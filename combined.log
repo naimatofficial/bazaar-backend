@@ -1,0 +1,1348 @@
+2024-07-28T19:40:11.584Z [error]: The client is closed
+2024-07-28T19:45:23.340Z [error]: The client is closed
+2024-07-29T07:51:42.325Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T07:51:43.431Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T07:53:10.650Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T07:53:10.941Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T09:11:41.227Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Product"
+2024-07-29T09:11:58.132Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Product"
+2024-07-29T09:12:34.106Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:12:34.119Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:50.909Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:50.973Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:54.097Z [error]: Cast to ObjectId failed for value "pending" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:54.113Z [error]: Cast to ObjectId failed for value "pending" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:59.166Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:59.180Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:21:02.527Z [error]: Cast to ObjectId failed for value "denied" (type string) at path "_id" for model "Product"
+2024-07-29T09:21:02.537Z [error]: Cast to ObjectId failed for value "denied" (type string) at path "_id" for model "Product"
+2024-07-29T09:24:22.713Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Product"
+2024-07-29T09:43:49.708Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T09:43:49.776Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T10:45:06.530Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsdas" }
+2024-07-29T10:45:22.304Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsdas" }
+2024-07-29T10:59:45.901Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T10:59:46.011Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T11:25:06.930Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsda" }
+2024-07-29T11:39:01.456Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsdasdsd" }
+2024-07-29T12:09:34.213Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D24sd1B7332kjh" }
+2024-07-29T12:09:35.517Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D24sd1B7332kjh" }
+2024-07-29T19:00:04.391Z [info]: Cache miss for key: flashDeals_{}_1_10
+2024-07-29T19:00:05.037Z [info]: Cache set for key: flashDeals_{}_1_10
+2024-07-29T19:04:16.350Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:04:16.388Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:04:43.507Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:19:24.893Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:23:31.810Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:27:48.663Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:31:34.196Z [error]: Validation error: Image is required
+2024-07-29T19:39:54.827Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:39:54.925Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:40:14.600Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:40:14.612Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:41:10.332Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:41:10.636Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:41:52.173Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:41:52.206Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:45:13.772Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:49:41.857Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:49:42.470Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:54:37.541Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:54:37.638Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T19:55:20.493Z [error]: Validation error: Image is required
+2024-07-29T19:55:30.928Z [error]: Validation error: Image is required
+2024-07-29T20:01:59.192Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:01:59.262Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:03:05.648Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:03:05.664Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:04:58.616Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:06:31.340Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:06:31.498Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:06:53.705Z [error]: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "FlashDeal"
+2024-07-29T20:06:53.707Z [error]: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "FlashDeal"
+2024-07-29T20:07:43.220Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:07:43.231Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:08:39.969Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:08:39.992Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:09:27.453Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:09:27.469Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:09:45.882Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:11:20.204Z [error]: Validation error: Image is required
+2024-07-29T20:11:24.725Z [error]: Validation error: Image is required
+2024-07-29T20:12:05.145Z [error]: Validation error: Image is required
+2024-07-29T20:16:14.721Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:16:49.857Z [error]: Validation error: Image is required
+2024-07-29T20:24:09.655Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:24:09.722Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:24:34.837Z [error]: Validation error: Image is required
+2024-07-29T20:24:48.975Z [error]: Validation error: Image is required
+2024-07-29T20:26:32.254Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:26:36.074Z [error]: Validation error: Image is required
+2024-07-29T20:26:40.844Z [error]: Validation error: Image is required
+2024-07-29T20:29:31.658Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:29:31.682Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:30:56.950Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:30:57.025Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:36:57.152Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:41:57.252Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:41:57.275Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-29T20:41:57.282Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:10:42.835Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:10:42.912Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:11:08.531Z [error]: Validation error: Image is required
+2024-07-30T05:17:36.279Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:17:39.217Z [error]: Validation error: Image is required
+2024-07-30T05:19:49.367Z [error]: Validation error: Image is required
+2024-07-30T05:20:45.141Z [info]: Cache deleted for key: flashDeals
+2024-07-30T05:21:06.450Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:21:06.461Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:22:22.491Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:22:42.036Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:25:37.606Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:25:37.627Z [info]: Cache hit
+2024-07-30T05:34:00.524Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:34:00.548Z [info]: Cache hit
+2024-07-30T05:34:07.605Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:34:07.606Z [info]: Cache hit
+2024-07-30T05:34:23.408Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:34:23.410Z [info]: Cache hit
+2024-07-30T05:40:55.816Z [error]: Cache invalidation error: client is not defined
+2024-07-30T05:50:05.576Z [error]: Cache invalidation error: client is not defined
+2024-07-30T05:52:58.728Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:52:58.744Z [info]: Cache hit
+2024-07-30T05:53:07.430Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:53:07.432Z [info]: Cache hit
+2024-07-30T05:53:07.444Z [info]: Cache hit for key: flashDeals_{}_1_10
+2024-07-30T05:53:07.446Z [info]: Cache hit
+2024-07-30T05:53:39.457Z [error]: Cache invalidation error: invalidateCacheByPattern is not defined
+2024-07-30T06:03:12.691Z [info]: Cache deleted for key: flashDeal_66997432ec95940cfb6ee967
+2024-07-30T06:03:12.728Z [info]: Cache deleted for key: flashDeals
+2024-07-30T06:03:28.020Z [info]: Cache deleted for key: flashDeal_66a880c9c1310033ed7797c7
+2024-07-30T06:03:28.023Z [info]: Cache deleted for key: flashDeals
+2024-07-30T06:03:32.750Z [info]: Cache deleted for key: flashDeal_66a880d7c1310033ed7797c9
+2024-07-30T06:03:32.753Z [info]: Cache deleted for key: flashDeals
+2024-07-30T06:36:30.683Z [info]: Cache miss for key: flashDeals_all
+2024-07-30T06:36:31.622Z [info]: Cache set for key: flashDeals_all
+2024-07-30T06:37:50.441Z [info]: Cache hit for key: flashDeals_all
+2024-07-30T06:37:50.453Z [info]: Cache hit for key: flashDeals_all
+2024-07-30T06:39:17.507Z [info]: Cache hit for key: flashDeals_all
+2024-07-30T06:39:58.368Z [info]: Cache hit for key: flashDeals_all
+2024-07-30T06:39:58.381Z [info]: Cache hit for key: flashDeals_all
+2024-07-30T06:44:12.029Z [info]: Cache hit for key: flashDeals_all
+2024-07-30T06:47:22.268Z [info]: Cache deleted for key: flashDeal_66a88c2df643abc8481ab1df
+2024-07-30T06:47:22.276Z [info]: Cache deleted for key: flashDeals
+2024-07-30T06:47:27.104Z [info]: Cache deleted for key: flashDeal_66a88babfa2ebe28fdd48994
+2024-07-30T06:47:27.108Z [info]: Cache deleted for key: flashDeals
+2024-07-30T17:15:49.363Z [info]: Cache miss for key: flashDeals
+2024-07-30T17:15:50.089Z [info]: Cache set for key: flashDeals
+2024-07-30T17:16:29.938Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:16:29.952Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:18:03.519Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:18:03.720Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:18:43.138Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:18:48.591Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:21:45.398Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:25:57.542Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:28:00.321Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:28:00.718Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:28:09.983Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:29:52.912Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:29:58.047Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:31:14.435Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:31:28.613Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:31:51.717Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:32:08.911Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:33:10.045Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:33:18.399Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:38:27.530Z [info]: Cache set for key: flashDeal_66a925121e8efd7d03df6dd5
+2024-07-30T17:39:07.339Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:43:42.471Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:44:58.378Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:45:26.082Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:45:26.280Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:46:23.254Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:46:23.436Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:47:17.868Z [info]: Cache set for key: flashDeal_66a92725731b7a3bb5714c33
+2024-07-30T17:47:28.333Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:47:28.940Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:47:59.482Z [error]: deleteCache is not defined
+2024-07-30T17:49:08.379Z [error]: deleteCache is not defined
+2024-07-30T17:50:44.645Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:54:15.430Z [info]: Cache miss for key: flashDeal_6698fe37deeefb3fdaa4fa29
+2024-07-30T17:54:19.149Z [info]: Cache miss for key: flashDeal_6698fe37deeefb3fdaa4fa29
+2024-07-30T17:54:34.915Z [info]: Cache hit for key: flashDeals
+2024-07-30T17:54:56.791Z [info]: Cache miss for key: flashDeal_669974b4ec95940cfb6ee975
+2024-07-30T17:54:56.949Z [info]: Cache set for key: flashDeal_669974b4ec95940cfb6ee975
+2024-07-30T17:55:17.656Z [error]: deleteCache is not defined
+2024-07-30T17:55:17.658Z [error]: deleteCache is not defined
+2024-07-30T17:55:21.272Z [error]: deleteCache is not defined
+2024-07-30T17:55:21.274Z [error]: deleteCache is not defined
+2024-07-30T17:55:36.150Z [info]: Cache hit for key: flashDeal_669974b4ec95940cfb6ee975
+2024-07-30T17:56:29.665Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:07:11.433Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:07:33.126Z [info]: Cache miss for key: flashDeal_6698fe37deeefb3fdaa4fa29
+2024-07-30T18:07:45.184Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:07:59.019Z [info]: Cache hit for key: flashDeal_669974b4ec95940cfb6ee975
+2024-07-30T18:08:56.012Z [info]: Cache deleted for key: flashDeal_669974b4ec95940cfb6ee975
+2024-07-30T18:08:56.016Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:09:06.641Z [info]: Cache miss for key: flashDeal_669974b4ec95940cfb6ee975
+2024-07-30T18:09:24.425Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:09:24.766Z [info]: Cache set for key: flashDeals
+2024-07-30T18:09:38.264Z [info]: Cache deleted for key: flashDeal_66a7f681c90cfface5c7cc7e
+2024-07-30T18:09:38.266Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:10:05.677Z [info]: Cache deleted for key: flashDeal_66a8919f3cd85550d7839a79
+2024-07-30T18:10:05.681Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:10:10.014Z [info]: Cache deleted for key: flashDeal_66a890b73cd85550d7839a4f
+2024-07-30T18:10:10.019Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:10:14.238Z [info]: Cache deleted for key: flashDeal_66a88ca0f643abc8481ab1fb
+2024-07-30T18:10:14.241Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:10:18.752Z [info]: Cache deleted for key: flashDeal_66a88b487a50133aeeb72caa
+2024-07-30T18:10:18.756Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:10:22.717Z [info]: Cache deleted for key: flashDeal_66a88b467a50133aeeb72ca8
+2024-07-30T18:10:22.719Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:10:26.976Z [info]: Cache deleted for key: flashDeal_66a88b427a50133aeeb72ca6
+2024-07-30T18:10:26.979Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:10:47.103Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:10:47.538Z [info]: Cache set for key: flashDeals
+2024-07-30T18:10:47.554Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:12:55.506Z [info]: Cache deleted for key: flashDeal_66a7f6ebc90cfface5c7cc80
+2024-07-30T18:12:55.508Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:13:00.065Z [info]: Cache deleted for key: flashDeal_66a8782c1259c2bcc0f32bc7
+2024-07-30T18:13:00.068Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:13:13.066Z [info]: Cache deleted for key: flashDeal_66a87ce7bd6f769fe52bfe87
+2024-07-30T18:13:13.072Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:13:18.215Z [info]: Cache deleted for key: flashDeal_66a87f0daa126664bfe61480
+2024-07-30T18:13:18.217Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:13:38.156Z [info]: Cache deleted for key: flashDeal_66a88a597ab80827c8f17f30
+2024-07-30T18:13:38.163Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:13:42.988Z [info]: Cache deleted for key: flashDeal_66a88a647ab80827c8f17f32
+2024-07-30T18:13:42.992Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:13:47.551Z [info]: Cache deleted for key: flashDeal_66a88a707ab80827c8f17f34
+2024-07-30T18:13:47.553Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:14:00.345Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:14:00.420Z [info]: Cache set for key: flashDeals
+2024-07-30T18:14:11.717Z [info]: Cache deleted for key: flashDeal_66a925121e8efd7d03df6dd5
+2024-07-30T18:14:11.720Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:14:59.680Z [info]: Cache set for key: flashDeal_66a92da3b39f57c1e242d090
+2024-07-30T18:15:07.976Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:15:08.188Z [info]: Cache set for key: flashDeals
+2024-07-30T18:15:08.510Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:15:24.692Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:15:35.439Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:16:54.012Z [info]: Cache miss for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:16:54.094Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:17:00.343Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:17:00.474Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:17:13.014Z [info]: Cache deleted for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:17:13.016Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:17:13.028Z [info]: Cache miss for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:17:13.099Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:17:30.523Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:17:37.160Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:17:37.376Z [info]: Cache set for key: flashDeals
+2024-07-30T18:20:30.351Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:20:30.375Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:21.898Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:21.904Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:25.012Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:25.013Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:27.813Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:27.815Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:56.324Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:23:56.348Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:25:55.699Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:25:55.721Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:02.328Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:02.329Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:06.167Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:06.178Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:09.955Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:09.956Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:27.440Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:27.451Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:27.603Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:26:27.609Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:27:07.463Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:27:07.476Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:28:33.731Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:28:33.751Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:28:47.051Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:28:47.052Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:13.401Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:13.411Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:18.648Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:18.649Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:45.854Z [info]: Cache deleted for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:45.860Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:29:45.887Z [info]: Cache miss for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:46.261Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:46.262Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:58.158Z [info]: Cache deleted for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:58.160Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:29:58.172Z [info]: Cache miss for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:58.324Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:29:58.326Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:32:23.853Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:32:24.790Z [info]: Cache set for key: flashDeals
+2024-07-30T18:32:24.802Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:32:37.564Z [info]: Cache deleted for key: flashDeal_66a92725731b7a3bb5714c33
+2024-07-30T18:32:37.566Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:32:51.336Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:32:51.485Z [info]: Cache set for key: flashDeals
+2024-07-30T18:35:29.093Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:29.103Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:29.248Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:29.250Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:36.442Z [info]: Cache deleted for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:36.447Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:35:36.526Z [info]: Cache miss for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:36.707Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:36.708Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:41.790Z [info]: Cache deleted for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:41.792Z [info]: Cache deleted for key: flashDeals
+2024-07-30T18:35:41.804Z [info]: Cache miss for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:41.939Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:41.941Z [info]: Cache set for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:35:53.243Z [info]: Cache miss for key: flashDeals
+2024-07-30T18:35:53.400Z [info]: Cache set for key: flashDeals
+2024-07-30T18:35:53.613Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:35:59.926Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:36:02.313Z [info]: Cache hit for key: flashDeals
+2024-07-30T18:36:11.783Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:36:11.784Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:36:14.991Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:36:14.992Z [info]: Cache hit for key: flashDeal_66a88aaa7ab80827c8f17f36
+2024-07-30T18:39:58.022Z [info]: Cache miss for key: featureDeals
+2024-07-30T18:39:58.311Z [info]: Cache set for key: featureDeals
+2024-07-30T18:40:06.065Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:40:13.353Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:40:29.731Z [info]: Cache miss for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:40:29.897Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:40:29.899Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:41:45.175Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:41:45.191Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:41:50.923Z [info]: Cache deleted for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:41:50.926Z [info]: Cache deleted for key: featureDeals
+2024-07-30T18:41:54.484Z [info]: Cache miss for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:41:54.643Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:41:54.645Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:41:54.665Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:41:54.668Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:21.982Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:21.984Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:22.298Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:22.299Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:45.904Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:45.905Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:46.382Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:46.618Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:57.102Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:42:57.103Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:06.047Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:06.048Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:11.940Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:11.943Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:15.793Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:15.799Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:27.621Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:27.622Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:27.854Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:27.855Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:54.735Z [info]: Cache deleted for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:54.739Z [info]: Cache deleted for key: featureDeals
+2024-07-30T18:43:54.760Z [info]: Cache miss for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:54.958Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:43:54.959Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:38.104Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:38.111Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:43.866Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:43.871Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:57.488Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:57.490Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:57.522Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:46:57.533Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:47:19.659Z [info]: Cache miss for key: featureDeals
+2024-07-30T18:47:20.740Z [info]: Cache set for key: featureDeals
+2024-07-30T18:47:29.433Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:47:29.435Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:48:27.427Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:48:27.434Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:48:30.576Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:48:30.596Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:48:54.819Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:51:13.361Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:52:25.688Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:25.736Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:25.913Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:25.936Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:29.379Z [info]: Cache deleted for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:29.382Z [info]: Cache deleted for key: featureDeals
+2024-07-30T18:52:29.412Z [info]: Cache miss for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:29.611Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:29.613Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T18:52:33.187Z [info]: Cache miss for key: featureDeals
+2024-07-30T18:52:33.406Z [info]: Cache set for key: featureDeals
+2024-07-30T18:52:33.424Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:52:36.968Z [info]: Cache deleted for key: featureDeal_669a665ef01ec595eb7912d4
+2024-07-30T18:52:36.970Z [info]: Cache deleted for key: featureDeals
+2024-07-30T18:54:47.783Z [info]: Cache miss for key: featureDeals
+2024-07-30T18:54:48.139Z [info]: Cache set for key: featureDeals
+2024-07-30T18:55:06.326Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:55:24.207Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:56:08.162Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:56:15.341Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:56:30.420Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:57:02.228Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:57:24.589Z [info]: Cache hit for key: featureDeals
+2024-07-30T18:58:37.790Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:00:31.557Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:00:46.826Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:01:03.534Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:02:54.966Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:02:55.049Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:00.653Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:00.684Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:00.749Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:01.869Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:02.239Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:02.820Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:03.382Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:03.644Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:03.949Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:03:04.816Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:00.584Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:00.662Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:00.685Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:04.132Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:04.227Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:04.954Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:06.052Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:06.091Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:07.310Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:07.663Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:08.259Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:08.968Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:09.347Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:10.324Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:10.649Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:11.268Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:11.507Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:12.360Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:12.603Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:13.009Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:13.126Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:13.636Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:13.831Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:14.088Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:14.213Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:14.444Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:14.674Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:15.381Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:08:15.628Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:09:28.481Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:09:38.899Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:09:44.039Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:09:48.801Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:09:51.629Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:14:12.031Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:14:12.128Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:18:54.628Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:18:54.698Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:20:11.439Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:33:16.715Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:33:16.831Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:34:07.820Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:36:26.776Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:40:54.405Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:43:41.320Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:47:49.947Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:48:05.841Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:48:05.870Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:48:47.104Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:48:47.117Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:51:03.193Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:51:32.105Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:51:49.604Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:51:49.619Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:53:21.409Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:53:47.360Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:54:05.456Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:54:18.995Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:57:26.999Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:57:41.320Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:57:41.333Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:58:07.959Z [info]: Cache hit for key: flashDeals
+2024-07-30T19:58:07.975Z [info]: Cache hit for key: flashDeals
+2024-07-30T19:58:09.045Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:58:09.056Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:58:12.833Z [info]: Cache hit for key: flashDeals
+2024-07-30T19:58:12.840Z [info]: Cache hit for key: flashDeals
+2024-07-30T19:58:23.895Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:58:23.911Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:58:39.666Z [info]: Cache set for key: featureDeal_66a945ef6e97fd8f2c2c7773
+2024-07-30T19:59:41.077Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:59:42.235Z [info]: Cache hit for key: featureDeals
+2024-07-30T19:59:56.425Z [info]: Cache set for key: featureDeal_66a9463c6e97fd8f2c2c7775
+2024-07-30T19:59:56.438Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:00:13.761Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:00:13.790Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:00:30.679Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:01:06.428Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:03:50.016Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:07:49.232Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:07:57.309Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:10:04.290Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:10:08.438Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:10:12.049Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:11:45.088Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:11:52.756Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:12:02.859Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:16:40.462Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:16:58.422Z [info]: Cache set for key: featureDeal_66a94a3aaf9312d7652f91f6
+2024-07-30T20:16:58.425Z [info]: Cache deleted for key: featureDeals
+2024-07-30T20:16:58.458Z [info]: Cache miss for key: featureDeals
+2024-07-30T20:16:58.939Z [info]: Cache set for key: featureDeals
+2024-07-30T20:17:06.560Z [info]: Cache hit for key: featureDeals
+2024-07-30T20:19:07.777Z [info]: Cache deleted for key: featureDeal_66a9463c6e97fd8f2c2c7775
+2024-07-30T20:19:08.004Z [info]: Cache deleted for key: featureDeals
+2024-07-30T20:19:08.815Z [info]: Cache deleted for key: featureDeal_66a94a3aaf9312d7652f91f6
+2024-07-30T20:19:08.829Z [info]: Cache deleted for key: featureDeals
+2024-07-30T20:19:13.608Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:13.611Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:13.637Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:13.650Z [info]: Cache hit for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:19.968Z [info]: Cache deleted for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:19.971Z [info]: Cache deleted for key: featureDeals
+2024-07-30T20:19:19.980Z [info]: Cache miss for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:20.284Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:20.285Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:28.576Z [info]: Cache deleted for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:28.579Z [info]: Cache deleted for key: featureDeals
+2024-07-30T20:19:28.587Z [info]: Cache miss for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:28.919Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:19:28.923Z [info]: Cache set for key: featureDeal_669a5bb707d147520e3badfc
+2024-07-30T20:20:22.893Z [info]: Cache miss for key: featureDeals
+2024-07-30T20:20:23.117Z [info]: Cache set for key: featureDeals
+2024-07-30T20:20:27.333Z [info]: Cache hit for key: featureDeals
+2024-07-31T10:19:26.863Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-07-31T10:19:56.692Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-07-31T11:50:30.209Z [error]: docs is not defined
+2024-08-01T10:08:51.545Z [error]: Order validation failed: billingAddress: Path `billingAddress` is required., shippingAddress: Path `shippingAddress` is required., paymentMethod: Path `paymentMethod` is required., totalAmount: Path `totalAmount` is required., vendor: Path `vendor` is required., customer: Path `customer` is required.
+2024-08-01T10:09:16.596Z [error]: Order validation failed: billingAddress: Path `billingAddress` is required., shippingAddress: Path `shippingAddress` is required., paymentMethod: Path `paymentMethod` is required., totalAmount: Path `totalAmount` is required., vendor: Path `vendor` is required., customer: Path `customer` is required.
+2024-08-01T11:26:45.914Z [error]: Refund not found
+2024-08-01T12:09:09.025Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Category"
+2024-08-01T12:09:15.395Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Category"
+2024-08-01T19:53:29.817Z [error]: Main category not found.
+2024-08-01T19:58:12.954Z [error]: subSubCategory validation failed: name: Please provide sub sub category name.
+2024-08-01T20:10:47.143Z [error]: Vendor validation failed: phoneNumber: Path `phoneNumber` is required.
+2024-08-01T20:10:51.890Z [error]: Vendor validation failed: phoneNumber: Path `phoneNumber` is required.
+2024-08-01T20:11:04.215Z [error]: E11000 duplicate key error collection: newbazaradmin.vendors index: shopName_1 dup key: { shopName: "HSA Cafe" }
+2024-08-01T20:46:24.763Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-01T20:47:10.744Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T05:34:40.592Z [error]: Vendor not found
+2024-08-02T05:34:40.823Z [error]: Vendor not found
+2024-08-02T05:47:34.586Z [error]: Vendor not found
+2024-08-02T05:47:34.682Z [error]: Vendor not found
+2024-08-02T05:58:17.297Z [error]: status is not defined
+2024-08-02T06:33:06.759Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:42.178Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:42.614Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:48.219Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:48.319Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:48.825Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:49.048Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T07:32:52.370Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T07:33:01.654Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T14:02:46.798Z [error]: Vendor not found
+2024-08-02T14:02:46.942Z [error]: Vendor not found
+2024-08-02T15:27:41.001Z [error]: Vendor not found
+2024-08-02T15:27:41.057Z [error]: Vendor not found
+2024-08-02T16:28:44.698Z [error]: Vendor not found
+2024-08-02T16:28:45.146Z [error]: Vendor not found
+2024-08-03T06:58:39.608Z [error]: Vendor not found
+2024-08-03T06:58:40.088Z [error]: Vendor not found
+2024-08-03T07:50:18.845Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-03T10:32:33.044Z [error]: Vendor not found
+2024-08-03T10:32:33.059Z [error]: Vendor not found
+2024-08-03T11:05:55.724Z [error]: Order not found
+2024-08-03T11:05:59.415Z [error]: Order not found
+2024-08-03T11:07:03.249Z [error]: Order not found
+2024-08-03T11:07:43.309Z [error]: Order not found
+2024-08-03T11:08:45.093Z [error]: Order not found
+2024-08-03T11:10:14.373Z [error]: Vendor not found
+2024-08-03T11:10:14.388Z [error]: Vendor not found
+2024-08-03T11:15:16.299Z [error]: Order validation failed: vendor: Cast to ObjectId failed for value "[ '668eb1606379caf5ecad7629', '6698bd943781907de4f8e89d' ]" (type Array) at path "vendor" because of "BSONError"
+2024-08-03T11:15:51.351Z [error]: Order validation failed: vendor: Cast to ObjectId failed for value "[ '668eb1606379caf5ecad7629', '6698bd943781907de4f8e89d' ]" (type Array) at path "vendor" because of "BSONError"
+2024-08-03T11:20:41.061Z [error]: Order not found
+2024-08-03T11:26:14.880Z [error]: Order not found
+2024-08-03T11:39:53.981Z [error]: Order not found
+2024-08-03T11:50:18.242Z [error]: Order not found
+2024-08-03T11:51:03.837Z [error]: Order not found
+2024-08-03T11:51:20.942Z [error]: Order not found
+2024-08-03T11:51:46.802Z [error]: Order not found
+2024-08-03T11:51:56.390Z [error]: Order not found
+2024-08-03T11:52:01.017Z [error]: Order not found
+2024-08-03T11:56:21.990Z [error]: Order not found
+2024-08-03T11:58:52.734Z [error]: Order not found
+2024-08-03T11:58:56.452Z [error]: Order not found
+2024-08-03T11:58:59.963Z [error]: Order not found
+2024-08-03T12:11:03.154Z [error]: Order not found
+2024-08-03T12:11:03.231Z [error]: Order not found
+2024-08-03T13:56:55.465Z [error]: Order not found
+2024-08-03T13:56:55.621Z [error]: Order not found
+2024-08-03T13:56:55.787Z [error]: Order not found
+2024-08-03T13:56:57.847Z [error]: Order not found
+2024-08-05T09:59:36.660Z [error]: Vendor not found
+2024-08-05T09:59:36.709Z [error]: Vendor not found
+2024-08-05T10:04:57.489Z [error]: Order not found
+2024-08-05T10:05:01.329Z [error]: Order not found
+2024-08-05T10:05:05.000Z [error]: Order not found
+2024-08-05T10:05:07.654Z [error]: Order not found
+2024-08-05T10:05:16.451Z [error]: Order not found
+2024-08-05T10:05:20.239Z [error]: Order not found
+2024-08-05T10:05:26.503Z [error]: Order not found
+2024-08-05T10:05:29.071Z [error]: Order not found
+2024-08-05T10:05:38.345Z [error]: Order not found
+2024-08-05T10:41:20.831Z [error]: client.setex is not a function
+2024-08-05T10:42:07.270Z [error]: client.setex is not a function
+2024-08-05T10:42:30.462Z [error]: client.setex is not a function
+2024-08-05T10:44:14.504Z [error]: fetchOrdersFromDb is not defined
+2024-08-05T10:44:56.719Z [error]: client.setex is not a function
+2024-08-05T10:47:23.201Z [error]: getCache is not defined
+2024-08-05T10:52:07.890Z [info]: Cache miss for key: all_orders{}
+2024-08-05T10:52:08.305Z [info]: Cache set for key: all_orders{}
+2024-08-05T10:52:57.771Z [info]: Cache hit for key: all_orders{}
+2024-08-05T10:52:57.842Z [info]: Cache hit for key: all_orders{}
+2024-08-05T10:57:38.718Z [info]: Cache hit for key: all_orders{}
+2024-08-05T11:00:45.176Z [info]: Cache hit for key: all_orders{}
+2024-08-05T11:00:57.853Z [info]: Cache hit for key: all_orders{}
+2024-08-05T11:01:16.202Z [info]: Cache miss for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T11:01:16.481Z [info]: Cache set for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T11:02:21.547Z [info]: Cache hit for key: all_orders{}
+2024-08-05T11:04:38.495Z [info]: Cache miss for key: orders_list
+2024-08-05T11:04:40.209Z [info]: Cache set for key: orders_list
+2024-08-05T11:05:00.233Z [info]: Cache hit for key: orders_list
+2024-08-05T11:05:00.253Z [info]: Cache hit for key: orders_list
+2024-08-05T11:05:10.452Z [info]: Cache hit for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T11:05:10.474Z [info]: Cache hit for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T11:05:24.898Z [info]: Cache set for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T11:05:24.908Z [info]: Cache deleted for key: all_orders
+2024-08-05T11:05:33.532Z [info]: Cache hit for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T11:05:33.544Z [info]: Cache hit for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T11:08:12.796Z [info]: Cache hit for key: orders_list
+2024-08-05T11:08:35.017Z [info]: Cache hit for key: orders_list
+2024-08-05T11:13:41.690Z [info]: Cache miss for key: orders_list_{"orderStatus":"delivered"}
+2024-08-05T11:13:42.007Z [info]: Cache set for key: orders_list_{"orderStatus":"delivered"}
+2024-08-05T11:14:03.221Z [info]: Cache miss for key: orders_list_{"orderStatus":"pending"}
+2024-08-05T11:14:03.559Z [info]: Cache set for key: orders_list_{"orderStatus":"pending"}
+2024-08-05T11:16:37.816Z [info]: Cache hit for key: orders_list_{"orderStatus":"pending"}
+2024-08-05T11:19:25.195Z [info]: Cache hit for key: orders_list_{"orderStatus":"pending"}
+2024-08-05T11:20:30.185Z [info]: Cache miss for key: orders_list_{}
+2024-08-05T11:20:31.374Z [info]: Cache set for key: orders_list_{}
+2024-08-05T11:21:27.123Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T11:22:12.238Z [info]: Cache hit for key: orders_list_{"orderStatus":"pending"}
+2024-08-05T11:22:34.806Z [info]: Cache hit for key: orders_list_{"orderStatus":"delivered"}
+2024-08-05T11:33:23.233Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T11:33:23.571Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T11:34:53.036Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T11:34:53.251Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T12:50:10.821Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T12:50:10.985Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T12:54:27.674Z [info]: Cache hit for key: order:66a96c84943c131c0462eea3
+2024-08-05T12:54:37.642Z [info]: Cache miss for key: orders_list_{"orderStatus":"pending","customer":"66a4a721b0126bceaceda81b","vendor":"668eb1606379caf5ecad7629"}
+2024-08-05T12:54:38.550Z [info]: Cache set for key: orders_list_{"orderStatus":"pending","customer":"66a4a721b0126bceaceda81b","vendor":"668eb1606379caf5ecad7629"}
+2024-08-05T12:54:47.038Z [info]: Cache miss for key: orders_list_{"orderStatus":"pending","vendor":"668eb1606379caf5ecad7629"}
+2024-08-05T12:54:47.400Z [info]: Cache set for key: orders_list_{"orderStatus":"pending","vendor":"668eb1606379caf5ecad7629"}
+2024-08-05T12:54:56.009Z [info]: Cache miss for key: orders_list_{"orderStatus":"pending","customer":"66a4a721b0126bceaceda81b"}
+2024-08-05T12:54:56.105Z [info]: Cache set for key: orders_list_{"orderStatus":"pending","customer":"66a4a721b0126bceaceda81b"}
+2024-08-05T12:55:01.294Z [info]: Cache hit for key: orders_list_{"orderStatus":"pending"}
+2024-08-05T12:55:19.004Z [info]: Cache miss for key: orders_list_{"orderStatus":"pending","customer":"669ddf935845c964ebc06614"}
+2024-08-05T12:55:19.697Z [info]: Cache set for key: orders_list_{"orderStatus":"pending","customer":"669ddf935845c964ebc06614"}
+2024-08-05T12:55:23.585Z [info]: Cache miss for key: orders_list_{"customer":"669ddf935845c964ebc06614"}
+2024-08-05T12:55:24.402Z [info]: Cache set for key: orders_list_{"customer":"669ddf935845c964ebc06614"}
+2024-08-05T12:55:41.683Z [info]: Cache miss for key: orders_list_{"orderStatus":"pending","customer":"669ddf935845c964ebc06614","vendor":"6698bae66affb86b039f18ad"}
+2024-08-05T12:55:42.014Z [info]: Cache set for key: orders_list_{"orderStatus":"pending","customer":"669ddf935845c964ebc06614","vendor":"6698bae66affb86b039f18ad"}
+2024-08-05T13:04:24.256Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:04:24.477Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:07:37.896Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:07:38.016Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:08:02.344Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:08:02.542Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:08:33.888Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:08:40.499Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:08:47.865Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:08:52.768Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:08:55.441Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:09:00.382Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:09:04.940Z [info]: Cache miss for key: orders_list_{"createdAt":{"$gte":"2024-08-11T00:00:00.000Z","$lte":"2024-09-04T00:00:00.000Z"}}
+2024-08-05T13:09:05.085Z [info]: Cache set for key: orders_list_{"createdAt":{"$gte":"2024-08-11T00:00:00.000Z","$lte":"2024-09-04T00:00:00.000Z"}}
+2024-08-05T13:09:12.107Z [info]: Cache miss for key: orders_list_{"createdAt":{"$gte":"2024-07-28T00:00:00.000Z","$lte":"2024-09-04T00:00:00.000Z"}}
+2024-08-05T13:09:12.441Z [info]: Cache set for key: orders_list_{"createdAt":{"$gte":"2024-07-28T00:00:00.000Z","$lte":"2024-09-04T00:00:00.000Z"}}
+2024-08-05T13:10:54.393Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:10:54.508Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:12:34.464Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:12:59.847Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:13:00.116Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:13:37.219Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:13:53.399Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:13:53.445Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:20:24.425Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:20:24.602Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:20:43.686Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:22:50.285Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:22:50.342Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:22:57.097Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:23:03.272Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:28:50.366Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:28:50.537Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:33:57.236Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:33:57.279Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:34:03.128Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:34:18.021Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:34:25.282Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:34:28.951Z [info]: Cache miss for key: orders_list_{"createdAt":{"$gte":"2024-08-18T00:00:00.000Z","$lte":"2024-09-05T00:00:00.000Z"}}
+2024-08-05T13:34:29.043Z [info]: Cache set for key: orders_list_{"createdAt":{"$gte":"2024-08-18T00:00:00.000Z","$lte":"2024-09-05T00:00:00.000Z"}}
+2024-08-05T13:34:31.516Z [info]: Cache hit for key: orders_list_{"createdAt":{"$gte":"2024-08-18T00:00:00.000Z","$lte":"2024-09-05T00:00:00.000Z"}}
+2024-08-05T13:34:31.575Z [info]: Cache hit for key: orders_list_{"createdAt":{"$gte":"2024-08-18T00:00:00.000Z","$lte":"2024-09-05T00:00:00.000Z"}}
+2024-08-05T13:34:31.660Z [info]: Cache hit for key: orders_list_{"createdAt":{"$gte":"2024-08-18T00:00:00.000Z","$lte":"2024-09-05T00:00:00.000Z"}}
+2024-08-05T13:34:36.195Z [info]: Cache miss for key: orders_list_{"createdAt":{"$gte":"2024-07-28T00:00:00.000Z","$lte":"2024-09-05T00:00:00.000Z"}}
+2024-08-05T13:34:36.562Z [info]: Cache set for key: orders_list_{"createdAt":{"$gte":"2024-07-28T00:00:00.000Z","$lte":"2024-09-05T00:00:00.000Z"}}
+2024-08-05T13:36:59.875Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:06.397Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:31.400Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:31.445Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:38.888Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:38.937Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:42.627Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:42.912Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:43.307Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:44.408Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:45.262Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:46.212Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:46.879Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:47.286Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:56.550Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:56.902Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:58.666Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:59.087Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:59.299Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:59.496Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:37:59.759Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:00.190Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:00.523Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:00.800Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:01.355Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:01.770Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:03.018Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:03.320Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:03.559Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:03.715Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:04.371Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:04.885Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:06.637Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:08.335Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:08.628Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:08.795Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:17.028Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:22.712Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:38:25.787Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:40:30.065Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:40:30.770Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:40:31.133Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:40:32.009Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:44:23.750Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:44:24.782Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:45:00.514Z [info]: Cache miss for key: order:66b08532ad592e1c389624bf
+2024-08-05T13:45:01.014Z [info]: Cache set for key: order:66b08532ad592e1c389624bf
+2024-08-05T13:45:01.050Z [info]: Cache hit for key: order:66b08532ad592e1c389624bf
+2024-08-05T13:45:04.835Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:45:04.874Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:32.905Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:36.131Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:36.185Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:37.427Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:38.008Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:38.759Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:40.609Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:41.757Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:42.575Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:43.871Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:44.560Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:44.908Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:49.698Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:47:55.148Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:00.467Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:05.283Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:07.881Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:16.424Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:24.842Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:28.517Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:32.666Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:33.782Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:48:34.083Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:49:30.742Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:49:30.775Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:49:30.851Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:49:31.260Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:49:31.559Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:49:31.718Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:49:59.969Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:00.448Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:13.437Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:24.725Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:32.445Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:32.464Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:32.532Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:32.552Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:32.662Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:33.252Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:33.510Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:33.634Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:33.895Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:50:34.241Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:51:10.027Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T13:59:49.134Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:01:31.137Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:02:36.024Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:02:51.109Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:04:00.146Z [info]: Cache miss for key: orders_list_{"orderStatus":"confirmed"}
+2024-08-05T14:04:00.297Z [info]: Cache set for key: orders_list_{"orderStatus":"confirmed"}
+2024-08-05T14:04:33.846Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:05:58.979Z [error]: Cannot set properties of undefined (setting 'category')
+2024-08-05T14:06:52.705Z [info]: Cache miss for key: orders_list_{"orderStatus":"confirmed","category":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:06:52.808Z [info]: Cache set for key: orders_list_{"orderStatus":"confirmed","category":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:07:05.166Z [info]: Cache miss for key: orders_list_{"category":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:07:05.241Z [info]: Cache set for key: orders_list_{"category":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:10:24.173Z [info]: Cache miss for key: orders_list_{"products.category":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:10:24.461Z [info]: Cache set for key: orders_list_{"products.category":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:10:29.866Z [info]: Cache hit for key: orders_list_{"products.category":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:10:51.876Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:12:57.669Z [info]: Cache miss for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:12:57.823Z [info]: Cache set for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:13:31.462Z [info]: Cache hit for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:14:08.207Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:18:38.469Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:18:47.140Z [info]: Cache hit for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:18:53.210Z [info]: Cache hit for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:19:36.795Z [info]: Cache hit for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:20:18.952Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:20:46.188Z [info]: Cache hit for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:20:53.390Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:22:56.800Z [info]: Cache miss for key: orders_list_{"products.brand._id":"6698ba7d6affb86b039f18a5"}
+2024-08-05T14:22:56.922Z [info]: Cache set for key: orders_list_{"products.brand._id":"6698ba7d6affb86b039f18a5"}
+2024-08-05T14:24:32.292Z [info]: Cache miss for key: orders_list_{"products.brand":"6698ba7d6affb86b039f18a5"}
+2024-08-05T14:24:32.522Z [info]: Cache set for key: orders_list_{"products.brand":"6698ba7d6affb86b039f18a5"}
+2024-08-05T14:24:34.639Z [info]: Cache hit for key: orders_list_{"products.brand":"6698ba7d6affb86b039f18a5"}
+2024-08-05T14:25:13.282Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:25:51.368Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T14:25:58.098Z [info]: Cache hit for key: orders_list_{"products.category._id":"66a1f8c9828af0935f804d82"}
+2024-08-05T14:26:50.733Z [info]: Cache hit for key: orders_list_{"orderStatus":"confirmed"}
+2024-08-05T14:26:58.283Z [info]: Cache hit for key: orders_list_{"orderStatus":"pending"}
+2024-08-05T14:27:08.074Z [info]: Cache hit for key: orders_list_{"orderStatus":"delivered"}
+2024-08-05T15:26:37.056Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:26:38.279Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:26:39.148Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:26:39.372Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:26:39.975Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:26:40.271Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:26:46.983Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:26:47.043Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:28:07.472Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:28:08.751Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:28:18.817Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T15:28:18.833Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T15:28:24.324Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:28:24.358Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:28:59.320Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:46:19.113Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:46:19.426Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:47:42.311Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:47:42.436Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:48:29.366Z [info]: Cache miss for key: orders_list_{"vendor":"669ac00ffe4a9e456fb35af2"}
+2024-08-05T15:48:30.130Z [info]: Cache set for key: orders_list_{"vendor":"669ac00ffe4a9e456fb35af2"}
+2024-08-05T15:48:30.159Z [info]: Cache hit for key: orders_list_{"vendor":"669ac00ffe4a9e456fb35af2"}
+2024-08-05T15:48:42.620Z [info]: Cache hit for key: orders_list_{"vendor":"669ac00ffe4a9e456fb35af2"}
+2024-08-05T15:48:42.669Z [info]: Cache hit for key: orders_list_{"vendor":"669ac00ffe4a9e456fb35af2"}
+2024-08-05T15:48:44.930Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:48:44.955Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:00.363Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:00.444Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:01.117Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:01.438Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:09.386Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:09.415Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:50.151Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:50.360Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:51.872Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:49:51.905Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:50:01.856Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:50:01.890Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:50:09.063Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:50:09.096Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:50:12.153Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:50:12.189Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:51:23.840Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:51:26.642Z [error]: Validation failed: orderStatus: `completed` is not a valid enum value for path `orderStatus`.
+2024-08-05T15:51:38.556Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:51:38.622Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:42.716Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:42.797Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:42.808Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:42.845Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:45.419Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:45.447Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:52.149Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:52.171Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:58.085Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T15:59:58.118Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:06.217Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:06.263Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:08.139Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:08.172Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:16.501Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:16.540Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:16.609Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:17.092Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:17.351Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:17.526Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:20.786Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:23.315Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:27.489Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:31.414Z [info]: Cache miss for key: orders_list_{"createdAt":{"$gte":"2024-08-04T00:00:00.000Z","$lte":"2024-08-12T00:00:00.000Z"}}
+2024-08-05T16:00:31.703Z [info]: Cache set for key: orders_list_{"createdAt":{"$gte":"2024-08-04T00:00:00.000Z","$lte":"2024-08-12T00:00:00.000Z"}}
+2024-08-05T16:00:34.588Z [info]: Cache hit for key: orders_list_{"createdAt":{"$gte":"2024-08-04T00:00:00.000Z","$lte":"2024-08-12T00:00:00.000Z"}}
+2024-08-05T16:00:36.767Z [info]: Cache hit for key: orders_list_{"createdAt":{"$gte":"2024-08-04T00:00:00.000Z","$lte":"2024-08-12T00:00:00.000Z"}}
+2024-08-05T16:00:51.146Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:51.153Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:53.438Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:53.461Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:55.415Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:55.436Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:56.999Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:57.015Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:58.730Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:00:58.768Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:00.015Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:00.051Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:06.559Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:06.593Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:08.603Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:08.620Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:13.020Z [info]: Cache set for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T16:01:13.026Z [info]: Cache deleted for key: all_orders
+2024-08-05T16:01:15.574Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:15.593Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:20.233Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:20.302Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:21.485Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:21.534Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:31.832Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:01:31.920Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:49:53.071Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:49:53.206Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:50:35.892Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:50:37.264Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:50:37.322Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:50:37.915Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:50:38.355Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:33.609Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:35.860Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:36.017Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:36.895Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:36.914Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:41.659Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:41.704Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:43.735Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:43.764Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:45.584Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:45.914Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:46.806Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:46.848Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:55.471Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:55.488Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:57.878Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:56:57.906Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:58:46.135Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T16:58:46.189Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:06:35.195Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:12:14.087Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:12:50.098Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:12:50.137Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:12:51.983Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:12:52.058Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:02.008Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:02.029Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:04.168Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:04.198Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:06.181Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:06.229Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:07.827Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:07.863Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:13.070Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:13.107Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:15.221Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:15.259Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:16.465Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:16.490Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:17.880Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:17.897Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:18.770Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:18.811Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:19.783Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:19.813Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:21.042Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:21.057Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:27.071Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:13:27.097Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:14:08.742Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:15:49.665Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:15:49.695Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:18:47.391Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:18:47.542Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:16.973Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:31.921Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:32.023Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:34.334Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:34.350Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:36.105Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:36.155Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:37.253Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:37.271Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:40.410Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:40.452Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:42.151Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:42.187Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:44.242Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:44.274Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:45.117Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:45.157Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:46.068Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:46.092Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:47.823Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:47.859Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:48.880Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:43:48.904Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:44:09.085Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:46:47.533Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:06.489Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:12.606Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:18.819Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:18.861Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:21.349Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:21.370Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:22.310Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:22.364Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:23.628Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:23.643Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:39.237Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:39.247Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:45.681Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:45.721Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T17:48:48.257Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:48:48.269Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:48:54.441Z [info]: Cache set for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:48:54.500Z [info]: Cache deleted for key: all_orders
+2024-08-05T17:48:59.034Z [info]: Cache set for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:48:59.037Z [info]: Cache deleted for key: all_orders
+2024-08-05T17:52:26.522Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:54:54.102Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:54:54.461Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:55:08.677Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:55:08.702Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:55:17.848Z [info]: Cache set for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T17:55:17.855Z [info]: Cache deleted for key: all_orders
+2024-08-05T18:01:12.954Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T18:01:13.026Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T18:36:08.172Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:36:08.244Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:36:20.169Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:36:20.224Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:37:58.116Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:49:26.794Z [info]: Cache hit for key: order:66a96d08943c131c0462eeba
+2024-08-05T20:29:56.166Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T20:35:57.198Z [error]: Refund not found
+2024-08-05T20:36:18.162Z [error]: Refund not found
+2024-08-05T20:36:20.677Z [error]: Refund not found
+2024-08-05T21:12:05.192Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T21:12:05.213Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T21:12:11.984Z [info]: Cache hit for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T21:12:11.994Z [info]: Cache hit for key: order:66ae1f323cad2b0cf7eed441
+2024-08-05T21:14:45.430Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T21:14:45.458Z [info]: Cache hit for key: orders_list_{}
+2024-08-05T21:20:14.337Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T21:20:14.377Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T21:45:23.161Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-05T21:45:23.196Z [info]: Cache hit for key: order:66ae37e92f20f464f4532ae3
+2024-08-06T06:51:26.403Z [error]: Operation `refunds.find()` buffering timed out after 10000ms
+2024-08-06T06:55:33.265Z [error]: Cannot read properties of undefined (reading 'equals')
+2024-08-06T06:59:21.480Z [error]: No refunds found for the specified criteria.
+2024-08-06T07:02:49.705Z [error]: No refunds found for the specified criteria.
+2024-08-06T07:05:36.713Z [error]: No refunds found for the specified criteria.
+2024-08-06T07:06:18.400Z [error]: No refunds found for the specified criteria.
+2024-08-06T07:42:09.099Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T07:45:01.527Z [info]: Cache miss for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T07:45:01.564Z [info]: Cache miss for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T07:45:01.567Z [info]: Cache miss for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T07:45:01.569Z [info]: Cache miss for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T07:45:01.702Z [info]: Cache set for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T07:45:01.709Z [info]: Cache set for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T07:45:01.711Z [info]: Cache set for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T07:45:01.713Z [info]: Cache set for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T07:45:01.726Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T07:45:01.728Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T07:45:01.751Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T07:45:01.762Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T07:47:27.164Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T07:47:27.166Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T07:47:27.169Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T07:47:27.171Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:25:47.961Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:25:48.034Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:25:48.043Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:25:48.044Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:25:48.070Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:25:48.079Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:25:48.080Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:25:48.087Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:27:40.270Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:27:40.320Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:27:40.348Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:27:40.351Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:27:40.352Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:27:40.380Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:27:40.626Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:27:40.628Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:29:34.239Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:29:34.265Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:29:34.268Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:29:34.270Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:29:34.281Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:29:34.367Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:29:34.370Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:29:34.372Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:30:33.948Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T10:30:40.726Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:30:40.731Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:30:40.735Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:30:40.752Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:30:40.759Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:30:40.772Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:30:40.784Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:30:40.795Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:34:04.378Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:34:04.398Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:34:04.402Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:34:04.404Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:34:04.449Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:34:04.451Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:34:04.452Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:34:04.454Z [info]: Cache hit for key: orders_list_{"vendor":"669f7f4a57b06c44da9dc3c2"}
+2024-08-06T10:42:46.023Z [error]: read ECONNRESET
+2024-08-06T10:42:52.709Z [error]: read ECONNRESET
+2024-08-06T10:43:26.387Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:26.394Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:26.400Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:29.437Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:43.937Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:45:11.190Z [info]: Cache miss for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T10:45:11.198Z [info]: Cache miss for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T10:45:11.199Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:45:11.200Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:45:11.218Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:45:11.220Z [info]: Cache miss for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T10:45:11.231Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:45:11.238Z [info]: Cache hit for key: orders_list_{"vendor":"669b5f57969405187b775526"}
+2024-08-06T10:45:11.246Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:45:11.271Z [info]: Cache set for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T10:45:11.281Z [info]: Cache set for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T10:45:11.292Z [info]: Cache set for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T10:45:11.301Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T10:45:11.308Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T10:45:11.319Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T10:50:10.439Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T10:50:15.278Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:50:15.287Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:50:15.294Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T10:50:15.302Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T10:50:15.315Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T10:50:15.979Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T10:50:16.258Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T10:50:16.266Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T10:50:16.267Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T10:50:16.272Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:04:03.494Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:04:03.551Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:04:03.564Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:04:03.568Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:04:03.797Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:04:03.799Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:04:03.801Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:04:03.803Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:04:03.823Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:04:03.844Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:04:17.942Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:04:17.960Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:04:17.968Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:04:18.072Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:04:18.076Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:04:32.102Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:04:32.142Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:04:32.147Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:04:32.158Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:04:32.159Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:06:03.640Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:08:27.343Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:35.985Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:46.587Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:55.452Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:55.893Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:18:12.441Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:18:12.460Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:18:12.589Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:18:12.595Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:18:12.601Z [info]: Cache miss for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:18:12.613Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:18:12.664Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:18:12.665Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:18:12.666Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:18:12.675Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:18:12.713Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:18:12.872Z [info]: Cache set for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:18:12.892Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:19:35.365Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:19:35.372Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:19:35.374Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:19:35.389Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:19:35.406Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:19:35.420Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:19:35.464Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:19:35.475Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:19:35.495Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:19:35.502Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ee8795ec24ee084d1e79"}
+2024-08-06T11:19:35.521Z [info]: Cache hit for key: orders_list_{"vendor":"66b1f55095ec24ee084d1e7b"}
+2024-08-06T11:19:35.630Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:29:40.430Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:29:40.437Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:29:40.439Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:29:40.447Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:29:40.451Z [info]: Cache miss for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:29:40.463Z [info]: Cache miss for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:29:40.522Z [info]: Cache set for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:29:40.531Z [info]: Cache set for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:29:40.673Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:29:40.702Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:29:40.794Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:29:40.795Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:29:40.796Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:29:40.797Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:34:58.572Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:34:58.580Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:34:58.589Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:34:58.610Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:34:58.627Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:34:58.639Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:34:58.651Z [info]: Cache miss for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:34:58.702Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:34:58.709Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:34:58.718Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:34:58.729Z [info]: Cache set for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:34:58.746Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:34:58.754Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:34:58.809Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:34:58.815Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:37:05.543Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:40:18.662Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:40:20.103Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:54:40.227Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:54:40.263Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:54:40.275Z [info]: Cache miss for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T11:54:40.276Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:54:40.279Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:54:40.351Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:54:40.352Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:54:40.353Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:54:40.379Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:54:40.395Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:54:40.397Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:54:40.407Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:54:40.437Z [info]: Cache set for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T11:54:40.443Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:54:40.447Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:54:40.448Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:54:40.467Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T11:55:04.006Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:55:04.084Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:55:04.088Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:55:04.089Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:55:04.090Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:55:04.105Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:55:04.107Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:55:04.108Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T11:55:04.133Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:55:04.149Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:55:04.161Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:55:04.186Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:55:04.189Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:55:04.190Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:55:04.191Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:55:04.213Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T11:55:18.493Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:55:18.496Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:55:18.499Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:55:18.501Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:55:18.514Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:55:18.555Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:55:18.563Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:55:18.566Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T11:55:25.071Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T11:55:25.074Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T11:55:25.075Z [info]: Cache hit for key: orders_list_{"vendor":"66b1ca7ceb86a9b921a4df64"}
+2024-08-06T11:55:25.076Z [info]: Cache hit for key: orders_list_{"vendor":"66b2060095ec24ee084d1ebe"}
+2024-08-06T11:55:25.093Z [info]: Cache hit for key: orders_list_{"vendor":"66b207d995ec24ee084d1f05"}
+2024-08-06T11:55:25.095Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T11:55:25.099Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T11:55:25.100Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T12:17:29.611Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T12:17:29.666Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T12:17:45.110Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T12:17:45.131Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T12:17:45.133Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T12:17:45.134Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T12:17:45.155Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T12:17:45.237Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T12:17:45.239Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T12:17:45.240Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T12:17:45.246Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T12:17:45.261Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T12:46:53.496Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T12:46:53.588Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T12:46:59.792Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T12:46:59.833Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T12:47:02.630Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T12:47:02.646Z [info]: Cache hit for key: orders_list_{}
+2024-08-06T13:03:19.849Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T13:03:19.873Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T13:03:19.876Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T13:03:19.878Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T13:03:19.880Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T13:03:20.418Z [info]: Cache hit for key: orders_list_{"vendor":"668eb1606379caf5ecad7629"}
+2024-08-06T13:03:20.422Z [info]: Cache hit for key: orders_list_{"vendor":"6698bae66affb86b039f18ad"}
+2024-08-06T13:03:20.430Z [info]: Cache hit for key: orders_list_{"vendor":"66b2091d70200812ed167dcd"}
+2024-08-06T13:03:20.439Z [info]: Cache hit for key: orders_list_{"vendor":"66b209c495ec24ee084d1f46"}
+2024-08-06T13:03:20.448Z [info]: Cache hit for key: orders_list_{"vendor":"66b20ef470200812ed167ddc"}
+2024-08-06T15:06:42.217Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:45.572Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:46.465Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:47.012Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:48.790Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:07:48.425Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:25:06.789Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T15:25:30.109Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T15:25:32.144Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T15:25:33.203Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T17:36:36.068Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Brand"
+2024-08-06T17:36:36.265Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Brand"
+2024-08-06T18:23:57.308Z [error]: currentBrand is not defined
+2024-08-06T18:56:50.353Z [info]: Cache hit for key: flashDeals
+2024-08-06T18:56:50.382Z [info]: Cache hit for key: flashDeals
+2024-08-07T06:49:06.778Z [info]: Cache hit for key: orders_list_{}

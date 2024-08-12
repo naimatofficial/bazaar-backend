@@ -1,0 +1,186 @@
+2024-07-28T19:40:11.584Z [error]: The client is closed
+2024-07-28T19:45:23.340Z [error]: The client is closed
+2024-07-29T07:51:42.325Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T07:51:43.431Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T07:53:10.650Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T07:53:10.941Z [error]: Cast to ObjectId failed for value "null" (type string) at path "userId" for model "Product"
+2024-07-29T09:11:41.227Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Product"
+2024-07-29T09:11:58.132Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Product"
+2024-07-29T09:12:34.106Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:12:34.119Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:50.909Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:50.973Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:54.097Z [error]: Cast to ObjectId failed for value "pending" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:54.113Z [error]: Cast to ObjectId failed for value "pending" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:59.166Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:20:59.180Z [error]: Cast to ObjectId failed for value "approved" (type string) at path "_id" for model "Product"
+2024-07-29T09:21:02.527Z [error]: Cast to ObjectId failed for value "denied" (type string) at path "_id" for model "Product"
+2024-07-29T09:21:02.537Z [error]: Cast to ObjectId failed for value "denied" (type string) at path "_id" for model "Product"
+2024-07-29T09:24:22.713Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Product"
+2024-07-29T09:43:49.708Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T09:43:49.776Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T10:45:06.530Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsdas" }
+2024-07-29T10:45:22.304Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsdas" }
+2024-07-29T10:59:45.901Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T10:59:46.011Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "userId" for model "Product"
+2024-07-29T11:25:06.930Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsda" }
+2024-07-29T11:39:01.456Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D241B7fsdasdsd" }
+2024-07-29T12:09:34.213Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D24sd1B7332kjh" }
+2024-07-29T12:09:35.517Z [error]: E11000 duplicate key error collection: newbazaradmin.products index: sku_1 dup key: { sku: "D24sd1B7332kjh" }
+2024-07-29T19:31:34.196Z [error]: Validation error: Image is required
+2024-07-29T19:55:20.493Z [error]: Validation error: Image is required
+2024-07-29T19:55:30.928Z [error]: Validation error: Image is required
+2024-07-29T20:06:53.705Z [error]: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "FlashDeal"
+2024-07-29T20:06:53.707Z [error]: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "FlashDeal"
+2024-07-29T20:11:20.204Z [error]: Validation error: Image is required
+2024-07-29T20:11:24.725Z [error]: Validation error: Image is required
+2024-07-29T20:12:05.145Z [error]: Validation error: Image is required
+2024-07-29T20:16:49.857Z [error]: Validation error: Image is required
+2024-07-29T20:24:34.837Z [error]: Validation error: Image is required
+2024-07-29T20:24:48.975Z [error]: Validation error: Image is required
+2024-07-29T20:26:36.074Z [error]: Validation error: Image is required
+2024-07-29T20:26:40.844Z [error]: Validation error: Image is required
+2024-07-30T05:11:08.531Z [error]: Validation error: Image is required
+2024-07-30T05:17:39.217Z [error]: Validation error: Image is required
+2024-07-30T05:19:49.367Z [error]: Validation error: Image is required
+2024-07-30T05:40:55.816Z [error]: Cache invalidation error: client is not defined
+2024-07-30T05:50:05.576Z [error]: Cache invalidation error: client is not defined
+2024-07-30T05:53:39.457Z [error]: Cache invalidation error: invalidateCacheByPattern is not defined
+2024-07-30T17:47:59.482Z [error]: deleteCache is not defined
+2024-07-30T17:49:08.379Z [error]: deleteCache is not defined
+2024-07-30T17:55:17.656Z [error]: deleteCache is not defined
+2024-07-30T17:55:17.658Z [error]: deleteCache is not defined
+2024-07-30T17:55:21.272Z [error]: deleteCache is not defined
+2024-07-30T17:55:21.274Z [error]: deleteCache is not defined
+2024-07-31T10:19:26.863Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-07-31T10:19:56.692Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-07-31T11:50:30.209Z [error]: docs is not defined
+2024-08-01T10:08:51.545Z [error]: Order validation failed: billingAddress: Path `billingAddress` is required., shippingAddress: Path `shippingAddress` is required., paymentMethod: Path `paymentMethod` is required., totalAmount: Path `totalAmount` is required., vendor: Path `vendor` is required., customer: Path `customer` is required.
+2024-08-01T10:09:16.596Z [error]: Order validation failed: billingAddress: Path `billingAddress` is required., shippingAddress: Path `shippingAddress` is required., paymentMethod: Path `paymentMethod` is required., totalAmount: Path `totalAmount` is required., vendor: Path `vendor` is required., customer: Path `customer` is required.
+2024-08-01T11:26:45.914Z [error]: Refund not found
+2024-08-01T12:09:09.025Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Category"
+2024-08-01T12:09:15.395Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Category"
+2024-08-01T19:53:29.817Z [error]: Main category not found.
+2024-08-01T19:58:12.954Z [error]: subSubCategory validation failed: name: Please provide sub sub category name.
+2024-08-01T20:10:47.143Z [error]: Vendor validation failed: phoneNumber: Path `phoneNumber` is required.
+2024-08-01T20:10:51.890Z [error]: Vendor validation failed: phoneNumber: Path `phoneNumber` is required.
+2024-08-01T20:11:04.215Z [error]: E11000 duplicate key error collection: newbazaradmin.vendors index: shopName_1 dup key: { shopName: "HSA Cafe" }
+2024-08-01T20:46:24.763Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-01T20:47:10.744Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T05:34:40.592Z [error]: Vendor not found
+2024-08-02T05:34:40.823Z [error]: Vendor not found
+2024-08-02T05:47:34.586Z [error]: Vendor not found
+2024-08-02T05:47:34.682Z [error]: Vendor not found
+2024-08-02T05:58:17.297Z [error]: status is not defined
+2024-08-02T06:33:06.759Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:42.178Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:42.614Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:48.219Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:48.319Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:48.825Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T06:55:49.048Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T07:32:52.370Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T07:33:01.654Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-02T14:02:46.798Z [error]: Vendor not found
+2024-08-02T14:02:46.942Z [error]: Vendor not found
+2024-08-02T15:27:41.001Z [error]: Vendor not found
+2024-08-02T15:27:41.057Z [error]: Vendor not found
+2024-08-02T16:28:44.698Z [error]: Vendor not found
+2024-08-02T16:28:45.146Z [error]: Vendor not found
+2024-08-03T06:58:39.608Z [error]: Vendor not found
+2024-08-03T06:58:40.088Z [error]: Vendor not found
+2024-08-03T07:50:18.845Z [error]: Cannot populate path `products.color` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-03T10:32:33.044Z [error]: Vendor not found
+2024-08-03T10:32:33.059Z [error]: Vendor not found
+2024-08-03T11:05:55.724Z [error]: Order not found
+2024-08-03T11:05:59.415Z [error]: Order not found
+2024-08-03T11:07:03.249Z [error]: Order not found
+2024-08-03T11:07:43.309Z [error]: Order not found
+2024-08-03T11:08:45.093Z [error]: Order not found
+2024-08-03T11:10:14.373Z [error]: Vendor not found
+2024-08-03T11:10:14.388Z [error]: Vendor not found
+2024-08-03T11:15:16.299Z [error]: Order validation failed: vendor: Cast to ObjectId failed for value "[ '668eb1606379caf5ecad7629', '6698bd943781907de4f8e89d' ]" (type Array) at path "vendor" because of "BSONError"
+2024-08-03T11:15:51.351Z [error]: Order validation failed: vendor: Cast to ObjectId failed for value "[ '668eb1606379caf5ecad7629', '6698bd943781907de4f8e89d' ]" (type Array) at path "vendor" because of "BSONError"
+2024-08-03T11:20:41.061Z [error]: Order not found
+2024-08-03T11:26:14.880Z [error]: Order not found
+2024-08-03T11:39:53.981Z [error]: Order not found
+2024-08-03T11:50:18.242Z [error]: Order not found
+2024-08-03T11:51:03.837Z [error]: Order not found
+2024-08-03T11:51:20.942Z [error]: Order not found
+2024-08-03T11:51:46.802Z [error]: Order not found
+2024-08-03T11:51:56.390Z [error]: Order not found
+2024-08-03T11:52:01.017Z [error]: Order not found
+2024-08-03T11:56:21.990Z [error]: Order not found
+2024-08-03T11:58:52.734Z [error]: Order not found
+2024-08-03T11:58:56.452Z [error]: Order not found
+2024-08-03T11:58:59.963Z [error]: Order not found
+2024-08-03T12:11:03.154Z [error]: Order not found
+2024-08-03T12:11:03.231Z [error]: Order not found
+2024-08-03T13:56:55.465Z [error]: Order not found
+2024-08-03T13:56:55.621Z [error]: Order not found
+2024-08-03T13:56:55.787Z [error]: Order not found
+2024-08-03T13:56:57.847Z [error]: Order not found
+2024-08-05T09:59:36.660Z [error]: Vendor not found
+2024-08-05T09:59:36.709Z [error]: Vendor not found
+2024-08-05T10:04:57.489Z [error]: Order not found
+2024-08-05T10:05:01.329Z [error]: Order not found
+2024-08-05T10:05:05.000Z [error]: Order not found
+2024-08-05T10:05:07.654Z [error]: Order not found
+2024-08-05T10:05:16.451Z [error]: Order not found
+2024-08-05T10:05:20.239Z [error]: Order not found
+2024-08-05T10:05:26.503Z [error]: Order not found
+2024-08-05T10:05:29.071Z [error]: Order not found
+2024-08-05T10:05:38.345Z [error]: Order not found
+2024-08-05T10:41:20.831Z [error]: client.setex is not a function
+2024-08-05T10:42:07.270Z [error]: client.setex is not a function
+2024-08-05T10:42:30.462Z [error]: client.setex is not a function
+2024-08-05T10:44:14.504Z [error]: fetchOrdersFromDb is not defined
+2024-08-05T10:44:56.719Z [error]: client.setex is not a function
+2024-08-05T10:47:23.201Z [error]: getCache is not defined
+2024-08-05T14:05:58.979Z [error]: Cannot set properties of undefined (setting 'category')
+2024-08-05T15:51:26.642Z [error]: Validation failed: orderStatus: `completed` is not a valid enum value for path `orderStatus`.
+2024-08-05T18:36:08.172Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:36:08.244Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:36:20.169Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:36:20.224Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T18:37:58.116Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Refund"
+2024-08-05T20:35:57.198Z [error]: Refund not found
+2024-08-05T20:36:18.162Z [error]: Refund not found
+2024-08-05T20:36:20.677Z [error]: Refund not found
+2024-08-06T06:51:26.403Z [error]: Operation `refunds.find()` buffering timed out after 10000ms
+2024-08-06T06:55:33.265Z [error]: Cannot read properties of undefined (reading 'equals')
+2024-08-06T06:59:21.480Z [error]: No refunds found for the specified criteria.
+2024-08-06T07:02:49.705Z [error]: No refunds found for the specified criteria.
+2024-08-06T07:05:36.713Z [error]: No refunds found for the specified criteria.
+2024-08-06T07:06:18.400Z [error]: No refunds found for the specified criteria.
+2024-08-06T10:30:33.948Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T10:42:46.023Z [error]: read ECONNRESET
+2024-08-06T10:42:52.709Z [error]: read ECONNRESET
+2024-08-06T10:43:26.387Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:26.394Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:26.400Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:29.437Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:43:43.937Z [error]: getaddrinfo ENOTFOUND ac-iqgq5gy-shard-00-00.zrvhibc.mongodb.net
+2024-08-06T10:50:10.439Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:06:03.640Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:08:27.343Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:35.985Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:46.587Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:55.452Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:12:55.893Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:37:05.543Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:40:18.662Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T11:40:20.103Z [error]: Invalid first name, Invalid last name, Invalid phone number, Invalid email, Invalid password, Invalid shop name, Invalid address
+2024-08-06T15:06:42.217Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:45.572Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:46.465Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:47.012Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:06:48.790Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:07:48.425Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "brandnamefhgfh" }
+2024-08-06T15:25:06.789Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T15:25:30.109Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T15:25:32.144Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T15:25:33.203Z [error]: E11000 duplicate key error collection: newbazaradmin.brands index: name_1 dup key: { name: "asd" }
+2024-08-06T17:36:36.068Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Brand"
+2024-08-06T17:36:36.265Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Brand"
+2024-08-06T18:23:57.308Z [error]: currentBrand is not defined
