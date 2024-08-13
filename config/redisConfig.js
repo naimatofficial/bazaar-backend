@@ -3,9 +3,10 @@ import dotenv from "dotenv";
 
 dotenv.config({ path: "env" });
 
-console.log(process.env.REDIS_URL);
-
-const redisClient = Redis.createClient({ url: process.env.REDIS_URL });
+const redisClient = Redis.createClient({
+	url: process.env.REDIS_URL,
+});
+// password: process.env.REDIS_PASSWORD,
 
 redisClient.on("error", (err) => console.log("Redis Client Error", err));
 

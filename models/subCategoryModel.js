@@ -37,11 +37,6 @@ subCategorySchema.pre(/^find/, function (next) {
 	next();
 });
 
-subCategorySchema.pre("save", function (next) {
-	this.slug = slugify(this.name, { lower: true });
-	next();
-});
-
 const SubCategory = mongoose.model("SubCategory", subCategorySchema);
 
 export default SubCategory;

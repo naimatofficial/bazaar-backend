@@ -1,4 +1,3 @@
-// routes/bannerRoutes.js
 import express from "express";
 import multer from "multer";
 import path from "path";
@@ -7,7 +6,6 @@ import {
 	getBanners,
 	updateBanner,
 	deleteBanner,
-	updatePublishStatus,
 	getBannerById,
 } from "../controllers/bannerController.js";
 
@@ -50,7 +48,5 @@ router
 	.get(getBannerById)
 	.put(upload.single("bannerImage"), updateBanner)
 	.delete(deleteBanner);
-
-router.route("/:id/publish").patch(updatePublishStatus);
 
 export default router;

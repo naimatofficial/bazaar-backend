@@ -1,6 +1,8 @@
+import redisClient from "../config/redisConfig.js";
 import APIFeatures from "../utils/apiFeatures.js";
 import AppError from "../utils/appError.js";
 import catchAsync from "../utils/catchAsync.js";
+import { getCacheKey } from "../utils/helpers.js";
 
 export const deleteOne = (Model) =>
 	catchAsync(async (req, res, next) => {
@@ -10,15 +12,18 @@ export const deleteOne = (Model) =>
 			return next(new AppError("No document found with that ID", 404));
 		}
 
+		// Invalidate the cache for this document
+		const cacheKey = getCacheKey(Model.modelName, req.params.id);
+		await redisClient.del(cacheKey);
+
 		res.status(204).json({
 			status: "success",
-			data: null,
+			doc: null,
 		});
 	});
 
 export const updateOne = (Model) =>
 	catchAsync(async (req, res, next) => {
-		console.log(req.body);
 		const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
 			new: true,
 			runValidators: true,
@@ -27,6 +32,10 @@ export const updateOne = (Model) =>
 		if (!doc) {
 			return next(new AppError("No document found with that ID", 404));
 		}
+
+		// Update cache
+		const cacheKey = getCacheKey(Model.modelName, req.params.id);
+		await redisClient.setEx(cacheKey, 3600, JSON.stringify(doc));
 
 		res.status(200).json({
 			status: "success",
@@ -38,6 +47,10 @@ export const createOne = (Model) =>
 	catchAsync(async (req, res, next) => {
 		const doc = await Model.create(req.body);
 
+		// Cache the new document
+		const cacheKey = getCacheKey(Model.modelName, doc._id.toString());
+		await redisClient.setEx(cacheKey, 3600, JSON.stringify(doc));
+
 		res.status(201).json({
 			status: "success",
 			doc,
@@ -46,14 +59,28 @@ export const createOne = (Model) =>
 
 export const getOne = (Model, popOptions) =>
 	catchAsync(async (req, res, next) => {
-		let query = Model.findById(req.params.id);
+		const cacheKey = getCacheKey(Model.modelName, req.params.id);
 
+		// Check cache first
+		const cachedDoc = await redisClient.get(cacheKey);
+		if (cachedDoc) {
+			return res.status(200).json({
+				status: "success",
+				doc: JSON.parse(cachedDoc),
+			});
+		}
+
+		// If not in cache, fetch from database
+		let query = Model.findById(req.params.id);
 		if (popOptions) query = query.populate(popOptions);
 		const doc = await query;
 
 		if (!doc) {
 			return next(new AppError("No document found with that ID", 404));
 		}
+
+		// Cache the result
+		await redisClient.setEx(cacheKey, 3600, JSON.stringify(doc));
 
 		res.status(200).json({
 			status: "success",
@@ -62,24 +89,30 @@ export const getOne = (Model, popOptions) =>
 	});
 
 export const getAll = (Model) =>
-	catchAsync(async (req, res) => {
-		// To allow nested GET reviews on tour
-		console.log("GET ALL", req.query);
-		let filter = {};
-		if (req?.params?.productId) filter = { tour: req.params.productId };
+	catchAsync(async (req, res, next) => {
+		const cacheKey = getCacheKey(Model.modelName, "", req.query);
 
-		// EXECUTE QUERY
-		const features = new APIFeatures(Model.find(filter), req.query)
+		// Check cache first
+		const cacheddoc = await redisClient.get(cacheKey);
+		if (cacheddoc) {
+			return res.status(200).json({
+				status: "success",
+				results: JSON.parse(cacheddoc).length,
+				doc: JSON.parse(cacheddoc),
+			});
+		}
+
+		// If not in cache, fetch from database
+		const features = new APIFeatures(Model.find(), req.query)
 			.filter()
 			.sort()
 			.fieldsLimit()
 			.paginate();
-
-		// for more detailed about query
-		// const doc = await features.query.explain();
 		const doc = await features.query;
 
-		// SEND RESPONSE
+		// Cache the result
+		await redisClient.setEx(cacheKey, 3600, JSON.stringify(doc));
+
 		res.status(200).json({
 			status: "success",
 			results: doc.length,
