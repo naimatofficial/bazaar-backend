@@ -1,19 +1,18 @@
-import express from 'express';
+import express from "express";
 import {
-    createCoupon,
-    getAllCoupons,
-    getCouponById,
-    updateCoupon,
-    updateCouponStatus,
-    deleteCoupon
-} from '../controllers/couponController.js';
+	createCoupon,
+	getAllCoupons,
+	getCouponById,
+	updateCoupon,
+	updateCouponStatus,
+	deleteCoupon,
+} from "../controllers/couponController.js";
 const router = express.Router();
 
-router.post('/', createCoupon);
-router.get('/', getAllCoupons);
-router.get('/:id', getCouponById);
-router.put('/:id', updateCoupon);
-router.patch('/:id/status', updateCouponStatus);
-router.delete('/:id', deleteCoupon);
+router.route("/").post(createCoupon).get(getAllCoupons);
+
+router.route("/:id").get(getCouponById).put(updateCoupon).delete(deleteCoupon);
+
+router.route("/:id/status").patch(updateCouponStatus);
 
 export default router;

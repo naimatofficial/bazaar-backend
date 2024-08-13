@@ -1,20 +1,22 @@
-import express from 'express';
+import express from "express";
 import {
-    createDealOfTheDay,
-    getAllDealsOfTheDay,
-    getDealOfTheDayById,
-    updateDealOfTheDay,
-    deleteDealOfTheDay,
-    updateDealOfTheDayStatus
-} from '../controllers/dealOfTheDayController.js';
+	createDealOfTheDay,
+	getAllDealsOfTheDay,
+	getDealOfTheDayById,
+	updateDealOfTheDay,
+	deleteDealOfTheDay,
+	updateDealOfTheDayStatus,
+} from "../controllers/dealOfTheDayController.js";
 
 const router = express.Router();
+router.route("/").post(createDealOfTheDay).get(getAllDealsOfTheDay);
 
-router.post('/', createDealOfTheDay);
-router.get('/', getAllDealsOfTheDay);
-router.get('/:id', getDealOfTheDayById);
-router.put('/:id', updateDealOfTheDay);
-router.delete('/:id', deleteDealOfTheDay);
-router.patch('/:id/status', updateDealOfTheDayStatus);
+router
+	.route("/:id")
+	.get(getDealOfTheDayById)
+	.put(updateDealOfTheDay)
+	.delete(deleteDealOfTheDay);
+
+router.route("/:id/status").patch(updateDealOfTheDayStatus);
 
 export default router;

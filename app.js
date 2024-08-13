@@ -3,8 +3,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import morgan from "morgan";
 import globalErrorHandler from "./controllers/errorController.js";
-import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
+import { fileURLToPath } from "url";
+import path, { dirname } from "path";
 
 // ROUTES
 
@@ -30,24 +30,25 @@ import coupons from "./routes/couponRoutes.js";
 import subscriber from "./routes/subscriberRoutes.js";
 import notification from "./routes/notificationRoutes.js";
 import { sendErrorResponse } from "./utils/responseHandler.js";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
 
 const app = express();
 
 // app.use(cors({
 //   origin: ['http://localhost:5173','http://localhost:5174',
-//      'https://baaazaaradmin.ecommercebaazaar.com/', 
+//      'https://baaazaaradmin.ecommercebaazaar.com/',
 //      'https://ecommercebaazaar.com/'],
 //   credentials: true,
 // }));
 
-
-app.use(cors({
-  origin: '*',  
-  credentials: true,
-}));
+app.use(
+	cors({
+		origin: "*",
+		credentials: true,
+	})
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -55,10 +56,10 @@ app.use(cookieParser());
 
 // Developing logging
 if (process.env.NODE_ENV === "development") {
-  app.use(morgan("dev"));
+	app.use(morgan("dev"));
 }
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // API ROUTES
 app.use("/api/users", userRoutes);
@@ -68,9 +69,9 @@ app.use("/api/brands", brandsRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/sub-categories", subCategoryRoutes);
 app.use("/api/sub-sub-categories", subSubCategoryRoutes);
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/products", productRoutes);
-app.use('/api/attributes', attributeRoutes);
+app.use("/api/attributes", attributeRoutes);
 app.use("/api/orders", oderRoutes);
 app.use("/api/refunds", refundRoutes);
 app.use("/api/colors", colorRoutes);
@@ -79,19 +80,17 @@ app.use("/api/banner", banner);
 app.use("/api/flash-deals", flashDeal);
 app.use("/api/deal-of-day", dealOfDay);
 app.use("/api/feature-deals", featuredeal);
-app.use("/api/coupons", coupons );
-app.use("/api/subscribers", subscriber );
-app.use("/api/notification",notification  );
-
-
+app.use("/api/coupons", coupons);
+app.use("/api/subscribers", subscriber);
+app.use("/api/notification", notification);
 
 app.use("/", (req, res) => {
-  res.send("Ecommerce Bazaar API is Running");
+	res.send("Ecommerce Bazaar API is Running");
 });
 
 // Unhandled Routes Handling Middleware
 app.all("*", (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on this server.`, 404));
+	next(new AppError(`Can't find ${req.originalUrl} on this server.`, 404));
 });
 
 // GLOBAL ERROR HANDLING MIDDLEWARE

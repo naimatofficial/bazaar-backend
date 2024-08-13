@@ -184,3 +184,5 @@
 2024-08-06T17:36:36.068Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Brand"
 2024-08-06T17:36:36.265Z [error]: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Brand"
 2024-08-06T18:23:57.308Z [error]: currentBrand is not defined
+2024-08-12T11:13:09.849Z [error]: Schema hasn't been registered for model "SubSubCategory".
+Use mongoose.model(name, schema)

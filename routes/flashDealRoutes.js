@@ -1,60 +1,61 @@
-import express from 'express';
-import multer from 'multer';
+import express from "express";
+import multer from "multer";
 import {
-    createFlashDeal,
-    getFlashDeals,
-    updateFlashDeal,
-    addProductToFlashDeal,
-    updateFlashDealStatus,
-    updatePublishStatus,
-    deleteFlashDeal,
-    getFlashDealById,
-    removeProductFromFlashDeal,
-  
- 
-} from '../controllers/flashDealController.js';
+	createFlashDeal,
+	getFlashDeals,
+	updateFlashDeal,
+	addProductToFlashDeal,
+	updateFlashDealStatus,
+	updatePublishStatus,
+	deleteFlashDeal,
+	getFlashDealById,
+	removeProductFromFlashDeal,
+} from "../controllers/flashDealController.js";
 
 const router = express.Router();
 
-
 // Set up multer for file uploads
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads/');
-    },
-    filename: (req, file, cb) => {
-        cb(null, `${Date.now()}-${file.originalname}`);
-    }
+	destination: (req, file, cb) => {
+		cb(null, "uploads/");
+	},
+	filename: (req, file, cb) => {
+		cb(null, `${Date.now()}-${file.originalname}`);
+	},
 });
 
 const upload = multer({
-    storage,
-    limits: { fileSize: 10 * 1024 * 1024 } // 10 MB limit
+	storage,
+	limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
 });
 
 // Middleware to log file uploads
 router.use((req, res, next) => {
-    if (req.file) {
-        console.log('Uploaded file:', req.file);
-    }
-    next();
+	if (req.file) {
+		console.log("Uploaded file:", req.file);
+	}
+	next();
 });
 
+router
+	.route("/")
+	.post(upload.single("image"), createFlashDeal)
+	.get(getFlashDeals);
 
-// Routes for flash deals
-router.post('/', upload.single('image'), createFlashDeal);
-router.get('/', getFlashDeals);
+router
+	.route("/:id")
+	.get(getFlashDealById)
+	.put(upload.single("image"), updateFlashDeal)
+	.delete(deleteFlashDeal);
 
-router.get('/:id', getFlashDealById);
-router.put('/:id', upload.single('image'), updateFlashDeal);
-router.put('/:id/add-product', addProductToFlashDeal);
-router.delete('/:id/remove-product/:productId', removeProductFromFlashDeal);
+router.route("/:id/add-product").put(addProductToFlashDeal);
 
-router.put('/:id', upload.single('image'), updateFlashDeal);
-router.put('/:id/add-product', addProductToFlashDeal);
+router
+	.route("/:id/remove-product/:productId")
+	.delete(removeProductFromFlashDeal);
 
-router.patch('/:id/status', updateFlashDealStatus);
-router.patch('/:id/update-publish', updatePublishStatus);
-router.delete('/:id', deleteFlashDeal);
+router.route("/:id/status").patch(updateFlashDealStatus);
+
+router.route("/:id/update-publish").patch(updatePublishStatus);
 
 export default router;

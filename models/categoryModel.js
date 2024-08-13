@@ -10,15 +10,28 @@ const categorySchema = new mongoose.Schema(
 		},
 		logo: {
 			type: String,
-		
 		},
 		priority: Number,
-		slug: String,
 	},
 	{
+		toJSON: { virtuals: true },
+		toObject: { virtuals: true },
 		timestamps: true,
 	}
 );
+
+// Virtual to count products associated with the category
+categorySchema.virtual("productCount", {
+	ref: "Product",
+	localField: "_id",
+	foreignField: "category",
+	// This tells mongoose to return a count instead of the documents
+	count: true,
+});
+
+categorySchema.virtual("slug").get(function () {
+	return slugify(this.name, { lower: true });
+});
 
 categorySchema.pre("save", function (next) {
 	if (this.isModified("name")) {

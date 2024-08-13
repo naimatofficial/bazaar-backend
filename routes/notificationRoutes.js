@@ -1,36 +1,43 @@
-import express from 'express';
-import multer from 'multer';
-import path from 'path';
+import express from "express";
+import multer from "multer";
+import path from "path";
 import {
-  getAllNotifications,
-  getNotificationById,
-  createNotification,
-  updateNotification,
-  deleteNotification,
-  searchNotifications,
-  incrementNotificationCount,
-} from '../controllers/notificationController.js';
+	getAllNotifications,
+	getNotificationById,
+	createNotification,
+	updateNotification,
+	deleteNotification,
+	searchNotifications,
+	incrementNotificationCount,
+} from "../controllers/notificationController.js";
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/');
-  },
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname);
-    cb(null, Date.now() + ext); 
-  }
+	destination: (req, file, cb) => {
+		cb(null, "uploads/");
+	},
+	filename: (req, file, cb) => {
+		const ext = path.extname(file.originalname);
+		cb(null, Date.now() + ext);
+	},
 });
 
 const upload = multer({ storage });
 
 const router = express.Router();
 
-router.get('/', getAllNotifications);
-router.get('/search', searchNotifications);
-router.get('/:id', getNotificationById);
-router.post('/', upload.single('image'), createNotification);
-router.put('/:id', upload.single('image'), updateNotification);
-router.put('/:id/increment', incrementNotificationCount);
-router.delete('/:id', deleteNotification);
+router
+	.route("/")
+	.get(getAllNotifications)
+	.post(upload.single("image"), createNotification);
+
+router.route("/search").get(searchNotifications);
+
+router
+	.route("/:id")
+	.get(getNotificationById)
+	.put(upload.single("image"), updateNotification)
+	.delete(deleteNotification);
+
+router.route("/:id/increment").put(incrementNotificationCount);
 
 export default router;

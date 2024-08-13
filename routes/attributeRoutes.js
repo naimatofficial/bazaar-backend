@@ -1,20 +1,19 @@
-import express from 'express';
+import express from "express";
 import {
-    createAttribute,
-    getAttributes,
-    getAttributeById,
-    updateAttribute,
-    deleteAttribute,
-
-    
-} from '../controllers/attributeController.js';
+	createAttribute,
+	getAttributes,
+	getAttributeById,
+	updateAttribute,
+	deleteAttribute,
+} from "../controllers/attributeController.js";
 
 const router = express.Router();
 
-router.post('/', createAttribute);
-router.get('/', getAttributes);
-router.get('/:id', getAttributeById);
-router.put('/:id', updateAttribute);
-router.delete('/:id', deleteAttribute);
+router.route("/").post(createAttribute).get(getAttributes);
+router
+	.route("/:id")
+	.get(getAttributeById)
+	.put(updateAttribute)
+	.delete(deleteAttribute);
 
 export default router;

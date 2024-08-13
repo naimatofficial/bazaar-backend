@@ -19,12 +19,17 @@ const subSubCategorySchema = new mongoose.Schema(
 			ref: "SubCategory",
 		},
 		priority: Number,
-		slug: String,
 	},
 	{
+		toJSON: { virtuals: true },
+		toObject: { virtuals: true },
 		timestamps: true,
 	}
 );
+
+subSubCategorySchema.virtual("slug").get(function () {
+	return slugify(this.name, { lower: true });
+});
 
 subSubCategorySchema.pre(/^find/, function (next) {
 	this.populate({
@@ -42,6 +47,6 @@ subSubCategorySchema.pre("save", function (next) {
 	next();
 });
 
-const SubSubCategory = mongoose.model("subSubCategory", subSubCategorySchema);
+const SubSubCategory = mongoose.model("SubSubCategory", subSubCategorySchema);
 
 export default SubSubCategory;

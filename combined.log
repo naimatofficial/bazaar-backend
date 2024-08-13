@@ -1346,3 +1346,5 @@
 2024-08-06T18:56:50.353Z [info]: Cache hit for key: flashDeals
 2024-08-06T18:56:50.382Z [info]: Cache hit for key: flashDeals
 2024-08-07T06:49:06.778Z [info]: Cache hit for key: orders_list_{}
+2024-08-12T11:13:09.849Z [error]: Schema hasn't been registered for model "SubSubCategory".
+Use mongoose.model(name, schema)
