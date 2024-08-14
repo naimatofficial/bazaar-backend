@@ -34,10 +34,7 @@ subSubCategorySchema.virtual("slug").get(function () {
 subSubCategorySchema.pre(/^find/, function (next) {
 	this.populate({
 		path: "mainCategory subCategory",
-		select: "-__v -createdAt -updatedAt -mainCategory",
-		populate: {
-			path: "name",
-		},
+		select: "name",
 	});
 	next();
 });

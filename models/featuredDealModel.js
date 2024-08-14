@@ -1,8 +1,6 @@
-// models/FeatureDeal.js
-
 import mongoose from "mongoose";
 
-const featureDealSchema = new mongoose.Schema(
+const featuredDealSchema = new mongoose.Schema(
 	{
 		title: {
 			type: String,
@@ -35,7 +33,7 @@ const featureDealSchema = new mongoose.Schema(
 	{ timestamps: true }
 );
 
-featureDealSchema.pre(/^find/, function (next) {
+featuredDealSchema.pre(/^find/, function (next) {
 	this.populate({
 		path: "products",
 		select: "-__v -createdAt -updatedAt",
@@ -43,5 +41,5 @@ featureDealSchema.pre(/^find/, function (next) {
 	next();
 });
 
-const FeatureDeal = mongoose.model("FeatureDeal", featureDealSchema);
-export default FeatureDeal;
+const FeaturedDeal = mongoose.model("FeaturedDeal", featuredDealSchema);
+export default FeaturedDeal;

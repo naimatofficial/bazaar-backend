@@ -53,6 +53,7 @@ export const createOne = (Model) =>
 
 		res.status(201).json({
 			status: "success",
+
 			doc,
 		});
 	});
@@ -66,13 +67,14 @@ export const getOne = (Model, popOptions) =>
 		if (cachedDoc) {
 			return res.status(200).json({
 				status: "success",
+				cached: true,
 				doc: JSON.parse(cachedDoc),
 			});
 		}
 
 		// If not in cache, fetch from database
 		let query = Model.findById(req.params.id);
-		if (popOptions) query = query.populate(popOptions);
+		if (popOptions && popOptions.path) query = query.populate(popOptions);
 		const doc = await query;
 
 		if (!doc) {
@@ -84,11 +86,13 @@ export const getOne = (Model, popOptions) =>
 
 		res.status(200).json({
 			status: "success",
+			cached: false,
+
 			doc,
 		});
 	});
 
-export const getAll = (Model) =>
+export const getAll = (Model, popOptions) =>
 	catchAsync(async (req, res, next) => {
 		const cacheKey = getCacheKey(Model.modelName, "", req.query);
 
@@ -97,13 +101,22 @@ export const getAll = (Model) =>
 		if (cacheddoc) {
 			return res.status(200).json({
 				status: "success",
+				cached: true,
 				results: JSON.parse(cacheddoc).length,
 				doc: JSON.parse(cacheddoc),
 			});
 		}
 
+		// EXECUTE QUERY
+		let query = Model.find();
+
+		// If popOptions is provided, populate the query
+		if (popOptions && popOptions.path) {
+			query = query.populate(popOptions);
+		}
+
 		// If not in cache, fetch from database
-		const features = new APIFeatures(Model.find(), req.query)
+		const features = new APIFeatures(query, req.query)
 			.filter()
 			.sort()
 			.fieldsLimit()
@@ -115,6 +128,7 @@ export const getAll = (Model) =>
 
 		res.status(200).json({
 			status: "success",
+			cached: false,
 			results: doc.length,
 			doc,
 		});

@@ -186,3 +186,9 @@
 2024-08-06T18:23:57.308Z [error]: currentBrand is not defined
 2024-08-12T11:13:09.849Z [error]: Schema hasn't been registered for model "SubSubCategory".
 Use mongoose.model(name, schema)
+2024-08-14T05:28:45.773Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:30:59.147Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:31:44.604Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:32:52.020Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:33:41.978Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:35:57.587Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"

@@ -1348,3 +1348,22 @@
 2024-08-07T06:49:06.778Z [info]: Cache hit for key: orders_list_{}
 2024-08-12T11:13:09.849Z [error]: Schema hasn't been registered for model "SubSubCategory".
 Use mongoose.model(name, schema)
+2024-08-13T11:46:32.912Z [info]: Cache miss for key: featuredDeals
+2024-08-13T11:46:33.045Z [info]: Cache set for key: featuredDeals
+2024-08-13T11:47:01.807Z [info]: Cache hit for key: featuredDeals
+2024-08-14T04:26:49.794Z [info]: Cache hit for key: featuredDeals
+2024-08-14T04:26:53.249Z [info]: Cache hit for key: featuredDeals
+2024-08-14T04:58:45.931Z [info]: Cache hit for key: featuredDeals
+2024-08-14T05:28:45.715Z [info]: Cache miss for key: flashDeals
+2024-08-14T05:28:45.773Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:28:46.028Z [info]: Cache set for key: flashDeals
+2024-08-14T05:30:59.101Z [info]: Cache hit for key: flashDeals
+2024-08-14T05:30:59.147Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:31:44.570Z [info]: Cache hit for key: flashDeals
+2024-08-14T05:31:44.604Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:32:52.009Z [info]: Cache hit for key: flashDeals
+2024-08-14T05:32:52.020Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:33:41.969Z [info]: Cache hit for key: flashDeals
+2024-08-14T05:33:41.978Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T05:35:57.543Z [info]: Cache hit for key: flashDeals
+2024-08-14T05:35:57.587Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"

@@ -15,6 +15,7 @@ const bannerSchema = new mongoose.Schema(
 		url: {
 			type: String,
 			required: [true, "Please provide url."],
+			unique: true,
 		},
 		bannerImage: {
 			type: String,

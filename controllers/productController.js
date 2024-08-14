@@ -9,6 +9,7 @@ import { populateProductDetails } from "../utils/productHelper.js";
 import { buildFilterQuery, buildSortOptions } from "../utils/filterHelper.js";
 import { productValidationSchema } from "../validations/productValidation.js"; // Import Joi schema
 import Customer from "../models/customerModel.js";
+import { getAll, getOne } from "./handleFactory.js";
 
 // Create a new product
 export const createProduct = async (req, res) => {
@@ -130,83 +131,62 @@ export const updateProductImages = async (req, res) => {
 	}
 };
 
-export const getAllProducts = async (req, res) => {
-	try {
-		const { priceRange, sort, order = "asc", page = 1, limit = 10 } = req.query;
+// export const getAllProducts = async (req, res) => {
+// 	try {
+// 		const { priceRange, sort, order = "asc", page = 1, limit = 10 } = req.query;
 
-		let query = buildFilterQuery(req.query);
+// 		let query = buildFilterQuery(req.query);
 
-		if (priceRange) {
-			const [minPrice, maxPrice] = priceRange.split("-").map(Number);
-			query.price = { $gte: minPrice, $lte: maxPrice };
-		}
+// 		if (priceRange) {
+// 			const [minPrice, maxPrice] = priceRange.split("-").map(Number);
+// 			query.price = { $gte: minPrice, $lte: maxPrice };
+// 		}
 
-		let sortOptions = buildSortOptions(sort, order);
-		const cacheKey = `products_${JSON.stringify(req.query)}`;
-		const cachedProducts = await client.get(cacheKey);
-		if (cachedProducts) {
-			console.log("Returning cached products");
-			return sendSuccessResponse(res, JSON.parse(cachedProducts), 200);
-		}
+// 		let sortOptions = buildSortOptions(sort, order);
+// 		const cacheKey = `products_${JSON.stringify(req.query)}`;
+// 		const cachedProducts = await client.get(cacheKey);
+// 		if (cachedProducts) {
+// 			console.log("Returning cached products");
+// 			return sendSuccessResponse(res, JSON.parse(cachedProducts), 200);
+// 		}
 
-		const skip = (page - 1) * limit;
-		const products = await Product.find(query)
-			.populate("category", "name")
-			.populate("subCategory", "name")
-			.populate("brand", "name")
-			.populate("colors", "name")
-			.populate("attributes", "name")
-			.sort(sortOptions)
-			.skip(skip)
-			.limit(parseInt(limit));
+// 		const skip = (page - 1) * limit;
+// 		const products = await Product.find(query)
+// 			.populate("category", "name")
+// 			.populate("subCategory", "name")
+// 			.populate("brand", "name")
+// 			.populate("colors", "name")
+// 			.populate("attributes", "name")
+// 			.sort(sortOptions)
+// 			.skip(skip)
+// 			.limit(parseInt(limit));
 
-		const totalDocs = await Product.countDocuments(query);
-		const response = {
-			products,
-			totalDocs,
-			limit: parseInt(limit),
-			totalPages: Math.ceil(totalDocs / limit),
-			page: parseInt(page),
-			pagingCounter: skip + 1,
-			hasPrevPage: page > 1,
-			hasNextPage: page * limit < totalDocs,
-			prevPage: page > 1 ? page - 1 : null,
-			nextPage: page * limit < totalDocs ? page + 1 : null,
-		};
+// 		const totalDocs = await Product.countDocuments(query);
+// 		const response = {
+// 			products,
+// 			totalDocs,
+// 			limit: parseInt(limit),
+// 			totalPages: Math.ceil(totalDocs / limit),
+// 			page: parseInt(page),
+// 			pagingCounter: skip + 1,
+// 			hasPrevPage: page > 1,
+// 			hasNextPage: page * limit < totalDocs,
+// 			prevPage: page > 1 ? page - 1 : null,
+// 			nextPage: page * limit < totalDocs ? page + 1 : null,
+// 		};
 
-		await client.set(cacheKey, JSON.stringify(response), "EX", 3600); // Cache for 1 hour
+// 		await client.set(cacheKey, JSON.stringify(response), "EX", 3600); // Cache for 1 hour
 
-		// console.log('Returning products from database');
-		sendSuccessResponse(res, response, 200);
-	} catch (error) {
-		// console.error('Error fetching products:', error);
-		sendErrorResponse(res, error);
-	}
-};
+// 		// console.log('Returning products from database');
+// 		sendSuccessResponse(res, response, 200);
+// 	} catch (error) {
+// 		// console.error('Error fetching products:', error);
+// 		sendErrorResponse(res, error);
+// 	}
+// };
+export const getAllProducts = getAll(Product);
 
-export const getProductById = async (req, res) => {
-	try {
-		const productId = req.params.id;
-		const cacheKey = `product_${productId}`;
-		const cachedProduct = await client.get(cacheKey);
-
-		if (cachedProduct) {
-			return sendSuccessResponse(res, 200, JSON.parse(cachedProduct));
-		}
-
-		const product = await populateProductDetails(Product.findById(productId));
-
-		if (!product) {
-			return res.status(404).json({ message: "Product not found" });
-		}
-
-		await client.set(cacheKey, JSON.stringify(product), "EX", 3600);
-		sendSuccessResponse(res, product, 200);
-	} catch (error) {
-		sendErrorResponse(res, error);
-	}
-};
-
+export const getProductById = getOne(Product);
 // Delete a Product
 export const deleteProduct = async (req, res) => {
 	try {

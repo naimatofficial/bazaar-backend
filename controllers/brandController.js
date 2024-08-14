@@ -4,6 +4,7 @@ import {
 	sendSuccessResponse,
 	sendErrorResponse,
 } from "../utils/responseHandler.js";
+import { getAll } from "./handleFactory.js";
 
 // Create a new brand
 export const createBrand = async (req, res) => {
@@ -40,58 +41,60 @@ export const createBrand = async (req, res) => {
 };
 
 // Get all brands with optional search and status filter
-export const getBrands = async (req, res) => {
-	try {
-		const { name, status } = req.query;
-		const cacheKey = `all_brands${name ? `:name:${name}` : ""}${
-			status ? `:status:${status}` : ""
-		}`;
+// export const getBrands = async (req, res) => {
+// 	try {
+// 		const { name, status } = req.query;
+// 		const cacheKey = `all_brands${name ? `:name:${name}` : ""}${
+// 			status ? `:status:${status}` : ""
+// 		}`;
 
-		// Check cache first
-		let cacheData = await client.get(cacheKey);
-		if (cacheData) {
-			try {
-				cacheData = JSON.parse(cacheData);
-				if (Array.isArray(cacheData)) {
-					console.log(
-						`[CACHE] Retrieved brands from cache with key: ${cacheKey}`
-					);
-					return sendSuccessResponse(
-						res,
-						cacheData,
-						"Brands fetched successfully"
-					);
-				}
-			} catch (error) {
-				console.error(`[CACHE] Error parsing cached data: ${error.message}`);
-			}
-		}
+// 		// Check cache first
+// 		let cacheData = await client.get(cacheKey);
+// 		if (cacheData) {
+// 			try {
+// 				cacheData = JSON.parse(cacheData);
+// 				if (Array.isArray(cacheData)) {
+// 					console.log(
+// 						`[CACHE] Retrieved brands from cache with key: ${cacheKey}`
+// 					);
+// 					return sendSuccessResponse(
+// 						res,
+// 						cacheData,
+// 						"Brands fetched successfully"
+// 					);
+// 				}
+// 			} catch (error) {
+// 				console.error(`[CACHE] Error parsing cached data: ${error.message}`);
+// 			}
+// 		}
 
-		// Fetch from the database
-		const searchCriteria = {};
-		if (name) {
-			searchCriteria.name = new RegExp(name, "i");
-		}
-		if (status) {
-			searchCriteria.status = status;
-		}
+// 		// Fetch from the database
+// 		const searchCriteria = {};
+// 		if (name) {
+// 			searchCriteria.name = new RegExp(name, "i");
+// 		}
+// 		if (status) {
+// 			searchCriteria.status = status;
+// 		}
 
-		const brands = await Brand.find(searchCriteria);
+// 		const brands = await Brand.find(searchCriteria);
 
-		// Cache the result
-		if (brands && brands.length > 0) {
-			await client.set(cacheKey, JSON.stringify(brands));
-			console.log(`[CACHE] Cached brands with key: ${cacheKey}`);
-		} else {
-			console.log(`[DB] No brands found for search criteria.`);
-		}
+// 		// Cache the result
+// 		if (brands && brands.length > 0) {
+// 			await client.set(cacheKey, JSON.stringify(brands));
+// 			console.log(`[CACHE] Cached brands with key: ${cacheKey}`);
+// 		} else {
+// 			console.log(`[DB] No brands found for search criteria.`);
+// 		}
 
-		sendSuccessResponse(res, brands, "Brands fetched successfully");
-	} catch (error) {
-		console.error(`[ERROR] Error fetching brands: ${error.message}`);
-		sendErrorResponse(res, error);
-	}
-};
+// 		sendSuccessResponse(res, brands, "Brands fetched successfully");
+// 	} catch (error) {
+// 		console.error(`[ERROR] Error fetching brands: ${error.message}`);
+// 		sendErrorResponse(res, error);
+// 	}
+// };
+
+export const getBrands = getAll(Brand, { path: "productCount" });
 
 // Get a brand by ID
 export const getBrandById = async (req, res) => {

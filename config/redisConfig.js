@@ -12,6 +12,6 @@ redisClient.on("error", (err) => console.log("Redis Client Error", err));
 
 await redisClient.connect();
 
-console.log("Redis cache database connected...");
+console.log("Redis cache database connected..");
 
 export default redisClient;

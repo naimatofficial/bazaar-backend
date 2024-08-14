@@ -10,7 +10,7 @@ const dealOfTheDaySchema = new mongoose.Schema(
 		title: { type: String, required: true },
 		status: {
 			type: String,
-			enum: ["active", "expired", "inactive"], // Valid statuses
+			enum: ["active", "expired", "inactive"],
 			default: "inactive",
 		},
 	},

@@ -11,8 +11,8 @@ const reviewSchema = new mongoose.Schema(
 		rating: { type: Number, required: true, min: 1, max: 5 },
 		status: {
 			type: String,
-			enum: ["Active", "Inactive"],
-			default: "Active",
+			enum: ["active", "inactive"],
+			default: "active",
 		},
 	},
 	{ timestamps: true }
@@ -127,19 +127,19 @@ const productSchema = new mongoose.Schema(
 productSchema.pre(/^find/, function (next) {
 	this.populate({
 		path: "category",
-		select: "-__v -createdAt -updatedAt",
+		select: "name",
 	})
 		.populate({
 			path: "brand",
-			select: "-__v -createdAt -updatedAt",
+			select: "name",
 		})
 		.populate({
 			path: "subCategory",
-			select: "-__v -createdAt -updatedAt",
+			select: "name",
 		})
 		.populate({
 			path: "subSubCategory",
-			select: "-__v -createdAt -updatedAt",
+			select: "name",
 		});
 	next();
 });

@@ -10,6 +10,7 @@ const categorySchema = new mongoose.Schema(
 		},
 		logo: {
 			type: String,
+			required: [true, "Please provide category logo."],
 		},
 		priority: Number,
 	},
@@ -31,24 +32,6 @@ categorySchema.virtual("productCount", {
 
 categorySchema.virtual("slug").get(function () {
 	return slugify(this.name, { lower: true });
-});
-
-categorySchema.pre("save", function (next) {
-	if (this.isModified("name")) {
-		this.slug = slugify(this.name, { lower: true });
-		console.log(`Slug updated to: ${this.slug}`);
-	}
-	next();
-});
-
-categorySchema.pre("findByIdAndUpdate", function (next) {
-	const update = this.getUpdate();
-	if (update.name) {
-		update.slug = slugify(update.name, { lower: true });
-		this.setUpdate(update);
-		console.log(`Slug updated to: ${update.slug}`);
-	}
-	next();
 });
 
 const Category = mongoose.model("Category", categorySchema);
