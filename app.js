@@ -75,7 +75,7 @@ app.use("/api/attributes", attributeRoutes);
 app.use("/api/orders", oderRoutes);
 app.use("/api/refunds", refundRoutes);
 app.use("/api/colors", colorRoutes);
-app.use("/api/whishlist", whishlist);
+app.use("/api/wishlists", whishlist);
 app.use("/api/banners", banner);
 app.use("/api/flash-deals", flashDeal);
 app.use("/api/deal-of-day", dealOfDay);

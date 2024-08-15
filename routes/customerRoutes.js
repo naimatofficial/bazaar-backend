@@ -28,8 +28,8 @@ router
 
 router
 	.route("/:id")
-	.get(protect, getCustomer)
-	.put(protect, restrictTo("admin", "customer"), updateCustomer)
-	.delete(protect, restrictTo("admin", "customer"), deleteCustomer);
+	.get(getCustomer)
+	.put(updateCustomer)
+	.delete(deleteCustomer);
 
 export default router;

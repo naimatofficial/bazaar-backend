@@ -1367,3 +1367,85 @@ Use mongoose.model(name, schema)
 2024-08-14T05:33:41.978Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
 2024-08-14T05:35:57.543Z [info]: Cache hit for key: flashDeals
 2024-08-14T05:35:57.587Z [error]: Cast to ObjectId failed for value "latest-product" (type string) at path "_id" for model "Product"
+2024-08-14T07:01:24.397Z [info]: Cache hit for key: flashDeals
+2024-08-14T07:02:58.320Z [info]: Cache hit for key: flashDeals
+2024-08-14T07:20:15.849Z [info]: Cache hit for key: flashDeals
+2024-08-14T07:21:07.942Z [info]: Cache hit for key: flashDeals
+2024-08-14T09:55:57.111Z [error]: No document found with that ID
+2024-08-14T09:56:50.543Z [error]: No document found with that ID
+2024-08-14T09:56:56.052Z [error]: No document found with that ID
+2024-08-14T09:56:58.389Z [error]: No document found with that ID
+2024-08-14T09:57:37.094Z [error]: Bad control character in string literal in JSON at position 29
+2024-08-14T09:57:46.597Z [error]: Invalid input data: Please provide color hexCode.
+2024-08-14T09:58:20.418Z [error]: ValidationError: Color validation failed: hexCode: Please provide color hexCode.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-14T09:59:48.226Z [error]: ValidationError: Color validation failed: hexCode: Please provide color hexCode.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-14T10:00:12.472Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:81:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-14T10:05:41.539Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:12:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-14T10:05:57.288Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:33:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-14T10:09:16.399Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:81:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-14T10:26:58.823Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:81:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-15T05:57:03.157Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:28:4
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:421:3)
+2024-08-15T05:57:34.003Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:28:4
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:421:3)
+2024-08-15T05:57:40.924Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:28:4
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:421:3)
+2024-08-15T05:58:08.176Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:81:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-15T06:15:33.718Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:28:4
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)

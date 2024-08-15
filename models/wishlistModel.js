@@ -7,7 +7,12 @@ const wishlistSchema = new mongoose.Schema(
 			ref: "Customer",
 			required: true,
 		},
-		products: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
+		products: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "Product",
+			},
+		],
 	},
 	{ timestamps: true }
 );
