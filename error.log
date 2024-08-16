@@ -270,3 +270,9 @@ Use mongoose.model(name, schema)
     at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
     at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
     at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+2024-08-15T06:19:14.989Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:14:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-15T06:20:44.934Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:14:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
