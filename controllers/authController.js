@@ -5,6 +5,9 @@ import AppError from './../utils/appError.js'
 import { loginService } from '../services/authService.js'
 import Vendor from '../models/vendorModel.js'
 import Customer from '../models/customerModel.js'
+import { getCacheKey } from '../utils/helpers.js'
+import redisClient from '../config/redisConfig.js'
+import { checkFields } from './handleFactory.js'
 
 const createSendToken = catchAsync(async (user, statusCode, res) => {
     // loginService is Redis database to store the token in cache
@@ -55,13 +58,23 @@ export const login = catchAsync(async (req, res, next) => {
 })
 
 export const signup = catchAsync(async (req, res, next) => {
-    const { name, email, password } = req.body
+    const data = checkFields(User, req, next)
+
+    console.log(data)
+
+    const { name, email, password } = data
 
     const newUser = await User.create({
         name,
         email,
         password,
     })
+
+    console.log(newUser)
+
+    // delete pervious cache
+    const cacheKey = getCacheKey(User, '', req.query)
+    await redisClient.del(cacheKey)
 
     createSendToken(newUser, 201, res)
 })
@@ -99,9 +112,13 @@ export const loginCustomer = catchAsync(async (req, res, next) => {
 })
 
 export const signupCustomer = catchAsync(async (req, res, next) => {
-    // const { firstName, lastName, phoneNumber, email, password } = req.body;
-    const newCustomer = Customer.create(req.body)
-    console.log(newCustomer)
+    const data = checkFields(Customer, req, next)
+
+    const newCustomer = Customer.create(data)
+
+    // delete pervious cache
+    const cacheKey = getCacheKey(Customer, '', req.query)
+    await redisClient.del(cacheKey)
 
     createSendToken(newCustomer, 201, res)
 })
@@ -126,7 +143,12 @@ export const VendorLogin = catchAsync(async (req, res, next) => {
 })
 
 export const VendorSignup = catchAsync(async (req, res, next) => {
-    const newVendor = await Vendor.create(req.body)
+    const data = checkFields(Vendor, req, next)
+    const newVendor = await Vendor.create(data)
+
+    // delete pervious cache
+    const cacheKey = getCacheKey(Vendor, '', req.query)
+    await redisClient.del(cacheKey)
 
     createSendToken(newVendor, 201, res)
 })

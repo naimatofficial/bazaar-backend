@@ -1,81 +1,99 @@
+import mongoose from 'mongoose'
 
-import mongoose from 'mongoose';
-
-const orderSchema = new mongoose.Schema({
-    customer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Customer',
-        required: true
-    },
-    vendor: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Vendor',
-        required: true
-    }],
-    
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product',
-        required: true
-    }],
-    orderStatus: {
-        type: String,
-        enum: [
-            'pending',
-            'confirmed',
-            'packaging',
-            'out_for_delivery',
-            'delivered',
-            'failed_to_deliver',
-            'returned',
-            'canceled'
+const orderSchema = new mongoose.Schema(
+    {
+        customer: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Customer',
+            required: [true, 'Please provide customer.'],
+        },
+        vendors: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Vendor',
+                required: [true, 'Please provide vendor.'],
+            },
         ],
-        default: 'pending'
-    },
-    totalAmount: {
-        type: Number,
-        required: true
-    },
-    paymentMethod: {
-        type: String,
-        enum: ['credit_card', 'paypal', 'bank_transfer', 'cash_on_delivery'],
-        required: true
-    },
-    shippingAddress: {
-        type: {
-            address: String,
-            city: String,
-            state: String,
-            zipCode: String,
-            country: String
+        products: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Product',
+                required: [true, 'Please provide product.'],
+            },
+        ],
+        orderStatus: {
+            type: String,
+            enum: [
+                'pending',
+                'confirmed',
+                'packaging',
+                'out_for_delivery',
+                'delivered',
+                'failed_to_deliver',
+                'returned',
+                'canceled',
+            ],
+            default: 'pending',
         },
-        required: true
-    },
-    billingAddress: {
-        type: {
-            address: String,
-            city: String,
-            state: String,
-            zipCode: String,
-            country: String
+        totalAmount: {
+            type: Number,
+            required: [true, 'Please provide total amount.'],
         },
-        required: true
+        paymentMethod: {
+            type: String,
+            enum: [
+                'credit_card',
+                'paypal',
+                'bank_transfer',
+                'cash_on_delivery',
+            ],
+            required: true,
+        },
+        shippingAddress: {
+            type: {
+                address: String,
+                city: String,
+                state: String,
+                zipCode: String,
+                country: String,
+            },
+            required: [true, 'Please provide shipping address.'],
+        },
+        billingAddress: {
+            type: {
+                address: String,
+                city: String,
+                state: String,
+                zipCode: String,
+                country: String,
+            },
+            required: [true, 'Please provide billing address.'],
+        },
+        orderNote: {
+            type: String,
+        },
     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-    updatedAt: {
-        type: Date,
-        default: Date.now
+    {
+        timestamps: true,
     }
-});
+)
 
-orderSchema.pre('save', function (next) {
-    this.updatedAt = Date.now();
-    next();
-});
+orderSchema.pre(/^find/, function (next) {
+    this.populate({
+        path: 'vendors',
+        select: '-__v -createdAt -updatedAt -role -status',
+    })
+        .populate({
+            path: 'products',
+            select: '-__v -createdAt -updatedAt',
+        })
+        .populate({
+            path: 'customer',
+            select: '-__v -createdAt -updatedAt -role -status -referCode',
+        })
+    next()
+})
 
-const Order = mongoose.models.Order || mongoose.model('Order', orderSchema);
+const Order = mongoose.model('Order', orderSchema)
 
-export default Order;
+export default Order

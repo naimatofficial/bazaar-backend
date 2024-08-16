@@ -1539,3 +1539,198 @@ Use mongoose.model(name, schema)
     at customerSchema.methods.correctPassword (file:///F:/Side%20Projects/bazaar-backend/models/customerModel.js:72:22)
     at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:91:28
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T06:09:44.230Z [error]: JsonWebTokenError: jwt malformed
+    at module.exports (F:\Side Projects\bazaar-backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at node:internal/util:442:7
+    at new Promise (<anonymous>)
+    at node:internal/util:428:12
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:35:45
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+2024-08-16T06:10:07.210Z [error]: Error: Incorrect email or password
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:50:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T06:10:25.839Z [error]: Error: Incorrect email or password
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:94:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T06:10:50.835Z [error]: Error: Incorrect email or password
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:94:21
+2024-08-16T06:11:31.416Z [error]: Error: Illegal arguments: object, string
+    at _async (F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:286:46)
+    at F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:307:17
+    at new Promise (<anonymous>)
+    at bcrypt.compare (F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:306:20)
+    at customerSchema.methods.correctPassword (file:///F:/Side%20Projects/bazaar-backend/models/customerModel.js:72:22)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:93:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T06:12:20.175Z [error]: Error: Illegal arguments: object, string
+    at _async (F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:286:46)
+    at F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:307:17
+    at new Promise (<anonymous>)
+    at bcrypt.compare (F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:306:20)
+    at customerSchema.methods.correctPassword (file:///F:/Side%20Projects/bazaar-backend/models/customerModel.js:72:22)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:93:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T06:21:34.286Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:111:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T06:28:21.300Z [info]: Cache miss for key: orders_list_{}
+2024-08-16T06:28:21.396Z [info]: Cache set for key: orders_list_{}
+2024-08-16T06:28:33.585Z [info]: Cache hit for key: orders_list_{}
+2024-08-16T06:28:44.311Z [info]: Cache hit for key: orders_list_{}
+2024-08-16T06:28:45.657Z [info]: Cache hit for key: orders_list_{}
+2024-08-16T06:56:38.668Z [error]: ReferenceError: AppError is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:95:14
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-08-16T06:56:42.907Z [error]: ReferenceError: AppError is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:95:14
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-08-16T07:12:25.053Z [error]: ReferenceError: next is not defined
+    at checkFields (file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:18:9)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:82:22
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+2024-08-16T07:14:06.686Z [error]: Error: These fields are not allowed: vendor
+    at checkFields (file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:19:13)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:82:22
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+2024-08-16T07:14:15.701Z [error]: Error: These fields are not allowed: vendor
+    at checkFields (file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:19:13)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:82:22
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+2024-08-16T08:54:00.527Z [error]: JsonWebTokenError: jwt malformed
+    at module.exports (F:\Side Projects\bazaar-backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at node:internal/util:442:7
+    at new Promise (<anonymous>)
+    at node:internal/util:428:12
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:35:45
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+2024-08-16T08:54:07.636Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:30:4
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+2024-08-16T08:54:27.237Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:30:4
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+2024-08-16T08:55:29.267Z [error]: Error: You do not have permission to perform this action.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:72:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:62:2
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T08:56:24.040Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:30:4
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:421:3)
+2024-08-16T09:21:05.952Z [error]: Error: These fields are not allowed: names
+    at checkFields (file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:19:13)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:61:18
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+2024-08-16T09:21:15.567Z [error]: MongoServerError: E11000 duplicate key error collection: store.users index: email_1 dup key: { email: "naimat@mail.com" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-16T09:22:58.378Z [error]: MongoServerError: E11000 duplicate key error collection: store.users index: email_1 dup key: { email: "naimat@mail.com" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-16T09:23:38.298Z [error]: MongoServerError: E11000 duplicate key error collection: store.users index: email_1 dup key: { email: "naimat@mail.com" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-16T09:24:16.572Z [error]: MongoServerError: E11000 duplicate key error collection: store.users index: email_1 dup key: { email: "naimat@mail.com" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-16T09:24:27.978Z [error]: MongoServerError: E11000 duplicate key error collection: store.users index: email_1 dup key: { email: "naimat@mail.com" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-16T09:25:41.526Z [error]: Duplicate field value "naimat@mail.com", please use another value.
+2024-08-16T09:30:11.090Z [error]: Duplicate field value , please use another value.
+2024-08-16T09:30:48.417Z [error]: Duplicate field value , please use another value.
+2024-08-16T09:30:58.667Z [error]: Invalid Token! Please log in again.
+2024-08-16T09:31:48.505Z [error]: Duplicate field value , please use another value.
+2024-08-16T09:31:57.057Z [error]: Duplicate field value , please use another value.
+2024-08-16T09:43:17.721Z [error]: Duplicate field value , please use another value.
+2024-08-16T09:44:23.580Z [error]: Duplicate field value , please use another value.
+2024-08-16T09:45:02.513Z [error]: Duplicate field value , please use another value.
+2024-08-16T09:45:18.661Z [error]: Invalid Token! Please log in again.
+2024-08-16T11:28:46.853Z [error]: AppError is not defined
