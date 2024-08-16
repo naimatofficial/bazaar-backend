@@ -1,7 +1,6 @@
 import logger from "./logger.js";
 // utils/responseHandler.js
 export const sendSuccessResponse = (res, data, message) => {
-	console.log(message);
 	res.status(200).json({
 		success: true,
 		message,

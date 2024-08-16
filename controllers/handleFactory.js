@@ -8,8 +8,6 @@ export const deleteOne = (Model) =>
 	catchAsync(async (req, res, next) => {
 		const doc = await Model.findByIdAndDelete(req.params.id);
 
-		console.log(req.query);
-
 		if (!doc) {
 			return next(new AppError("No document found with that ID", 404));
 		}
@@ -26,19 +24,48 @@ export const deleteOne = (Model) =>
 
 export const updateOne = (Model) =>
 	catchAsync(async (req, res, next) => {
-		const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
+		// Step 1: Get the allowed fields from the model schema
+		const allowedFields = Object.keys(Model.schema.paths);
+
+		// Step 2: Identify fields in req.body that are not in the allowedFields list
+		const extraFields = Object.keys(req.body).filter(
+			(field) => !allowedFields.includes(field)
+		);
+
+		// Step 3: If extra fields are found, send an error response
+		if (extraFields.length > 0) {
+			return next(
+				new AppError(
+					`These fields are not allowed: ${extraFields.join(", ")}`,
+					400
+				)
+			);
+		}
+
+		// Step 4: Proceed with filtering the valid fields
+		const filteredBody = Object.keys(req.body).reduce((obj, key) => {
+			if (allowedFields.includes(key)) {
+				obj[key] = req.body[key];
+			}
+			return obj;
+		}, {});
+
+		// Step 5: Perform the update operation
+		const doc = await Model.findByIdAndUpdate(req.params.id, filteredBody, {
 			new: true,
 			runValidators: true,
 		});
 
+		// Step 6: Handle case where the document was not found
 		if (!doc) {
 			return next(new AppError("No document found with that ID", 404));
 		}
 
-		// Update cache
+		// Step 7: Update cache
 		const cacheKey = getCacheKey(Model.modelName, "", req.query);
 		await redisClient.del(cacheKey);
 
+		// Step 8: Send the response
 		res.status(200).json({
 			status: "success",
 			doc,
@@ -76,6 +103,7 @@ export const getOne = (Model, popOptions) =>
 
 		// If not in cache, fetch from database
 		let query = Model.findById(req.params.id);
+
 		if (popOptions && popOptions.path) query = query.populate(popOptions);
 		const doc = await query;
 

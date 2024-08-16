@@ -9,7 +9,7 @@ import { populateProductDetails } from "../utils/productHelper.js";
 import { buildFilterQuery, buildSortOptions } from "../utils/filterHelper.js";
 import { productValidationSchema } from "../validations/productValidation.js"; // Import Joi schema
 import Customer from "../models/customerModel.js";
-import { getAll, getOne } from "./handleFactory.js";
+import { deleteOne, getAll, getOne } from "./handleFactory.js";
 
 // Create a new product
 export const createProduct = async (req, res) => {
@@ -188,26 +188,16 @@ export const getAllProducts = getAll(Product);
 
 export const getProductById = getOne(Product);
 // Delete a Product
-export const deleteProduct = async (req, res) => {
-	try {
-		const productId = req.params.id;
-		const product = await Product.findByIdAndDelete(productId);
-		if (!product) {
-			return res.status(404).json({ message: "Product not found" });
-		}
-		await client.del("all_products:*");
-		await client.del(`product_${productId}`);
-		sendSuccessResponse(res, product, "Product deleted successfully");
-	} catch (error) {
-		sendErrorResponse(res, error);
-	}
-};
+export const deleteProduct = deleteOne(Product);
 
+// update product
+// export const updateProduct = updateOne(Product)
 // Add a new review to a product
 export const addReview = async (req, res) => {
 	try {
+		console.log("review ");
 		const productId = req.params.productId;
-		const { customerId, reviewText, rating } = req.body;
+		const { customer: customerId, review, rating } = req.body;
 
 		const product = await Product.findById(productId);
 		if (!product) {
@@ -215,16 +205,18 @@ export const addReview = async (req, res) => {
 		}
 
 		const customer = await Customer.findById(customerId);
+
 		if (!customer) {
 			return res.status(404).json({ message: "Customer not found" });
 		}
 
 		product.reviews.push({
 			customer: customerId,
-			reviewText,
+			review,
 			rating,
-			createdAt: new Date(),
 		});
+
+		console.log(product);
 
 		await product.save();
 		await client.del(`product_${productId}`);

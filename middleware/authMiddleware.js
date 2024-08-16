@@ -5,11 +5,13 @@ import AppError from "./../utils/appError.js";
 import catchAsync from "./../utils/catchAsync.js";
 import User from "../models/userModel.js";
 import Vendor from "../models/vendorModel.js";
+import Customer from "../models/customerModel.js";
 
 const models = {
 	user: User,
 	admin: User,
 	vendor: Vendor,
+	customer: Customer,
 };
 
 export const protect = catchAsync(async (req, res, next) => {

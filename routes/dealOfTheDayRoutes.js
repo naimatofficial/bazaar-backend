@@ -5,7 +5,6 @@ import {
 	getDealOfTheDayById,
 	updateDealOfTheDay,
 	deleteDealOfTheDay,
-	updateDealOfTheDayStatus,
 } from "../controllers/dealOfTheDayController.js";
 
 const router = express.Router();
@@ -16,7 +15,5 @@ router
 	.get(getDealOfTheDayById)
 	.put(updateDealOfTheDay)
 	.delete(deleteDealOfTheDay);
-
-router.route("/:id/status").patch(updateDealOfTheDayStatus);
 
 export default router;

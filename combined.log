@@ -1455,3 +1455,87 @@ Use mongoose.model(name, schema)
 2024-08-15T06:20:44.934Z [error]: Error: No document found with that ID
     at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:14:16
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-15T06:37:57.414Z [info]: Cache miss for key: flashDeals
+2024-08-15T06:37:57.834Z [info]: Cache set for key: flashDeals
+2024-08-15T06:45:17.089Z [error]: flashDealValidationSchema is not defined
+2024-08-15T06:45:17.090Z [error]: flashDealValidationSchema is not defined
+2024-08-15T10:04:30.401Z [error]: Error: These fields are not allowed: name, logo
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:38:5
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+2024-08-15T10:05:41.413Z [error]: Error: These fields are not allowed: name, logo
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:38:5
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+2024-08-15T10:05:50.596Z [error]: Error: These fields are not allowed: name, logo
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:38:5
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+2024-08-15T10:05:55.873Z [error]: SyntaxError: Expected double-quoted property name in JSON at position 53
+    at JSON.parse (<anonymous>)
+    at parse (F:\Side Projects\bazaar-backend\node_modules\body-parser\lib\types\json.js:92:19)
+    at F:\Side Projects\bazaar-backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (F:\Side Projects\bazaar-backend\node_modules\raw-body\index.js:238:16)
+    at done (F:\Side Projects\bazaar-backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (F:\Side Projects\bazaar-backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2024-08-15T10:06:07.192Z [error]: Error: These fields are not allowed: name
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:38:5
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+2024-08-16T05:43:24.695Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:12:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T05:44:05.314Z [error]: Error: No document found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:111:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-16T05:51:45.831Z [error]: Error: Please provide email and password
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:85:15
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:175:3)
+2024-08-16T05:53:17.276Z [error]: Error: Illegal arguments: object, string
+    at _async (F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:286:46)
+    at F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:307:17
+    at new Promise (<anonymous>)
+    at bcrypt.compare (F:\Side Projects\bazaar-backend\node_modules\bcryptjs\dist\bcrypt.js:306:20)
+    at customerSchema.methods.correctPassword (file:///F:/Side%20Projects/bazaar-backend/models/customerModel.js:72:22)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/authController.js:91:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

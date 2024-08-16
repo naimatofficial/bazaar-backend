@@ -4,15 +4,15 @@ const featuredDealSchema = new mongoose.Schema(
 	{
 		title: {
 			type: String,
-			required: true,
+			required: [true, "Please provide title."],
 		},
 		startDate: {
 			type: Date,
-			required: true,
+			required: [true, "Please provide start date."],
 		},
 		endDate: {
 			type: Date,
-			required: true,
+			required: [true, "Please provide end date."],
 		},
 		status: {
 			type: String,

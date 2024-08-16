@@ -5,10 +5,19 @@ const reviewSchema = new mongoose.Schema(
 		customer: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Customer",
-			required: true,
+			required: [true, "Please provide customer id."],
 		},
-		reviewText: { type: String, required: true },
-		rating: { type: Number, required: true, min: 1, max: 5 },
+		review: {
+			type: String,
+			required: [true, "Please provide review."],
+		},
+		rating: {
+			type: Number,
+			required: [true, "Please provide rating."],
+			min: 1,
+			max: 5,
+			set: (val) => (Math.round(val * 10) / 10).toFixed(1),
+		},
 		status: {
 			type: String,
 			enum: ["active", "inactive"],

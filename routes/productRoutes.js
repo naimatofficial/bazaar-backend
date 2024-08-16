@@ -51,7 +51,7 @@ router.route("/limited-product").get(getLimitedStockedProducts);
 
 router.route("/:productId/sold").get(sellProduct);
 
-router.route("/:productId/update-product-image").get(updateProductImages);
+router.put("/:productId/update-product-image", updateProductImages);
 
 router.route("/:productId/reviews").post(addReview).get(getProductReviews);
 

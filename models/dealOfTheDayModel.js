@@ -2,24 +2,29 @@ import mongoose from "mongoose";
 
 const dealOfTheDaySchema = new mongoose.Schema(
 	{
-		productId: {
+		product: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Product",
-			required: true,
+			required: [true, "Please provide product"],
 		},
-		title: { type: String, required: true },
+		title: {
+			type: String,
+			required: [true, "Please provide title"],
+		},
 		status: {
 			type: String,
 			enum: ["active", "expired", "inactive"],
 			default: "inactive",
 		},
 	},
-	{ timestamps: true }
+	{
+		timestamps: true,
+	}
 );
 
 dealOfTheDaySchema.pre(/^find/, function (next) {
 	this.populate({
-		path: "productId",
+		path: "product",
 		select: "-__v -createdAt -updatedAt",
 	});
 	next();

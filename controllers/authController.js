@@ -1,133 +1,135 @@
-import User from "../models/userModel.js";
-import catchAsync from "../utils/catchAsync.js";
-import AppError from "./../utils/appError.js";
+import User from '../models/userModel.js'
+import catchAsync from '../utils/catchAsync.js'
+import AppError from './../utils/appError.js'
 
-import { loginService } from "../services/authService.js";
-import Vendor from "../models/vendorModel.js";
-import Customer from "../models/customerModel.js";
+import { loginService } from '../services/authService.js'
+import Vendor from '../models/vendorModel.js'
+import Customer from '../models/customerModel.js'
 
 const createSendToken = catchAsync(async (user, statusCode, res) => {
-	// loginService is Redis database to store the token in cache
-	const { accessToken } = await loginService(user);
+    // loginService is Redis database to store the token in cache
+    const { accessToken } = await loginService(user)
 
-	console.log(user);
+    console.log(user)
 
-	// set cookie options
-	const cookieOptions = {
-		expires: new Date(
-			Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
-		),
-		httpOnly: true,
-	};
+    // set cookie options
+    const cookieOptions = {
+        expires: new Date(
+            Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+        ),
+        httpOnly: true,
+    }
 
-	// In production mode: we set to secure = true
-	if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+    // In production mode: we set to secure = true
+    if (process.env.NODE_ENV === 'production') cookieOptions.secure = true
 
-	// do not show the password to client side
-	user.password = undefined;
+    // do not show the password to client side
+    user.password = undefined
 
-	res.cookie("jwt", accessToken, cookieOptions);
+    res.cookie('jwt', accessToken, cookieOptions)
 
-	res.status(statusCode).json({
-		status: "success",
-		accessToken,
-		user,
-	});
-});
+    res.status(statusCode).json({
+        status: 'success',
+        accessToken,
+        user,
+    })
+})
 
 export const login = catchAsync(async (req, res, next) => {
-	const { email, password } = req.body;
+    const { email, password } = req.body
 
-	// 1) Check if email and password exists
-	if (!email || !password) {
-		return next(new AppError("Please provide email and password", 400));
-	}
+    // 1) Check if email and password exists
+    if (!email || !password) {
+        return next(new AppError('Please provide email and password', 400))
+    }
 
-	// 2) Check the user exists && password is correct
-	const user = await User.findOne({ email }).select("+password");
+    // 2) Check the user exists && password is correct
+    const user = await User.findOne({ email }).select('+password')
 
-	if (!user || !(await user.correctPassword(password, user.password))) {
-		return next(new AppError("Incorrect email or password", 401));
-	}
+    if (!user || !(await user.correctPassword(password, user.password))) {
+        return next(new AppError('Incorrect email or password', 401))
+    }
 
-	// 3) If everything is Ok, then send the response to client
-	createSendToken(user, 200, res);
-});
+    // 3) If everything is Ok, then send the response to client
+    createSendToken(user, 200, res)
+})
 
 export const signup = catchAsync(async (req, res, next) => {
-	const { name, email, password } = req.body;
+    const { name, email, password } = req.body
 
-	const newUser = await User.create({
-		name,
-		email,
-		password,
-	});
+    const newUser = await User.create({
+        name,
+        email,
+        password,
+    })
 
-	createSendToken(newUser, 201, res);
-});
+    createSendToken(newUser, 201, res)
+})
 
 export const logout = catchAsync(async (req, res, next) => {
-	const user = req.user;
+    const user = req.user
 
-	// Clear the refreshToken cookie on the client
-	res.clearCookie("jwt");
+    // Clear the refreshToken cookie on the client
+    res.clearCookie('jwt')
 
-	res.status(200).json({
-		status: "success",
-		message: "Logout successfully",
-	});
-});
+    res.status(200).json({
+        status: 'success',
+        message: 'Logout successfully',
+    })
+})
 export const loginCustomer = catchAsync(async (req, res, next) => {
-	const { email, password } = req.body;
+    const { email, password } = req.body
 
-	// 1) Check if email and password exists
-	if (!email || !password) {
-		return next(new AppError("Please provide email and password", 400));
-	}
+    console.log(req.body)
 
-	// 2) Check the user exists && password is correct
-	const user = await Customer.findOne({ email }).select("+password");
+    // 1) Check if email and password exists
+    if (!email || !password) {
+        return next(new AppError('Please provide email and password', 400))
+    }
 
-	if (!user || !(await user.correctPassword(password, user.password))) {
-		return next(new AppError("Incorrect email or password", 401));
-	}
+    // 2) Check the user exists && password is correct
+    const user = await Customer.findOne({ email }).select('+password')
 
-	// 3) If everything is Ok, then send the response to client
-	createSendToken(user, 200, res);
-});
+    if (!user || !(await user.correctPassword(password, user.password))) {
+        return next(new AppError('Incorrect email or password', 401))
+    }
+
+    // 3) If everything is Ok, then send the response to client
+    createSendToken(user, 200, res)
+})
 
 export const signupCustomer = catchAsync(async (req, res, next) => {
-	// const { firstName, lastName, phoneNumber, email, password } = req.body;
-	const newCustomer = Customer.create(req.body);
-	console.log(newCustomer);
+    // const { firstName, lastName, phoneNumber, email, password } = req.body;
+    const newCustomer = Customer.create(req.body)
+    console.log(newCustomer)
 
-	createSendToken(newCustomer, 201, res);
-});
+    createSendToken(newCustomer, 201, res)
+})
 
 export const VendorLogin = catchAsync(async (req, res, next) => {
-	const { email, password } = req.body;
+    const { email, password } = req.body
 
-	// 1) Check if email and password exists
-	if (!email || !password) {
-		return next(new AppError("Please provide email and password", 400));
-	}
+    // 1) Check if email and password exists
+    if (!email || !password) {
+        return next(new AppError('Please provide email and password', 400))
+    }
 
-	// 2) Check the vendor exists && password is correct
-	const vendor = await Vendor.findOne({ email }).select("+password");
+    // 2) Check the vendor exists && password is correct
+    const vendor = await Vendor.findOne({ email }).select('+password')
 
-	if (!vendor || !(await vendor.correctPassword(password, vendor.password))) {
-		return next(new AppError("Incorrect email or password", 401));
-	}
+    if (!vendor || !(await vendor.correctPassword(password, vendor.password))) {
+        return next(new AppError('Incorrect email or password', 401))
+    }
 
-	// 3) If everything is Ok, then send the response to client
-	createSendToken(vendor, 200, res);
-});
+    // 3) If everything is Ok, then send the response to client
+    createSendToken(vendor, 200, res)
+})
 
 export const VendorSignup = catchAsync(async (req, res, next) => {
-	const newVendor = await Vendor.create(req.body);
+    const newVendor = await Vendor.create(req.body)
 
-	createSendToken(newVendor, 201, res);
-});
+    createSendToken(newVendor, 201, res)
+})
 
 // exports.forgotPassword = catchAsync(async (req, res, next) => {
 // 	// 1) Get user based on posted email
