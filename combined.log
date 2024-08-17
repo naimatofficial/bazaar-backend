@@ -1777,3 +1777,6 @@ Use mongoose.model(name, schema)
 2024-08-17T08:04:10.501Z [error]: AppError is not defined
 2024-08-17T08:04:11.744Z [error]: Invalid Token! Please log in again.
 2024-08-17T09:42:51.481Z [error]: AppError is not defined
+2024-08-17T10:19:44.553Z [error]: Invalid input data: Please provide a valid email address.
+2024-08-17T10:20:01.372Z [error]: Invalid input data: Please provide a valid email address.
+2024-08-17T10:23:07.584Z [error]: AppError is not defined
