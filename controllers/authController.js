@@ -13,8 +13,6 @@ const createSendToken = catchAsync(async (user, statusCode, res) => {
     // loginService is Redis database to store the token in cache
     const { accessToken } = await loginService(user)
 
-    console.log(user)
-
     // set cookie options
     const cookieOptions = {
         expires: new Date(
@@ -92,8 +90,6 @@ export const logout = catchAsync(async (req, res, next) => {
 })
 export const loginCustomer = catchAsync(async (req, res, next) => {
     const { email, password } = req.body
-
-    console.log(req.body)
 
     // 1) Check if email and password exists
     if (!email || !password) {

@@ -548,3 +548,46 @@ Use mongoose.model(name, schema)
 2024-08-16T09:45:02.513Z [error]: Duplicate field value , please use another value.
 2024-08-16T09:45:18.661Z [error]: Invalid Token! Please log in again.
 2024-08-16T11:28:46.853Z [error]: AppError is not defined
+2024-08-17T05:41:29.244Z [error]: AppError is not defined
+2024-08-17T05:41:38.431Z [error]: No document found with that ID
+2024-08-17T06:16:57.302Z [error]: Invalid _id: 666b99b8c33496e5f51d9cb65.
+2024-08-17T06:25:52.671Z [error]: You are not logged in! Please log in to get access.
+2024-08-17T06:26:03.564Z [error]: The token belonging to this user does no longer exist.
+2024-08-17T06:26:35.844Z [error]: The token belonging to this user does no longer exist.
+2024-08-17T06:37:50.997Z [error]: No document found with that ID
+2024-08-17T07:00:18.023Z [error]: Operation `customers.findOne()` buffering timed out after 10000ms
+2024-08-17T07:00:30.570Z [error]: Operation `customers.findOne()` buffering timed out after 10000ms
+2024-08-17T07:10:38.741Z [error]: wishlist is not defined
+2024-08-17T07:21:36.493Z [error]: No wishlist found with that product ID
+2024-08-17T07:22:54.339Z [error]: No wishlist found with that product ID
+2024-08-17T07:38:01.774Z [error]: getCacheKey is not defined
+2024-08-17T08:04:01.819Z [error]: Duplicate field value , please use another value.
+2024-08-17T08:04:02.017Z [error]: Incorrect email or password
+2024-08-17T08:04:02.081Z [error]: Invalid Token! Please log in again.
+2024-08-17T08:04:02.157Z [error]: Invalid Token! Please log in again.
+2024-08-17T08:04:02.235Z [error]: Invalid Token! Please log in again.
+2024-08-17T08:04:02.329Z [error]: Invalid Token! Please log in again.
+2024-08-17T08:04:03.980Z [error]: No document found with that ID
+2024-08-17T08:04:04.305Z [error]: No document found with that ID
+2024-08-17T08:04:04.377Z [error]: AppError is not defined
+2024-08-17T08:04:04.473Z [error]: AppError is not defined
+2024-08-17T08:04:04.636Z [error]: Vendor not found
+2024-08-17T08:04:05.045Z [error]: Category validation failed: logo: Please provide category logo.
+2024-08-17T08:04:05.692Z [error]: Category not found
+2024-08-17T08:04:06.003Z [error]: Category not found
+2024-08-17T08:04:06.078Z [error]: Category validation failed: logo: Please provide category logo.
+2024-08-17T08:04:06.633Z [error]: Category not found
+2024-08-17T08:04:06.801Z [error]: Category not found
+2024-08-17T08:04:07.765Z [error]: Main category not found.
+2024-08-17T08:04:07.920Z [error]: Subcategory not found.
+2024-08-17T08:04:08.292Z [error]: Subcategory not found.
+2024-08-17T08:04:08.418Z [error]: Main category not found.
+2024-08-17T08:04:08.503Z [error]: AppError is not defined
+2024-08-17T08:04:08.582Z [error]: AppError is not defined
+2024-08-17T08:04:09.139Z [error]: Sub-subcategory not found.
+2024-08-17T08:04:09.306Z [error]: Main category not found.
+2024-08-17T08:04:09.392Z [error]: AppError is not defined
+2024-08-17T08:04:09.492Z [error]: Brand validation failed: logo: Please provide brand logo., imageAltText: Please provide image alt text.
+2024-08-17T08:04:10.501Z [error]: AppError is not defined
+2024-08-17T08:04:11.744Z [error]: Invalid Token! Please log in again.
+2024-08-17T09:42:51.481Z [error]: AppError is not defined

@@ -1,83 +1,108 @@
-import Wishlist from "../models/wishlistModel.js";
-import Product from "../models/productModel.js";
-import Customer from "../models/customerModel.js";
-import { getAll } from "./handleFactory.js";
-import catchAsync from "../utils/catchAsync.js";
+import Wishlist from '../models/wishlistModel.js'
+import Product from '../models/productModel.js'
+import Customer from '../models/customerModel.js'
+import { deleteOne, getAll, getOne } from './handleFactory.js'
+import catchAsync from '../utils/catchAsync.js'
+import AppError from '../utils/appError.js'
+import { getCacheKey } from '../utils/helpers.js'
+import redisClient from '../config/redisConfig.js'
 
-export const getAllWishlists = getAll(Wishlist);
+export const getAllWishlists = getAll(Wishlist)
+
+export const deleteWishlist = deleteOne(Wishlist)
+
+export const getWishlist = getOne(Wishlist)
 
 export const addProductToWishlist = catchAsync(async (req, res) => {
-	const { userId, productId } = req.body;
+    const { userId, productId } = req.body
 
-	console.log(req.body);
+    // Step 1: Check the product in Product document
+    const product = await Product.findById(productId)
 
-	let product = await Product.findById(productId);
-	console.log(product);
-	if (!product) {
-		return res.status(404).json({ message: "Product not found" });
-	}
-	let customer = await Customer.findById(userId);
-	if (!customer) {
-		return res.status(404).json({ message: "Customer not found" });
-	}
-	let wishlist = await Wishlist.findOne({ user: userId });
+    if (!product) {
+        return next(new AppError('No product found with that ID', 404))
+    }
 
-	if (!wishlist) {
-		wishlist = new Wishlist({ user: userId, products: [productId] });
-	} else {
-		if (!wishlist.products.includes(productId)) {
-			wishlist.products.push(productId);
-		}
-	}
+    // Step 2: Check the customer in Customer document
+    const customer = await Customer.findById(userId)
 
-	await wishlist.save();
-	res.status(200).json(wishlist);
-});
+    if (!customer) {
+        return next(new AppError('No customer found with that ID', 404))
+    }
 
-export const removeProductFromWishlist = async (req, res) => {
-	const { userId, productId } = req.body;
+    // Step 3: Check the user is exisit in wishlist
+    const doc = await Wishlist.findOne({ user: userId })
 
-	try {
-		const wishlist = await Wishlist.findOne({ user: userId });
+    if (!doc) {
+        doc = new Wishlist({
+            user: userId,
+            products: [productId],
+        })
+    } else {
+        const productEixist = doc.products.findIndex(
+            (product) => product._id === productId
+        )
 
-		if (wishlist) {
-			wishlist.products = wishlist.products.filter(
-				(id) => id.toString() !== productId
-			);
-			await wishlist.save();
-			res.status(200).json(wishlist);
-		} else {
-			res.status(404).json({ message: "Wishlist not found" });
-		}
-	} catch (error) {
-		res
-			.status(500)
-			.json({ message: "Error removing product from wishlist", error });
-	}
-};
+        if (!productEixist) {
+            doc.products[productEixist] = {
+                user: userId,
+                products: [productId],
+            }
+        } else {
+            doc.products.push(productId)
+        }
+    }
 
-export const getWishlist = async (req, res) => {
-	const { userId } = req.params;
+    // Save the wishlist document
+    await doc.save()
 
-	console.log(req.params);
+    // Invalidate the cache for this document
+    const cacheKey = getCacheKey(Wishlist, '', req.query)
+    await redisClient.del(cacheKey)
 
-	try {
-		const wishlist = await Wishlist.findOne({ user: userId })
-			.populate({
-				path: "products",
-				select: "name",
-			})
-			.populate({
-				path: "user",
-				select: "firstName lastName email",
-			});
+    res.status(200).json({
+        status: 'success',
+        doc,
+    })
+})
 
-		if (wishlist) {
-			res.status(200).json(wishlist);
-		} else {
-			res.status(404).json({ message: "Wishlist not found" });
-		}
-	} catch (error) {
-		res.status(500).json({ message: "Error retrieving wishlist", error });
-	}
-};
+export const removeProductFromWishlist = catchAsync(async (req, res, next) => {
+    const { productId } = req.params
+
+    // Step 1: Find the wishlist document for the user
+    const doc = await Wishlist.findOne({ user: req.user._id })
+
+    // Step 2: Handle case where the wishlist is not found
+    if (!doc) {
+        return next(new AppError('No wishlist found for this user', 404))
+    }
+
+    console.log(doc.products.length)
+
+    // Step 3: Find the product in the wishlist
+    const productIndex = doc.products.findIndex(
+        (product) => product._id.toString() === productId
+    )
+
+    // Step 4: Handle case where the product is not found
+    if (productIndex === -1) {
+        return next(new AppError('Product not found in wishlist', 404))
+    }
+
+    // Step 5: Remove the product from the array
+    doc.products.splice(productIndex, 1)
+
+    console.log(doc.products.length)
+
+    // Step 6: Save the updated document
+    await doc.save()
+
+    // Invalidate the cache for this document
+    const cacheKey = getCacheKey(Wishlist, '', req.query)
+    await redisClient.del(cacheKey)
+
+    res.status(204).json({
+        status: 'success',
+        message: 'Wishlist product deleted.',
+    })
+})
