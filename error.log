@@ -594,3 +594,26 @@ Use mongoose.model(name, schema)
 2024-08-17T10:19:44.553Z [error]: Invalid input data: Please provide a valid email address.
 2024-08-17T10:20:01.372Z [error]: Invalid input data: Please provide a valid email address.
 2024-08-17T10:23:07.584Z [error]: AppError is not defined
+2024-08-17T10:34:40.373Z [error]: No document found with that ID
+2024-08-17T11:01:50.740Z [error]: You do not have permission to perform this action.
+2024-08-17T11:02:13.297Z [error]: Incorrect email or password
+2024-08-19T04:20:56.820Z [error]: Incorrect email or password
+2024-08-19T04:21:04.032Z [error]: Invalid Token! Please log in again.
+2024-08-19T04:21:45.405Z [error]: Incorrect email or password
+2024-08-19T04:21:55.278Z [error]: Incorrect email or password
+2024-08-19T04:22:10.362Z [error]: Incorrect email or password
+2024-08-19T04:22:29.863Z [error]: You do not have permission to perform this action.
+2024-08-19T04:33:44.926Z [error]: AppError is not defined
+2024-08-19T04:33:54.847Z [error]: Refund not found
+2024-08-19T04:34:49.473Z [error]: No document found with that ID
+2024-08-19T04:50:57.462Z [error]: AppError is not defined
+2024-08-19T04:51:23.293Z [error]: Validation failed: status: `approved` is not a valid enum value for path `status`.
+2024-08-19T05:14:43.768Z [error]: AppError is not defined
+2024-08-19T05:19:17.270Z [error]: Cannot populate path `productId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-19T05:30:02.570Z [error]: These fields are not allowed: titlex
+2024-08-19T05:30:14.290Z [error]: Cannot populate path `productId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-19T05:33:51.447Z [error]: Cannot populate path `product` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-19T06:04:40.807Z [error]: Cannot populate path `products` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-19T06:05:05.418Z [error]: Cannot populate path `products` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-19T06:05:20.341Z [error]: Cannot populate path `products` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-08-19T06:17:07.317Z [error]: Error creating flash deal: FlashDeal validation failed: image: Please provide image.

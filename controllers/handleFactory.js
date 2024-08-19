@@ -4,6 +4,8 @@ import AppError from '../utils/appError.js'
 import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 
+// Check Document fields if they exisit it return data body
+// And if not it return Error
 export const checkFields = (Model, req, next) => {
     // Step 1: Get the allowed fields from the model schema
     const allowedFields = Object.keys(Model.schema.paths)
@@ -34,6 +36,7 @@ export const checkFields = (Model, req, next) => {
     return filteredBody
 }
 
+// DELETE One Document
 export const deleteOne = (Model) =>
     catchAsync(async (req, res, next) => {
         const doc = await Model.findByIdAndDelete(req.params.id)
@@ -52,6 +55,7 @@ export const deleteOne = (Model) =>
         })
     })
 
+// UPDATE One Document
 export const updateOne = (Model) =>
     catchAsync(async (req, res, next) => {
         const data = checkFields(Model, req, next)
@@ -77,6 +81,7 @@ export const updateOne = (Model) =>
         })
     })
 
+// CREATE One Document
 export const createOne = (Model) =>
     catchAsync(async (req, res, next) => {
         const data = checkFields(Model, req, next)
@@ -93,6 +98,7 @@ export const createOne = (Model) =>
         })
     })
 
+// GET One Document
 export const getOne = (Model, popOptions) =>
     catchAsync(async (req, res, next) => {
         const cacheKey = getCacheKey(Model.modelName, req.params.id)
@@ -129,10 +135,9 @@ export const getOne = (Model, popOptions) =>
         })
     })
 
+// GET All Documents
 export const getAll = (Model, popOptions) =>
     catchAsync(async (req, res, next) => {
-        console.log(Model)
-
         const cacheKey = getCacheKey(Model.modelName, '', req.query)
 
         // Check cache first

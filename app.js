@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url'
 import path, { dirname } from 'path'
 
 // ROUTES
-
 import userRoutes from './routes/userRoutes.js'
 import vendorRoutes from './routes/vendorRoutes.js'
 import customerRoutes from './routes/customerRoutes.js'
