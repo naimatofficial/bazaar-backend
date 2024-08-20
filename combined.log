@@ -1822,3 +1822,57 @@ Use mongoose.model(name, schema)
 2024-08-19T06:14:20.983Z [info]: Cache hit for key: flashDeals
 2024-08-19T06:17:07.317Z [error]: Error creating flash deal: FlashDeal validation failed: image: Please provide image.
 2024-08-19T06:32:26.005Z [info]: Cache set for key: flashDeal_66c2e6f9d8b34ab9f43be330
+2024-08-19T07:07:57.608Z [error]: AppError is not defined
+2024-08-19T07:08:10.783Z [error]: AppError is not defined
+2024-08-19T07:08:39.788Z [error]: AppError is not defined
+2024-08-19T07:09:34.433Z [error]: AppError is not defined
+2024-08-19T07:15:51.055Z [error]: AppError is not defined
+2024-08-19T07:43:05.839Z [error]: AppError is not defined
+2024-08-19T08:10:47.132Z [info]: Cache hit for key: flashDeals
+2024-08-19T08:11:12.287Z [info]: Cache set for key: flashDeal_66c2fe2030bf758b4c08f8f6
+2024-08-19T08:11:34.408Z [error]: No document found with that ID
+2024-08-19T08:12:05.404Z [error]: Unexpected token ']', ..."bedd",
+  ]
+}" is not valid JSON
+2024-08-19T10:18:44.404Z [info]: Cache set for key: flashDeal_66c31c04c25ff7daafd24a41
+2024-08-19T10:20:05.767Z [info]: Cache set for key: flashDeal_66c31c55979fa941a4860224
+2024-08-19T10:21:12.773Z [info]: Cache set for key: flashDeal_66c31c97d07499673e16dd35
+2024-08-19T10:25:57.950Z [info]: Cache set for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T10:31:21.163Z [info]: Cache set for key: flashDeal_66c31ef93eb610e530f8cd79
+2024-08-19T10:32:16.232Z [error]: Cannot read properties of undefined (reading 'endDate')
+2024-08-19T10:32:23.036Z [error]: Cannot read properties of undefined (reading 'endDate')
+2024-08-19T10:33:43.097Z [error]: Cannot read properties of undefined (reading 'endDate')
+2024-08-19T10:35:23.645Z [error]: Can't find /favicon.ico on this server.
+2024-08-19T11:12:31.999Z [error]: flashDeal.products.findByIndex is not a function
+2024-08-19T11:13:04.320Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:13:04.326Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:13:48.709Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:13:48.716Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:14:17.708Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:14:17.710Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:16:48.190Z [error]: Cannot access 'filteredProducts' before initialization
+2024-08-19T11:16:54.887Z [error]: Cannot access 'filteredProducts' before initialization
+2024-08-19T11:17:47.348Z [error]: item._id.toSting is not a function
+2024-08-19T11:18:09.359Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:18:09.365Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:26:09.241Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:26:09.246Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:27:04.954Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:27:04.959Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:27:50.925Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:27:50.931Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:28:26.924Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:28:26.948Z [info]: Cache deleted for key: flashDeals
+2024-08-19T11:29:03.491Z [info]: Cache deleted for key: flashDeal_66c31db57d91701f2fff5617
+2024-08-19T11:29:03.498Z [info]: Cache deleted for key: flashDeals
+2024-08-20T06:30:28.992Z [info]: Server is listening on port 3000
+2024-08-20T06:31:46.804Z [info]: Redis cache database connected..
+2024-08-20T06:31:46.833Z [info]: Server is listening on port 3000
+2024-08-20T06:33:10.645Z [info]: Redis cache database connected..
+2024-08-20T06:35:01.057Z [warn]: Server is listening on port 3000
+2024-08-20T06:36:08.943Z [error]: Can't find /favicon.ico on this server.
+2024-08-20T06:36:11.019Z [error]: Can't find /api/vendorss on this server.
+2024-08-20T06:36:17.463Z [error]: Can't find / on this server.
+2024-08-20T06:36:20.214Z [error]: Can't find /sdfkjs on this server.
+2024-08-20T06:36:52.594Z [error]: Can't find this /sdfkjs on this server.
+2024-08-20T06:37:10.385Z [error]: Can't find this url: /sdfkjs on this server.

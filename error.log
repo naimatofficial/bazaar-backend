@@ -617,3 +617,27 @@ Use mongoose.model(name, schema)
 2024-08-19T06:05:05.418Z [error]: Cannot populate path `products` because it is not in your schema. Set the `strictPopulate` option to false to override.
 2024-08-19T06:05:20.341Z [error]: Cannot populate path `products` because it is not in your schema. Set the `strictPopulate` option to false to override.
 2024-08-19T06:17:07.317Z [error]: Error creating flash deal: FlashDeal validation failed: image: Please provide image.
+2024-08-19T07:07:57.608Z [error]: AppError is not defined
+2024-08-19T07:08:10.783Z [error]: AppError is not defined
+2024-08-19T07:08:39.788Z [error]: AppError is not defined
+2024-08-19T07:09:34.433Z [error]: AppError is not defined
+2024-08-19T07:15:51.055Z [error]: AppError is not defined
+2024-08-19T07:43:05.839Z [error]: AppError is not defined
+2024-08-19T08:11:34.408Z [error]: No document found with that ID
+2024-08-19T08:12:05.404Z [error]: Unexpected token ']', ..."bedd",
+  ]
+}" is not valid JSON
+2024-08-19T10:32:16.232Z [error]: Cannot read properties of undefined (reading 'endDate')
+2024-08-19T10:32:23.036Z [error]: Cannot read properties of undefined (reading 'endDate')
+2024-08-19T10:33:43.097Z [error]: Cannot read properties of undefined (reading 'endDate')
+2024-08-19T10:35:23.645Z [error]: Can't find /favicon.ico on this server.
+2024-08-19T11:12:31.999Z [error]: flashDeal.products.findByIndex is not a function
+2024-08-19T11:16:48.190Z [error]: Cannot access 'filteredProducts' before initialization
+2024-08-19T11:16:54.887Z [error]: Cannot access 'filteredProducts' before initialization
+2024-08-19T11:17:47.348Z [error]: item._id.toSting is not a function
+2024-08-20T06:36:08.943Z [error]: Can't find /favicon.ico on this server.
+2024-08-20T06:36:11.019Z [error]: Can't find /api/vendorss on this server.
+2024-08-20T06:36:17.463Z [error]: Can't find / on this server.
+2024-08-20T06:36:20.214Z [error]: Can't find /sdfkjs on this server.
+2024-08-20T06:36:52.594Z [error]: Can't find this /sdfkjs on this server.
+2024-08-20T06:37:10.385Z [error]: Can't find this url: /sdfkjs on this server.

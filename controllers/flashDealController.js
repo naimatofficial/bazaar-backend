@@ -5,8 +5,7 @@ import {
 } from '../utils/responseHandler.js'
 import { getCache, setCache, deleteCache } from '../utils/redisUtils.js'
 import logger from '../utils/logger.js'
-import Product from '../models/productModel.js'
-import { deleteOne } from './handleFactory.js'
+import { deleteOne, getAll } from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import AppError from '../utils/appError.js'
 import { getCacheKey } from '../utils/helpers.js'
@@ -19,70 +18,31 @@ const checkExpiration = (flashDeal) => {
 }
 
 // Create Flash Deal
-export const createFlashDeal = async (req, res) => {
-    try {
-        const { title, startDate, endDate } = req.body
-        const image = req.file ? req.file.path : ''
+export const createFlashDeal = catchAsync(async (req, res) => {
+    const { title, startDate, endDate } = req.body
+    const image = req.file ? req.file.path : ''
 
-        const newFlashDeal = new FlashDeal({
-            title,
-            startDate,
-            endDate,
-            image,
-            status: 'inactive',
-        })
+    const newFlashDeal = new FlashDeal({
+        title,
+        startDate,
+        endDate,
+        image,
+    })
 
-        await newFlashDeal.save()
-        await setCache(`flashDeal_${newFlashDeal._id}`, newFlashDeal)
+    await newFlashDeal.save()
 
-        res.status(201).json({
-            message: 'Flash deal created successfully',
-            flashDeal: newFlashDeal,
-        })
-    } catch (error) {
-        logger.error(`Error creating flash deal: ${error.message}`)
-        res.status(500).json({ message: 'Internal server error' })
-    }
-}
+    // delete pervious cache
+    const cacheKey = getCacheKey(FlashDeal, '', req.query)
+    await redisClient.del(cacheKey)
+
+    res.status(201).json({
+        status: 'success',
+        doc,
+    })
+})
 
 // Get Flash Deals with Caching
-export const getFlashDeals = async (req, res) => {
-    try {
-        const cacheKey = 'flashDeals'
-        const cachedData = await getCache(cacheKey)
-
-        if (cachedData) {
-            return res.status(200).json({
-                success: true,
-                message: 'Flash deals retrieved successfully (from cache)',
-                docs: cachedData,
-            })
-        }
-
-        const flashDeals = await FlashDeal.find().populate({
-            path: 'products',
-            select: 'name price description thumbnail',
-        })
-
-        for (let deal of flashDeals) {
-            if (checkExpiration(deal)) {
-                deal.status = 'expired'
-                await deal.save()
-            }
-        }
-
-        await setCache(cacheKey, flashDeals, 3600)
-        res.status(200).json({
-            success: true,
-            message: 'Flash deals retrieved successfully',
-            docs: flashDeals,
-        })
-    } catch (error) {
-        logger.error(error.message)
-        res.status(500).json({ message: error.message })
-    }
-}
-
+export const getFlashDeals = getAll(FlashDeal)
 // Get Flash Deal by ID
 export const getFlashDealById = async (req, res) => {
     try {
@@ -180,9 +140,23 @@ export const addProductToFlashDeal = catchAsync(async (req, res, next) => {
         return next(new AppError('No document found with that ID', 404))
     }
 
-    flashDeal.products = products
+    let dealProducts = []
 
-    await flashDeal.save()
+    products?.filter((product) => {
+        if (!dealProducts.includes(product)) {
+            return dealProducts.push(product)
+        }
+    })
+
+    // Add products to the flash deal if they don't already exist
+    const newProducts = dealProducts.filter(
+        (product) => !flashDeal.products.includes(product)
+    )
+
+    if (newProducts.length > 0) {
+        flashDeal.products.push(...newProducts)
+        await flashDeal.save()
+    }
 
     // Update cache
     const cacheKey = getCacheKey(FlashDeal, '', req.query)
@@ -190,54 +164,59 @@ export const addProductToFlashDeal = catchAsync(async (req, res, next) => {
 
     res.status(200).json({
         status: 'success',
-        doc,
+        doc: flashDeal,
     })
 })
 // Remove Product from Flash Deal
-export const removeProductFromFlashDeal = async (req, res) => {
-    try {
-        const { id, productId } = req.params // Flash Deal ID
+export const removeProductFromFlashDeal = catchAsync(async (req, res, next) => {
+    const { id, productId } = req.params
 
-        if (!id || !productId) {
-            return res
-                .status(400)
-                .json({ message: 'Flash Deal ID and Product ID are required' })
-        }
-
-        const flashDeal = await FlashDeal.findById(id)
-        if (!flashDeal) {
-            return res.status(404).json({ message: 'Flash Deal not found' })
-        }
-
-        if (!flashDeal.productId.includes(productId)) {
-            return res
-                .status(400)
-                .json({ message: 'Product not found in Flash Deal' })
-        }
-
-        // Remove product from the Flash Deal
-        flashDeal.productId = flashDeal.productId.filter(
-            (pid) => pid.toString() !== productId
-        )
-        flashDeal.activeProducts -= 1
-
-        // Save updated Flash Deal
-        await flashDeal.save()
-
-        // Invalidate cache
-        await deleteCache(`flashDeal_${id}`)
-        await deleteCache('flashDeals')
-
-        sendSuccessResponse(
-            res,
-            flashDeal,
-            'Product removed from Flash Deal successfully'
-        )
-    } catch (error) {
-        logger.error(`Error removing product from Flash Deal: ${error.message}`)
-        sendErrorResponse(res, error)
+    const flashDeal = await FlashDeal.findById(id)
+    if (!flashDeal) {
+        return next(new AppError('No flash deal found with that ID', 404))
     }
-}
+
+    const productIndex = flashDeal.products.findIndex(
+        (item) => item._id == productId
+    )
+
+    if (productIndex === -1) {
+        return next(new AppError('No product found with that ID', 404))
+    }
+
+    console.log(flashDeal.products.length)
+
+    const filteredProducts = flashDeal.products.filter((item) => {
+        console.log(item._id + ' -- ' + productId)
+        return item._id === productId
+    })
+
+    console.log(filteredProducts)
+
+    // if (!flashDeal.productId.includes(productId)) {
+    //     return res
+    //         .status(400)
+    //         .json({ message: 'Product not found in Flash Deal' })
+    // }
+
+    // // Remove product from the Flash Deal
+    // flashDeal.productId = flashDeal.productId.filter(
+    //     (pid) => pid.toString() !== productId
+    // )
+
+    // // Save updated Flash Deal
+    // await flashDeal.save()
+
+    // Invalidate cache
+    await deleteCache(`flashDeal_${id}`)
+    await deleteCache('flashDeals')
+
+    sendSuccessResponse(
+        res,
+        flashDeal,
+        'Product removed from Flash Deal successfully'
+    )
+})
 
 // Update Flash Deal Status
 export const updateFlashDealStatus = async (req, res) => {

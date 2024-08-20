@@ -42,19 +42,29 @@ const flashDealSchema = new mongoose.Schema(
     }
 )
 
-const FlashDeal = mongoose.model('FlashDeal', flashDealSchema)
-
 // Add a virtual field to calculate the total number of products
 flashDealSchema.virtual('activeProducts').get(function () {
     return this.products.length
 })
 
+flashDealSchema.pre('save', function (next) {
+    console.log(this.endDate)
+
+    // Check if endDate is less than startDate
+    if (this.endDate && this.startDate && this.endDate < this.startDate) {
+        this.status = 'expired'
+    }
+    next()
+})
+
 flashDealSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'products',
-        select: 'thumbnail name userId price',
+        select: 'name price thumbnail userId',
     })
     next()
 })
+
+const FlashDeal = mongoose.model('FlashDeal', flashDealSchema)
 
 export default FlashDeal

@@ -28,7 +28,7 @@ import attributeRoutes from './routes/attributeRoutes.js'
 import coupons from './routes/couponRoutes.js'
 import subscriber from './routes/subscriberRoutes.js'
 import notification from './routes/notificationRoutes.js'
-import { sendErrorResponse } from './utils/responseHandler.js'
+import AppError from './utils/appError.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -58,8 +58,9 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
 
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
     res.send('Ecommerce Bazaar API is Running')
+    next()
 })
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
@@ -91,7 +92,9 @@ app.use('/api/subscribers', subscriber)
 
 // Unhandled Routes Handling Middleware
 app.all('*', (req, res, next) => {
-    next(new AppError(`Can't find ${req.originalUrl} on this server.`, 404))
+    next(
+        new AppError(`Can't find this ${req.originalUrl} on this server.`, 404)
+    )
 })
 
 // GLOBAL ERROR HANDLING MIDDLEWARE
