@@ -11,6 +11,8 @@ import {
     getFlashDealById,
     removeProductFromFlashDeal,
 } from '../controllers/flashDealController.js'
+import { validateSchema } from '../middleware/validationMiddleware.js'
+import flashDealValidationSchema from './../validations/flashDealValidator.js'
 
 const router = express.Router()
 
@@ -39,7 +41,11 @@ router.use((req, res, next) => {
 
 router
     .route('/')
-    .post(upload.single('image'), createFlashDeal)
+    .post(
+        upload.single('image'),
+        validateSchema(flashDealValidationSchema),
+        createFlashDeal
+    )
     .get(getFlashDeals)
 
 router

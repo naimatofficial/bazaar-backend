@@ -27,6 +27,8 @@ const createSendToken = catchAsync(async (user, statusCode, res) => {
     // do not show the password to client side
     user.password = undefined
 
+    console.log(user)
+
     res.cookie('jwt', accessToken, cookieOptions)
 
     res.status(statusCode).json({
@@ -108,9 +110,20 @@ export const loginCustomer = catchAsync(async (req, res, next) => {
 })
 
 export const signupCustomer = catchAsync(async (req, res, next) => {
-    const data = checkFields(Customer, req, next)
+    // const data = checkFields(Customer, req, next)
 
-    const newCustomer = Customer.create(data)
+    console.log(req.body)
+
+    const { firstName, lastName, email, password } = req.body
+
+    const newCustomer = new Customer({
+        firstName,
+        lastName,
+        email,
+        password,
+    })
+
+    await newCustomer.save()
 
     // delete pervious cache
     const cacheKey = getCacheKey(Customer, '', req.query)

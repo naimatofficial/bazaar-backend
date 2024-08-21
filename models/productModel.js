@@ -1,32 +1,5 @@
 import mongoose from 'mongoose'
 
-const reviewSchema = new mongoose.Schema(
-    {
-        customer: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Customer',
-            required: [true, 'Please provide customer id.'],
-        },
-        review: {
-            type: String,
-            required: [true, 'Please provide review.'],
-        },
-        rating: {
-            type: Number,
-            required: [true, 'Please provide rating.'],
-            min: 1,
-            max: 5,
-            set: (val) => (Math.round(val * 10) / 10).toFixed(1),
-        },
-        status: {
-            type: String,
-            enum: ['active', 'inactive'],
-            default: 'active',
-        },
-    },
-    { timestamps: true }
-)
-
 const productSchema = new mongoose.Schema(
     {
         name: {
@@ -143,12 +116,20 @@ const productSchema = new mongoose.Schema(
             enum: ['vendor', 'admin'],
             required: true,
         },
-        reviews: [reviewSchema],
     },
     {
+        toJSON: { virtuals: true },
+        toObject: { virtuals: true },
         timestamps: true,
     }
 )
+
+// Virtual middleware fetch all the reviews associated with this product
+productSchema.virtual('reviews', {
+    ref: 'ProductReview',
+    localField: '_id',
+    foreignField: 'product',
+})
 
 productSchema.pre(/^find/, function (next) {
     this.populate({

@@ -92,11 +92,6 @@ export const updateFlashDeal = async (req, res) => {
     try {
         const { id } = req.params
 
-        const { error } = flashDealValidationSchema.validate(req.body)
-        if (error) {
-            return res.status(400).json({ message: error.details[0].message })
-        }
-
         const updatedFlashDeal = await FlashDeal.findByIdAndUpdate(
             id,
             req.body,

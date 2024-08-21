@@ -1,24 +1,29 @@
-import express from "express";
+import express from 'express'
 import {
-	createBrand,
-	getBrands,
-	getBrandById,
-	updateBrand,
-	deleteBrand,
-	updateBrandStatus,
-} from "../controllers/brandController.js";
-import { uploadThumbnail } from "../config/multer-config.js";
+    createBrand,
+    getBrands,
+    getBrandById,
+    updateBrand,
+    deleteBrand,
+    updateBrandStatus,
+} from '../controllers/brandController.js'
+import { uploadThumbnail } from '../config/multer-config.js'
+import { validateSchema } from '../middleware/validationMiddleware.js'
+import brandValidationSchema from './../validations/brandValidator.js'
 
-const router = express.Router();
-
-router.route("/").post(uploadThumbnail, createBrand).get(getBrands);
+const router = express.Router()
 
 router
-	.route("/:id")
-	.get(getBrandById)
-	.put(uploadThumbnail, updateBrand)
-	.delete(deleteBrand);
+    .route('/')
+    .post(uploadThumbnail, validateSchema(brandValidationSchema), createBrand)
+    .get(getBrands)
 
-router.route("/:id/status").put(updateBrandStatus);
+router
+    .route('/:id')
+    .get(getBrandById)
+    .put(uploadThumbnail, updateBrand)
+    .delete(deleteBrand)
 
-export default router;
+router.route('/:id/status').put(updateBrandStatus)
+
+export default router

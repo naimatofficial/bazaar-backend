@@ -641,3 +641,55 @@ Use mongoose.model(name, schema)
 2024-08-20T06:36:20.214Z [error]: Can't find /sdfkjs on this server.
 2024-08-20T06:36:52.594Z [error]: Can't find this /sdfkjs on this server.
 2024-08-20T06:37:10.385Z [error]: Can't find this url: /sdfkjs on this server.
+2024-08-20T07:04:43.741Z [error]: "name" is required
+2024-08-20T07:05:12.523Z [error]: "name" is required
+2024-08-20T07:05:22.925Z [error]: "name" is required
+2024-08-20T07:05:49.984Z [error]: "name" is required
+2024-08-20T07:10:57.272Z [error]: "logo" is required
+2024-08-20T07:11:02.359Z [error]: "logo" is required
+2024-08-20T07:11:09.171Z [error]: "name" is required
+2024-08-20T07:11:12.998Z [error]: "logo" is required
+2024-08-20T07:13:09.829Z [error]: "logo" is required
+2024-08-20T07:15:59.481Z [error]: "logo" is required
+2024-08-20T07:16:54.593Z [error]: Cannot read properties of undefined (reading 'filename')
+2024-08-20T07:17:13.152Z [error]: "logo" is required
+2024-08-20T07:24:38.121Z [error]: "logo" is required
+2024-08-20T07:24:57.443Z [error]: "logo" is required
+2024-08-20T07:25:20.651Z [error]: Cannot convert object to primitive value
+2024-08-20T07:25:36.330Z [error]: "logo" is required
+2024-08-20T07:26:04.028Z [error]: "logo" is required
+2024-08-20T10:05:43.650Z [error]: Please provide a valid hex code in the format #RRGGBB or #RGB.
+2024-08-20T10:05:52.546Z [error]: Please provide a hex code.
+2024-08-20T10:06:00.500Z [error]: Please provide a valid hex code in the format #RRGGBB or #RGB.
+2024-08-20T10:06:07.172Z [error]: Please provide a color name.
+2024-08-20T10:06:29.118Z [error]: Please provide a hex code.
+2024-08-20T10:07:17.890Z [error]: Hex code must be a string.
+2024-08-20T10:08:05.867Z [error]: Please provide a valid hex code in the format #RRGGBB or #RGB.
+2024-08-21T04:55:14.830Z [error]: Color name is required.
+2024-08-21T04:55:23.188Z [error]: Unexpected end of JSON input
+2024-08-21T04:56:53.931Z [error]: Unexpected end of JSON input
+2024-08-21T04:58:44.064Z [error]: Please provide a valid hex code in the format #RRGGBB or #RGB.
+2024-08-21T05:20:26.549Z [error]: Expected double-quoted property name in JSON at position 28
+2024-08-21T05:20:31.351Z [error]: Hex code is required.
+2024-08-21T05:20:47.499Z [error]: Color name is required.
+2024-08-21T05:21:08.882Z [error]: Color name is required.
+2024-08-21T05:21:25.794Z [error]: Invalid input data: Please provide attribute name.
+2024-08-21T05:32:45.079Z [error]: Please provide attribute name.
+2024-08-21T05:40:45.060Z [error]: Duplicate field value "large", please use another value.
+2024-08-21T06:01:05.060Z [error]: Duplicate field value large, please use another value.
+2024-08-21T06:01:33.229Z [error]: Duplicate field value "large", please use another value.
+2024-08-21T06:01:50.744Z [error]: Duplicate field value "large", please use another value.
+2024-08-21T06:02:02.224Z [error]: Duplicate field value large, please use another value.
+2024-08-21T06:05:34.305Z [error]: Duplicate field value large, please use another value.
+2024-08-21T06:09:55.142Z [error]: Please provide attribute name.
+2024-08-21T06:10:07.673Z [error]: Duplicate field value large, please use another value.
+2024-08-21T06:11:08.802Z [error]: Hex code is required.
+2024-08-21T06:30:32.023Z [error]: Operation `customers.insertOne()` buffering timed out after 10000ms
+2024-08-21T06:31:02.358Z [error]: data is not defined
+2024-08-21T06:31:05.117Z [error]: data is not defined
+2024-08-21T06:31:32.501Z [error]: Operation `customers.insertOne()` buffering timed out after 10000ms
+2024-08-21T06:32:08.259Z [error]: Operation `customers.insertOne()` buffering timed out after 10000ms
+2024-08-21T06:33:50.577Z [error]: Operation `customers.insertOne()` buffering timed out after 10000ms
+2024-08-21T07:02:25.671Z [error]: Duplicate field value munna@mail.com, please use another value.
+2024-08-21T07:03:13.527Z [error]: Password is required
+2024-08-21T07:07:03.102Z [error]: Duplicate field value munna@mail.com, please use another value.

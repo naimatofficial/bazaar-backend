@@ -48,9 +48,10 @@ app.use(
         credentials: true,
     })
 )
-
+// Global input sanitization middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
 app.use(cookieParser())
 
 // Developing logging

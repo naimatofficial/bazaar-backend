@@ -1,71 +1,77 @@
-import express from "express";
-import multer from "multer";
+import express from 'express'
+import multer from 'multer'
 import {
-	createProduct,
-	updateProductImages,
-	getAllProducts,
-	getProductById,
-	deleteProduct,
-	addReview,
-	getProductReviews,
-	updateProductStatus,
-	updateProductFeaturedStatus,
-	getTopRatedProducts,
-	sellProduct,
-	getLimitedStockedProducts,
-	updateProduct,
-	updateReviewStatus,
-} from "../controllers/productController.js";
+    createProduct,
+    updateProductImages,
+    getAllProducts,
+    getProductById,
+    deleteProduct,
+    addReview,
+    getProductReviews,
+    updateProductStatus,
+    updateProductFeaturedStatus,
+    getTopRatedProducts,
+    sellProduct,
+    getLimitedStockedProducts,
+    updateProduct,
+    updateReviewStatus,
+} from '../controllers/productController.js'
+import { validateSchema } from '../middleware/validationMiddleware.js'
+import productValidationSchema from './../validations/productValidator.js'
 
-const router = express.Router();
+const router = express.Router()
 
 // Set up multer for file uploads
 const storage = multer.diskStorage({
-	destination: (req, file, cb) => {
-		const folder =
-			file.fieldname === "thumbnail"
-				? "uploads/thumbnails/"
-				: "uploads/images/";
-		cb(null, folder);
-	},
-	filename: (req, file, cb) => {
-		cb(null, `${Date.now()}-${file.originalname}`);
-	},
-});
+    destination: (req, file, cb) => {
+        const folder =
+            file.fieldname === 'thumbnail'
+                ? 'uploads/thumbnails/'
+                : 'uploads/images/'
+        cb(null, folder)
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}-${file.originalname}`)
+    },
+})
 
-const upload = multer({ storage });
+const upload = multer({ storage })
 
 // Product routes
 router
-	.route("/")
-	.post(
-		upload.fields([{ name: "thumbnail" }, { name: "images", maxCount: 10 }]),
-		createProduct
-	)
-	.get(getAllProducts);
+    .route('/')
+    .post(
+        upload.fields([
+            { name: 'thumbnail' },
+            { name: 'images', maxCount: 10 },
+        ]),
+        validateSchema(productValidationSchema),
+        createProduct
+    )
+    .get(getAllProducts)
 
 // Static routes
-router.route("/top-rated").get(getTopRatedProducts);
+router.route('/top-rated').get(getTopRatedProducts)
 
-router.route("/limited-product").get(getLimitedStockedProducts);
+router.route('/limited-product').get(getLimitedStockedProducts)
 
-router.route("/:productId/sold").get(sellProduct);
+router.route('/:productId/sold').get(sellProduct)
 
-router.put("/:productId/update-product-image", updateProductImages);
+router.put('/:productId/update-product-image', updateProductImages)
 
-router.route("/:productId/reviews").post(addReview).get(getProductReviews);
+router.route('/:productId/reviews').post(addReview).get(getProductReviews)
 
-router.route("/:reviewId/status").patch(updateReviewStatus);
+router.route('/:reviewId/status').patch(updateReviewStatus)
 
 router
-	.route("/:id")
-	.get(getProductById)
-	.put(updateProduct)
-	.delete(deleteProduct);
+    .route('/:id')
+    .get(getProductById)
+    .put(updateProduct)
+    .delete(deleteProduct)
 
-router.route("/:id/status").put(updateProductStatus);
+router.route('/:id/status').put(updateProductStatus)
 
-router.route("/:id/feature").put(updateProductFeaturedStatus);
+router.route('/:id/feature').put(updateProductFeaturedStatus)
 
 // // router.get('/feature-product', getFeaturedProducts);
 // // router.get('/latest-product', getLatestProducts);
@@ -91,4 +97,4 @@ router.route("/:id/feature").put(updateProductFeaturedStatus);
 
 // // Update review status
 
-export default router;
+export default router

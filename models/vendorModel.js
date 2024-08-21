@@ -5,14 +5,17 @@ const vendorSchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: [true, 'Please tell us your first name.'],
+        trim: true,
     },
     lastName: {
         type: String,
         default: '',
+        trim: true,
     },
     phoneNumber: {
         type: String,
         required: [true, 'Please tell us your phone number.'],
+        trim: true,
     },
     email: {
         type: String,
@@ -30,10 +33,12 @@ const vendorSchema = new mongoose.Schema({
     shopName: {
         type: String,
         required: [true, 'Please tell us shop name.'],
+        trim: true,
     },
     address: {
         type: String,
         required: [true, 'Please provide your address.'],
+        trim: true,
     },
 
     status: {

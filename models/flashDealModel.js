@@ -5,6 +5,7 @@ const flashDealSchema = new mongoose.Schema(
         title: {
             type: String,
             required: [true, 'Please provide title.'],
+            trim: true,
         },
         image: {
             type: String,

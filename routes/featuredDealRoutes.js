@@ -9,9 +9,14 @@ import {
     getFeaturedDealById,
     deleteProductFromFeaturedDeal,
 } from '../controllers/featuredDealController.js'
+import { validateSchema } from '../middleware/validationMiddleware.js'
+import featuredDealValidationSchema from './../validations/featuredDealValidator.js'
 
 const router = express.Router()
-router.route('/').post(createFeaturedDeal).get(getFeaturedDeals)
+router
+    .route('/')
+    .post(validateSchema(featuredDealValidationSchema), createFeaturedDeal)
+    .get(getFeaturedDeals)
 
 router
     .route('/:id')
