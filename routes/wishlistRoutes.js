@@ -1,5 +1,5 @@
 import express from 'express'
-import { protect } from './../middleware/authMiddleware.js'
+import { protect, restrictTo } from './../middleware/authMiddleware.js'
 import {
     addProductToWishlist,
     removeProductFromWishlist,
@@ -12,13 +12,14 @@ import wishlistValidationSchema from '../validations/wishlistValidator.js'
 
 const router = express.Router()
 
-router.get('/', getAllWishlists)
+router.get('/', protect, getAllWishlists)
 router.post(
     '/add',
+    protect,
     validateSchema(wishlistValidationSchema),
     addProductToWishlist
 )
 router.delete('/products/:productId', protect, removeProductFromWishlist)
-router.route('/:id').get(getWishlist).delete(deleteWishlist)
+router.route('/:id').get(protect, getWishlist).delete(protect, deleteWishlist)
 
 export default router

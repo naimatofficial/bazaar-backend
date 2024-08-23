@@ -10,10 +10,11 @@ import { login, signup, logout } from '../controllers/authController.js'
 import { protect, restrictTo } from '../middleware/authMiddleware.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import userValidationSchema from './../validations/userValidator.js'
+import { loginLimiter } from '../utils/helpers.js'
 
 const router = express.Router()
 
-router.post('/login', login)
+router.post('/login', loginLimiter, login)
 router.post('/register', signup)
 router.post('/logout', protect, logout)
 

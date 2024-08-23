@@ -4,7 +4,6 @@ import multer from 'multer'
 import {
     createVendor,
     registerVendor,
-    loginVendor,
     updateVendorStatus,
     getAllVendors,
     getVendorById,
@@ -12,6 +11,9 @@ import {
 } from '../controllers/vendorController.js' // Adjust the path based on your project structure
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import vendorValidationSchema from './../validations/vendorValidator.js'
+import { loginLimiter } from '../utils/helpers.js'
+import { protect, restrictTo } from '../middleware/authMiddleware.js'
+import { loginVendor } from './../controllers/authController.js'
 
 const router = express.Router()
 
@@ -27,7 +29,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-// Vendor routes
 router
     .route('/')
     .post(
@@ -39,11 +40,14 @@ router
         validateSchema(vendorValidationSchema),
         createVendor
     )
-    .get(getAllVendors)
+    .get(protect, getAllVendors)
 
-router.route('/:vendorId').get(getVendorById).delete(deleteVendor)
+router
+    .route('/:vendorId')
+    .get(getVendorById)
+    .delete(protect, restrictTo('admin', 'vendor'), deleteVendor)
 
-router.route('/:vendorId/status').put(updateVendorStatus)
+router.route('/:vendorId/status').put(protect, updateVendorStatus)
 
 router
     .route('/signup')
@@ -57,6 +61,6 @@ router
         registerVendor
     )
 
-router.route('/login').post(loginVendor)
+router.post('/login', loginLimiter, loginVendor)
 
 export default router

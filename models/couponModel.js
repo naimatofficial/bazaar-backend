@@ -37,12 +37,12 @@ const couponSchema = new mongoose.Schema(
         },
         couponBearer: {
             type: String,
-            enum: ['Vendor', 'Admin'],
+            enum: ['vendor', 'admin'],
             required: [true, 'Please provide Coupon Bearer.'],
         },
         discountType: {
             type: String,
-            enum: ['Amount', 'Percentage'],
+            enum: ['amount', 'percentage'],
             required: [true, 'Please provide Discount Type.'],
         },
         discountAmount: {
@@ -69,22 +69,16 @@ const couponSchema = new mongoose.Schema(
         },
         status: {
             type: String,
-            enum: ['Active', 'Inactive'],
-            default: 'Active',
+            enum: ['active', 'inactive'],
+            default: 'active',
         },
-        applicableProducts: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Product',
-            },
-        ],
-        applicableVendors: [
+        vendors: [
             {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Vendor',
             },
         ],
-        applicableCustomers: [
+        customers: [
             {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Customer',

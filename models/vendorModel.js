@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs'
 import mongoose from 'mongoose'
 import validator from 'validator'
 
@@ -59,6 +60,23 @@ const vendorSchema = new mongoose.Schema({
         type: String,
         default: 'vendor',
     },
+})
+
+vendorSchema.methods.correctPassword = async function (
+    candidatePassword,
+    userPassword
+) {
+    return await bcrypt.compare(candidatePassword, userPassword)
+}
+
+vendorSchema.pre('save', async function (next) {
+    // Only work when the password is not modified
+    if (!this.isModified('password')) return next()
+
+    // Hash the password using cost of 12
+    this.password = await bcrypt.hash(this.password, 12)
+
+    next()
 })
 
 const Vendor = mongoose.model('Vendor', vendorSchema)

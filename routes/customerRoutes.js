@@ -14,10 +14,11 @@ import {
 import { protect, restrictTo } from '../middleware/authMiddleware.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import customerValidationSchema from './../validations/customerValidator.js'
+import { loginLimiter } from '../utils/helpers.js'
 
 const router = express.Router()
 
-router.post('/login', loginCustomer)
+router.post('/login', loginLimiter, loginCustomer)
 router.post(
     '/register',
     validateSchema(customerValidationSchema),
@@ -27,11 +28,18 @@ router.post('/logout', protect, logout)
 
 router
     .route('/')
-    // .post(protect, restrictTo("admin"), createCustomer)
-    // .get(protect, restrictTo("admin", "vendor"), getCustomers);
-    .post(createCustomer)
-    .get(getCustomers)
+    .post(
+        protect,
+        restrictTo('admin'),
+        validateSchema(customerValidationSchema),
+        createCustomer
+    )
+    .get(protect, restrictTo('admin', 'vendor'), getCustomers)
 
-router.route('/:id').get(getCustomer).put(updateCustomer).delete(deleteCustomer)
+router
+    .route('/:id')
+    .get(protect, getCustomer)
+    .put(protect, updateCustomer)
+    .delete(protect, restrictTo('admin'), deleteCustomer)
 
 export default router

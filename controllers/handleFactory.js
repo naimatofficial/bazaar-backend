@@ -41,11 +41,18 @@ export const deleteOne = (Model) =>
     catchAsync(async (req, res, next) => {
         const doc = await Model.findByIdAndDelete(req.params.id)
 
+        const docName = Model.modelName.toLowerCase() || 'Document'
+
+        // Handle case where the document was not found
         if (!doc) {
-            return next(new AppError('No document found with that ID', 404))
+            return next(new AppError(`No ${docName} found with that ID`, 404))
         }
 
-        // Invalidate the cache for this document
+        // get single document store in cache
+        const cacheKeyOne = getCacheKey(Model.modelName, req.params.id)
+        await redisClient.del(cacheKeyOne)
+
+        // delete document caches
         const cacheKey = getCacheKey(Model.modelName, '', req.query)
         await redisClient.del(cacheKey)
 
@@ -66,10 +73,19 @@ export const updateOne = (Model) =>
             runValidators: true,
         })
 
+        const docName = Model.modelName.toLowerCase() || 'Document'
+
         // Handle case where the document was not found
         if (!doc) {
-            return next(new AppError('No document found with that ID', 404))
+            return next(new AppError(`No ${docName} found with that ID`, 404))
         }
+
+        const cacheKeyOne = getCacheKey(Model.modelName, req.params.id)
+
+        // delete pervious document data
+        await redisClient.del(cacheKeyOne)
+        // updated the cache with new data
+        await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(doc))
 
         // Update cache
         const cacheKey = getCacheKey(Model.modelName, '', req.query)
@@ -88,7 +104,19 @@ export const createOne = (Model) =>
 
         const doc = await Model.create(data)
 
-        // delete pervious cache
+        const docName = Model.modelName || 'Document'
+
+        if (!doc) {
+            return res.status(400).json({
+                status: 'fail',
+                message: `${docName} could not be created`,
+            })
+        }
+
+        const cacheKeyOne = getCacheKey(Model.modelName, doc?._id)
+        await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(doc))
+
+        // delete all documents caches related to this model
         const cacheKey = getCacheKey(Model.modelName, '', req.query)
         await redisClient.del(cacheKey)
 
@@ -130,7 +158,6 @@ export const getOne = (Model, popOptions) =>
         res.status(200).json({
             status: 'success',
             cached: false,
-
             doc,
         })
     })

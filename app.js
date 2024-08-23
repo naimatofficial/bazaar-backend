@@ -1,4 +1,5 @@
 import express from 'express'
+import rateLimit from 'express-rate-limit'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import morgan from 'morgan'
@@ -58,6 +59,18 @@ app.use(cookieParser())
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
+
+// Rate limit rule
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+    message: 'Too many requests from this IP, please try again later.',
+    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+})
+
+// Use rate limiting rule to all requests
+app.use(limiter)
 
 app.get('/', (req, res, next) => {
     res.send('Ecommerce Bazaar API is Running')

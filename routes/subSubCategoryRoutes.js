@@ -11,18 +11,23 @@ import {
 } from '../controllers/subSubCategoryController.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import subSubCategoryValidationSchema from '../validations/subSubCategoryValidator.js'
-// import { protect, admin } from "../middleware/authMiddleware.js";
+import { protect, restrictTo } from '../middleware/authMiddleware.js'
 
 router
     .route('/')
-    .post(validateSchema(subSubCategoryValidationSchema), createSubSubCategory)
+    .post(
+        protect,
+        restrictTo('admin'),
+        validateSchema(subSubCategoryValidationSchema),
+        createSubSubCategory
+    )
     .get(getAllSubSubCategories)
 
 router
     .route('/:id')
     .get(getSubSubCategoryById)
-    .put(updateSubSubCategoryById)
-    .delete(deleteSubSubCategoryById)
+    .put(protect, restrictTo('admin'), updateSubSubCategoryById)
+    .delete(protect, restrictTo('admin'), deleteSubSubCategoryById)
 
 router.route('/slug/:slug').get(getSubSubCategoryBySlug)
 

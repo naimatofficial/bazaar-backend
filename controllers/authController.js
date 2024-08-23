@@ -132,7 +132,7 @@ export const signupCustomer = catchAsync(async (req, res, next) => {
     createSendToken(newCustomer, 201, res)
 })
 
-export const VendorLogin = catchAsync(async (req, res, next) => {
+export const loginVendor = catchAsync(async (req, res, next) => {
     const { email, password } = req.body
 
     // 1) Check if email and password exists

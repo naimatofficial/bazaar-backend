@@ -13,18 +13,36 @@ const wishlistSchema = new mongoose.Schema(
                 ref: 'Product',
             },
         ],
+        totalProducts: {
+            type: Number,
+            required: [true, 'Total products required.'],
+            default: 0,
+        },
     },
-    { timestamps: true }
+    {
+        toJSON: { virtuals: true },
+        toObject: { virtuals: true },
+        timestamps: true,
+    }
 )
+
+// Calculate total products before saving the data
+wishlistSchema.pre('save', function (next) {
+    this.totalProducts = this.products.length
+    next()
+})
 
 wishlistSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'products',
         select: '-__v -createdAt -updatedAt',
-    }).populate({
-        path: 'user',
-        select: '-__v -createdAt -updatedAt -role -status -referCode',
     })
+        .populate({
+            path: 'user',
+            select: '-__v -createdAt -updatedAt -role -status -referCode',
+        })
+        .lean()
+
     next()
 })
 
