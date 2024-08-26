@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import AppError from '../utils/appError.js'
 
 const flashDealSchema = new mongoose.Schema(
     {
@@ -64,6 +65,29 @@ flashDealSchema.pre(/^find/, function (next) {
         select: 'name price thumbnail userId',
     })
     next()
+})
+
+flashDealSchema.pre('save', async function (next) {
+    try {
+        // Check if products are provided and validate them
+        if (this.products && this.products.length > 0) {
+            const productCheck = await mongoose
+                .model('Product')
+                .countDocuments({
+                    _id: { $in: this.products },
+                })
+
+            if (productCheck !== this.products.length) {
+                return next(
+                    new AppError('One or more products do not exist.', 400)
+                )
+            }
+        }
+
+        next()
+    } catch (err) {
+        next(err)
+    }
 })
 
 const FlashDeal = mongoose.model('FlashDeal', flashDealSchema)

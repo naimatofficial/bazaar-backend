@@ -830,3 +830,410 @@ Use mongoose.model(name, schema)
 2024-08-22T08:17:32.648Z [error]: Incorrect email or password
 2024-08-22T08:17:47.375Z [error]: Incorrect email or password
 2024-08-22T08:17:58.644Z [error]: Incorrect email or password
+2024-08-23T10:09:06.240Z [error]: Invalid Token! Please log in again.
+2024-08-23T10:09:20.729Z [error]: Invalid Token! Please log in again.
+2024-08-23T10:09:39.753Z [error]: Incorrect email or password
+2024-08-23T10:09:54.439Z [error]: Invalid Token! Please log in again.
+2024-08-23T10:10:14.646Z [error]: You do not have permission to perform this action.
+2024-08-23T10:27:41.904Z [error]: No document found with that ID
+2024-08-23T10:28:01.135Z [error]: Invalid _id: 66a08dbaed2e687d2edada.
+2024-08-23T11:32:00.119Z [error]: Invalid _id: reviews.
+2024-08-23T11:36:29.895Z [error]: Invalid _id: reviews.
+2024-08-23T11:37:41.783Z [error]: Invalid _id: reviews.
+2024-08-23T11:38:24.900Z [error]: Invalid _id: reviews.
+2024-08-23T11:39:58.748Z [error]: Invalid _id: reviews.
+2024-08-23T11:48:06.863Z [error]: Invalid _id: reviews.2.
+2024-08-23T11:48:40.613Z [error]: Invalid _id: reviews.
+2024-08-23T11:59:58.025Z [error]: You do not have permission to perform this action.
+2024-08-24T03:49:49.500Z [error]: The token belonging to this user does no longer exist.
+2024-08-24T03:50:28.382Z [error]: The token belonging to this user does no longer exist.
+2024-08-24T03:50:38.514Z [error]: You are not logged in! Please log in to get access.
+2024-08-24T05:27:25.957Z [error]: Can't find this /api/jhon on this server.
+2024-08-24T05:28:02.064Z [error]: Can't find this /api/jhon on this server.
+2024-08-24T05:34:29.567Z [error]: Error: The token belonging to this user does no longer exist.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:57:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T05:35:11.977Z [error]: MongoServerError: E11000 duplicate key error collection: bazaar-store.users index: phoneNumber_1 dup key: { phoneNumber: null }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-24T05:42:26.516Z [error]: Error: You do not have permission to perform this action.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:77:17
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:67:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T05:44:28.207Z [error]: Error: Can't find this /api/vendors/register on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+2024-08-24T05:49:54.602Z [error]: Error: Please provide your address.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:6:21
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at multerMiddleware (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+2024-08-24T05:50:06.377Z [error]: Error: "image" is not allowed
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:6:21
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at multerMiddleware (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+2024-08-24T05:50:25.735Z [error]: Cannot read properties of undefined (reading 'vendorImage')
+2024-08-24T05:51:06.854Z [error]: Cannot read properties of undefined (reading 'vendorImage')
+2024-08-24T05:55:38.577Z [error]: JsonWebTokenError: jwt malformed
+    at module.exports (F:\Side Projects\bazaar-backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at node:internal/util:442:7
+    at new Promise (<anonymous>)
+    at node:internal/util:428:12
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:40:48
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+2024-08-24T06:06:25.528Z [error]: Error: Can't find this /api/products/reviews on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+2024-08-24T06:12:38.670Z [error]: Error: Referenced product ID does not exist
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/productReviewModel.js:56:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T06:41:25.951Z [error]: Error: One or more vendors do not exist.
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/orderModel.js:133:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T06:42:23.559Z [error]: Error: One or more vendors do not exist.
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/orderModel.js:135:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T06:42:53.392Z [error]: Error: One or more vendors do not exist.
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/orderModel.js:135:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T06:43:40.411Z [error]: Error: One or more products do not exist.
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/orderModel.js:150:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T07:56:41.641Z [error]: Error: User ID is required
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:6:21
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:67:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T07:57:50.002Z [error]: ReferenceError: AppError is not defined
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/wishlistModel.js:57:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T07:58:17.371Z [error]: Error: Referenced customer ID does not exist
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/wishlistModel.js:58:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T07:58:41.330Z [error]: Error: One or more products do not exist.
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/wishlistModel.js:72:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-24T09:46:33.247Z [error]: Error: Category logo is required.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:6:21
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (F:\Side Projects\bazaar-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:530:35)
+    at finish (node:internal/streams/writable:945:10)
+    at node:internal/streams/writable:926:13
+2024-08-24T09:52:42.041Z [error]: Brand validation failed: logo: Please provide brand logo., imageAltText: Please provide image alt text.
+2024-08-24T09:55:19.290Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T09:57:59.125Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:26:27.435Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:27:14.651Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:27:39.362Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:28:36.447Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:44:23.359Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:48:46.026Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:49:26.188Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-24T10:50:32.018Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-26T04:21:11.601Z [error]: Category validation failed: logo: Please provide category logo.
+2024-08-26T04:25:33.803Z [error]: ValidationError: Category validation failed: logo: Please provide category logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-26T04:40:46.242Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-26T04:43:29.163Z [error]: ValidationError: Category validation failed: logo: Please provide category logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-26T04:47:17.621Z [error]: ValidationError: Category validation failed: logo: Please provide category logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-26T04:47:53.776Z [error]: ReferenceError: doc is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/categoryController.js:32:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T04:48:33.904Z [error]: MongoServerError: E11000 duplicate key error collection: bazaar-store.categories index: name_1 dup key: { name: "Aqous" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T04:49:13.572Z [error]: ReferenceError: doc is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/categoryController.js:32:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T04:49:37.258Z [error]: MongoServerError: E11000 duplicate key error collection: bazaar-store.categories index: name_1 dup key: { name: "Aqousj" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T04:49:42.278Z [error]: ReferenceError: categoey is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/categoryController.js:41:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T04:50:03.034Z [error]: MongoServerError: E11000 duplicate key error collection: bazaar-store.categories index: name_1 dup key: { name: "Aqousjd" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T04:58:52.655Z [error]: ReferenceError: getCacheKey is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/brandController.js:31:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T04:59:24.007Z [error]: MongoServerError: E11000 duplicate key error collection: bazaar-store.brands index: name_1 dup key: { name: "Addias" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T05:21:42.539Z [error]: CastError: Cast to ObjectId failed for value "lm10" (type string) at path "_id" for model "Brand"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2585:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:149:21
+2024-08-26T05:23:22.557Z [error]: CastError: Cast to ObjectId failed for value "lm10" (type string) at path "_id" for model "Brand"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2585:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:149:21
+2024-08-26T05:23:54.556Z [error]: Error: Can't find this /api/brands/slug/lm10 on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-08-26T05:24:42.303Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T05:38:28.186Z [error]: ValidationError: Brand validation failed: slug: Path `slug` is required.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-26T05:47:14.381Z [error]: Error: The token belonging to this user does no longer exist.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:57:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T05:50:35.654Z [error]: MongoServerError: E11000 duplicate key error collection: store.categories index: name_1 dup key: { name: "Electronic" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T05:52:30.317Z [error]: Error: Invalid brand ID
+    at validateProductDependencies (file:///F:/Side%20Projects/bazaar-backend/utils/validation.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/productController.js:55:9
+2024-08-26T05:56:23.113Z [error]: ReferenceError: subCategory is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/productController.js:68:9
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at Multipart.<anonymous> (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:166:7)
+    at Multipart.emit (node:events:518:28)
+    at emitCloseNT (node:internal/streams/destroy:147:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+2024-08-26T05:57:34.755Z [error]: ReferenceError: subCategory is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/productController.js:68:9
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at Multipart.<anonymous> (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:166:7)
+    at Multipart.emit (node:events:518:28)
+    at emitCloseNT (node:internal/streams/destroy:147:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+2024-08-26T05:58:22.783Z [error]: ReferenceError: subCategory is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/productController.js:68:9
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at Multipart.<anonymous> (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:166:7)
+    at Multipart.emit (node:events:518:28)
+    at emitCloseNT (node:internal/streams/destroy:147:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+2024-08-26T06:01:15.013Z [error]: ReferenceError: subCategory is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/productController.js:68:9
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at multerMiddleware (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+2024-08-26T06:01:59.150Z [error]: TypeError: Cannot read properties of undefined (reading 'thumbnail')
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/productController.js:92:29
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at multerMiddleware (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+2024-08-26T06:55:06.000Z [error]: Error: Reason is required.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:6:21
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:175:3)
+2024-08-26T07:02:08.096Z [error]: TypeError: next is not a function
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/refundModel.js:51:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T07:02:53.457Z [error]: Error: One or more vendors do not exist.
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/orderModel.js:109:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T07:03:31.854Z [error]: Error: Referenced order ID does not exist
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/refundModel.js:46:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T07:34:19.514Z [error]: Error: "logo" is not allowed
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:6:21
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:175:3)
+    at router (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:47:12)
+2024-08-26T07:34:36.317Z [error]: ValidationError: SubCategory validation failed: mainCategory: Please provide main category., name: Please provide sub category name.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-08-26T07:38:29.494Z [error]: MongoServerError: E11000 duplicate key error collection: store.subcategories index: name_1 dup key: { name: "under garments" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T07:41:40.612Z [error]: MongoServerError: E11000 duplicate key error collection: store.subcategories index: name_1 dup key: { name: "gaming mobile" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T07:46:00.138Z [error]: Main category not found.
+2024-08-26T07:54:43.767Z [error]: Main category not found.
+2024-08-26T07:55:30.600Z [error]: Main category not found.
+2024-08-26T08:13:22.679Z [error]: Error: Referenced category ID does not exist
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/subCategoryModel.js:50:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-08-26T08:14:53.487Z [error]: ENOENT: no such file or directory, unlink 'F:\Side Projects\bazaar-backend\uploads\https:\encrypted-tbn0.gstatic.com\images?q=tbn:ANd9GcTFFTu-mdPQ1EA-4FivG4Hk9mD-hgpTQ8Oj5w&s'
+2024-08-26T09:33:08.120Z [error]: MongoServerError: E11000 duplicate key error collection: store.subcategories index: name_1 dup key: { name: "iphone" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-08-26T09:59:30.932Z [error]: MongoServerError: E11000 duplicate key error collection: store.subcategories index: name_1 dup key: { name: "paasd" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)

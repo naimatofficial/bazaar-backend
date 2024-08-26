@@ -22,17 +22,24 @@ export const createFlashDeal = catchAsync(async (req, res) => {
     const { title, startDate, endDate } = req.body
     const image = req.file ? req.file.path : ''
 
-    const newFlashDeal = new FlashDeal({
+    const doc = new FlashDeal({
         title,
         startDate,
         endDate,
         image,
     })
 
-    await newFlashDeal.save()
+    await doc.save()
+
+    if (!doc) {
+        return res.status(400).json({
+            status: 'fail',
+            message: `Flash deal could not be created`,
+        })
+    }
 
     // delete pervious cache
-    const cacheKey = getCacheKey(FlashDeal, '', req.query)
+    const cacheKey = getCacheKey('FlashDeal', '', req.query)
     await redisClient.del(cacheKey)
 
     res.status(201).json({
@@ -44,84 +51,70 @@ export const createFlashDeal = catchAsync(async (req, res) => {
 // Get Flash Deals with Caching
 export const getFlashDeals = getAll(FlashDeal)
 // Get Flash Deal by ID
-export const getFlashDealById = async (req, res) => {
-    try {
-        const { id } = req.params
+export const getFlashDealById = catchAsync(async (req, res) => {
+    const { id } = req.params
 
-        const cacheKey = `flashDeal_${id}`
-        const cachedData = await getCache(cacheKey)
+    const cacheKey = `flashDeal_${id}`
+    const cachedData = await getCache(cacheKey)
 
-        if (cachedData) {
-            logger.info(`Cache hit for key: ${cacheKey}`)
-            return res.status(200).json({
-                success: true,
-                message: 'Flash deal retrieved successfully (from cache)',
-                docs: cachedData,
-            })
-        }
-
-        const flashDeal = await FlashDeal.findById(id).populate({
-            path: 'productId',
-            select: 'name price description thumbnail',
+    if (cachedData) {
+        logger.info(`Cache hit for key: ${cacheKey}`)
+        return res.status(200).json({
+            success: 'success',
+            cached: true,
+            doc: cachedData,
         })
-
-        if (!flashDeal) {
-            logger.warn(`Flash deal with ID ${id} not found in database`)
-            return res.status(404).json({ message: 'Flash deal not found' })
-        }
-
-        if (checkExpiration(flashDeal)) {
-            flashDeal.status = 'expired'
-            await flashDeal.save()
-        }
-
-        await setCache(cacheKey, flashDeal, 3600)
-        logger.info(`Cache set for key: ${cacheKey}`)
-        res.status(200).json({
-            success: true,
-            message: 'Flash deal retrieved successfully',
-            docs: flashDeal,
-        })
-    } catch (error) {
-        logger.error(`Error in getFlashDealById: ${error.message}`)
-        res.status(500).json({ message: error.message })
     }
-}
 
-export const updateFlashDeal = async (req, res) => {
-    try {
-        const { id } = req.params
+    const flashDeal = await FlashDeal.findById(id).populate({
+        path: 'productId',
+        select: 'name price description thumbnail',
+    })
 
-        const updatedFlashDeal = await FlashDeal.findByIdAndUpdate(
-            id,
-            req.body,
-            {
-                new: true,
-            }
-        ).exec()
-
-        if (!updatedFlashDeal) {
-            return res.status(404).json({ message: 'Flash deal not found' })
-        }
-
-        if (checkExpiration(updatedFlashDeal)) {
-            updatedFlashDeal.status = 'expired'
-            await updatedFlashDeal.save()
-        }
-
-        await deleteCache(`flashDeal_${id}`)
-        await deleteCache('flashDeals')
-
-        sendSuccessResponse(
-            res,
-            updatedFlashDeal,
-            'Flash deal updated successfully'
-        )
-    } catch (error) {
-        logger.error(error.message)
-        sendErrorResponse(res, error)
+    if (!flashDeal) {
+        logger.warn(`Flash deal with ID ${id} not found in database`)
+        return res.status(404).json({ message: 'Flash deal not found' })
     }
-}
+
+    if (checkExpiration(flashDeal)) {
+        flashDeal.status = 'expired'
+        await flashDeal.save()
+    }
+
+    await setCache(cacheKey, flashDeal, 3600)
+    logger.info(`Cache set for key: ${cacheKey}`)
+
+    res.status(200).json({
+        status: 'success',
+        cached: false,
+        doc: FlashDeal,
+    })
+})
+
+export const updateFlashDeal = catchAsync(async (req, res) => {
+    const { id } = req.params
+
+    const updatedFlashDeal = await FlashDeal.findByIdAndUpdate(id, req.body, {
+        new: true,
+    }).exec()
+
+    if (!updatedFlashDeal) {
+        return res.status(404).json({ message: 'Flash deal not found' })
+    }
+
+    if (checkExpiration(updatedFlashDeal)) {
+        updatedFlashDeal.status = 'expired'
+        await updatedFlashDeal.save()
+    }
+
+    await deleteCache(`flashDeal_${id}`)
+    await deleteCache('flashDeals')
+
+    res.status(200).json({
+        status: 'success',
+        doc: updatedFlashDeal,
+    })
+})
 
 // Delete Flash Deal
 export const deleteFlashDeal = deleteOne(FlashDeal)
@@ -214,73 +207,62 @@ export const removeProductFromFlashDeal = catchAsync(async (req, res, next) => {
 })
 
 // Update Flash Deal Status
-export const updateFlashDealStatus = async (req, res) => {
-    try {
-        const { id } = req.params
-        const { status } = req.body
+export const updateFlashDealStatus = catchAsync(async (req, res) => {
+    const { id } = req.params
+    const { status } = req.body
 
-        // Validate status
-        if (!['active', 'inactive', 'expired'].includes(status)) {
-            return res.status(400).json({ message: 'Invalid status value' })
-        }
-
-        // Update flash deal status
-        const updatedFlashDeal = await FlashDeal.findByIdAndUpdate(
-            id,
-            { status },
-            { new: true }
-        )
-
-        if (!updatedFlashDeal) {
-            return res.status(404).json({ message: 'Flash deal not found' })
-        }
-
-        // Invalidate cache
-        await deleteCache(`flashDeal_${id}`)
-        await deleteCache('flashDeals')
-
-        sendSuccessResponse(
-            res,
-            updatedFlashDeal,
-            'Flash deal status updated successfully'
-        )
-    } catch (error) {
-        logger.error(`Error updating flash deal status: ${error.message}`)
-        sendErrorResponse(res, error)
+    // Validate status
+    if (!['active', 'inactive', 'expired'].includes(status)) {
+        return res.status(400).json({ message: 'Invalid status value' })
     }
-}
+
+    // Update flash deal status
+    const updatedFlashDeal = await FlashDeal.findByIdAndUpdate(
+        id,
+        { status },
+        { new: true }
+    )
+
+    if (!updatedFlashDeal) {
+        return res.status(404).json({ message: 'Flash deal not found' })
+    }
+
+    // Invalidate cache
+    await deleteCache(`flashDeal_${id}`)
+    await deleteCache('flashDeals')
+
+    res.status(200).json({
+        status: 'success',
+        doc: updatedFlashDeal,
+    })
+})
 
 // Update Publish Status of Flash Deal
-export const updatePublishStatus = async (req, res) => {
-    try {
-        const { id } = req.params
-        const { publish } = req.body
+export const updatePublishStatus = catchAsync(async (req, res) => {
+    const { id } = req.params
+    const { publish } = req.body
 
-        // Validate publish status (true/false)
-        if (typeof publish !== 'boolean') {
-            return res.status(400).json({ message: 'Invalid publish status' })
-        }
-
-        // Update the publish status
-        const updatedFlashDeal = await FlashDeal.findByIdAndUpdate(
-            id,
-            { publish },
-            { new: true }
-        ).exec()
-        if (!updatedFlashDeal) {
-            return res.status(404).json({ message: 'Flash deal not found' })
-        }
-
-        // Invalidate cache
-        await deleteCache(`flashDeal_${id}`)
-        await deleteCache('flashDeals')
-
-        res.status(200).json({
-            message: 'Publish status updated successfully',
-            flashDeal: updatedFlashDeal,
-        })
-    } catch (error) {
-        logger.error(error.message)
-        res.status(500).json({ message: error.message })
+    // Validate publish status (true/false)
+    if (typeof publish !== 'boolean') {
+        return res.status(400).json({ message: 'Invalid publish status' })
     }
-}
+
+    // Update the publish status
+    const updatedFlashDeal = await FlashDeal.findByIdAndUpdate(
+        id,
+        { publish },
+        { new: true }
+    ).exec()
+    if (!updatedFlashDeal) {
+        return res.status(404).json({ message: 'Flash deal not found' })
+    }
+
+    // Invalidate cache
+    await deleteCache(`flashDeal_${id}`)
+    await deleteCache('flashDeals')
+
+    res.status(200).json({
+        status: 'success',
+        doc: updatedFlashDeal,
+    })
+})

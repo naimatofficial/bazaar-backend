@@ -43,7 +43,7 @@ router
     .route('/')
     .post(
         upload.single('image'),
-        validateSchema(flashDealValidationSchema),
+        // validateSchema(flashDealValidationSchema),
         createFlashDeal
     )
     .get(getFlashDeals)

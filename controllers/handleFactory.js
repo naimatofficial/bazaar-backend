@@ -1,3 +1,4 @@
+import slugify from 'slugify'
 import redisClient from '../config/redisConfig.js'
 import APIFeatures from '../utils/apiFeatures.js'
 import AppError from '../utils/appError.js'
@@ -9,6 +10,8 @@ import { getCacheKey } from '../utils/helpers.js'
 export const checkFields = (Model, req, next) => {
     // Step 1: Get the allowed fields from the model schema
     const allowedFields = Object.keys(Model.schema.paths)
+
+    console.log(allowedFields)
 
     // Step 2: Identify fields in req.body that are not in the allowedFields list
     const extraFields = Object.keys(req.body).filter(
@@ -26,20 +29,20 @@ export const checkFields = (Model, req, next) => {
     }
 
     // Step 4: Proceed with filtering the valid fields
-    const filteredBody = Object.keys(req.body).reduce((obj, key) => {
+    const filteredData = Object.keys(req.body).reduce((obj, key) => {
         if (allowedFields.includes(key)) {
             obj[key] = req.body[key]
         }
         return obj
     }, {})
 
-    return filteredBody
+    return { allowedFields, filteredData }
 }
 
 // DELETE One Document
 export const deleteOne = (Model) =>
     catchAsync(async (req, res, next) => {
-        const doc = await Model.findByIdAndDelete(req.params.id)
+        const doc = await Model.findByIdAndDelete(req.params.id).exec()
 
         const docName = Model.modelName.toLowerCase() || 'Document'
 
@@ -65,10 +68,20 @@ export const deleteOne = (Model) =>
 // UPDATE One Document
 export const updateOne = (Model) =>
     catchAsync(async (req, res, next) => {
-        const data = checkFields(Model, req, next)
+        const { allowedFields, filteredData } = checkFields(Model, req, next)
+
+        // // if document contain slug then update slug value
+        // if (allowedFields?.slug && filteredData?.name) {
+        //     filteredData = {
+        //         ...filteredData,
+        //         slug: slugify(filteredData.name, { lower: true }),
+        //     }
+        // }
+
+        console.log('DAta: ', filteredData)
 
         // Perform the update operation
-        const doc = await Model.findByIdAndUpdate(req.params.id, data, {
+        const doc = await Model.findByIdAndUpdate(req.params.id, filteredData, {
             new: true,
             runValidators: true,
         })
@@ -100,17 +113,14 @@ export const updateOne = (Model) =>
 // CREATE One Document
 export const createOne = (Model) =>
     catchAsync(async (req, res, next) => {
-        const data = checkFields(Model, req, next)
+        const { filteredData } = checkFields(Model, req, next)
 
-        const doc = await Model.create(data)
+        const doc = await Model.create(filteredData)
 
         const docName = Model.modelName || 'Document'
 
         if (!doc) {
-            return res.status(400).json({
-                status: 'fail',
-                message: `${docName} could not be created`,
-            })
+            return next(new AppError(`${docName} could not be created`, 400))
         }
 
         const cacheKeyOne = getCacheKey(Model.modelName, doc?._id)
@@ -148,8 +158,10 @@ export const getOne = (Model, popOptions) =>
         if (popOptions && popOptions.path) query = query.populate(popOptions)
         const doc = await query
 
+        const docName = Model.modelName.toLowerCase() || 'Document'
+
         if (!doc) {
-            return next(new AppError('No document found with that ID', 404))
+            return next(new AppError(`No ${docName} found with that ID`, 404))
         }
 
         // Cache the result
@@ -165,6 +177,8 @@ export const getOne = (Model, popOptions) =>
 // GET All Documents
 export const getAll = (Model, popOptions) =>
     catchAsync(async (req, res, next) => {
+        console.log('GET ALL')
+
         const cacheKey = getCacheKey(Model.modelName, '', req.query)
 
         // Check cache first
@@ -202,6 +216,45 @@ export const getAll = (Model, popOptions) =>
             status: 'success',
             cached: false,
             results: doc.length,
+            doc,
+        })
+    })
+
+export const getOneBySlug = (Model, popOptions) =>
+    catchAsync(async (req, res, next) => {
+        const cacheKey = getCacheKey(Model.modelName, req.params.slug)
+
+        const slug = req.params.slug
+
+        // Check cache first
+        const cachedDoc = await redisClient.get(cacheKey)
+
+        if (cachedDoc) {
+            return res.status(200).json({
+                status: 'success',
+                cached: true,
+                doc: JSON.parse(cachedDoc),
+            })
+        }
+
+        // If not in cache, fetch from database
+        let query = Model.findOne({ slug })
+
+        if (popOptions && popOptions.path) query = query.populate(popOptions)
+        const doc = await query
+
+        const docName = Model.modelName.toLowerCase() || 'Document'
+
+        if (!doc) {
+            return next(new AppError(`No ${docName} found with that slug`, 404))
+        }
+
+        // Cache the result
+        await redisClient.setEx(cacheKey, 3600, JSON.stringify(doc))
+
+        res.status(200).json({
+            status: 'success',
+            cached: false,
             doc,
         })
     })

@@ -45,14 +45,7 @@ const checkFileType = (file, cb) => {
 
 const router = express.Router()
 
-router
-    .route('/')
-    .post(
-        upload.single('logo'),
-        validateSchema(categoryValidationSchema),
-        createCategory
-    )
-    .get(getCategories)
+router.route('/').post(upload.single('logo'), createCategory).get(getCategories)
 
 router
     .route('/:id')

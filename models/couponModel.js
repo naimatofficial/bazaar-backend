@@ -90,14 +90,49 @@ const couponSchema = new mongoose.Schema(
     }
 )
 
+couponSchema.pre('save', async function (next) {
+    try {
+        // Check if vendors are provided and validate them
+        if (this.vendors && this.vendors.length > 0) {
+            const vendorCheck = await mongoose.model('Vendor').countDocuments({
+                _id: { $in: this.vendors },
+            })
+
+            if (vendorCheck !== this.vendors.length) {
+                return next(
+                    new AppError('One or more vendors do not exist.', 400)
+                )
+            }
+        }
+        // Check if customers are provided and validate them
+        if (this.customers && this.customers.length > 0) {
+            const customerCheck = await mongoose
+                .model('Customer')
+                .countDocuments({
+                    _id: { $in: this.customers },
+                })
+
+            if (customerCheck !== this.customers.length) {
+                return next(
+                    new AppError('One or more customers do not exist.', 400)
+                )
+            }
+        }
+
+        next()
+    } catch (err) {
+        next(err)
+    }
+})
+
 // Pre middleware to populate applicableProducts, applicableVendors,
 // and applicableCustomers before any find operation
-couponSchema.pre(/^find/, function (next) {
-    this.populate('applicableProducts')
-        .populate('applicableVendors')
-        .populate('applicableCustomers')
-    next()
-})
+// couponSchema.pre(/^find/, function (next) {
+//     this.populate('applicableProducts')
+//         .populate('applicableVendors')
+//         .populate('applicableCustomers')
+//     next()
+// })
 
 const Coupon = mongoose.model('Coupon', couponSchema)
 

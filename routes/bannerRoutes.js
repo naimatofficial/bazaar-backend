@@ -10,6 +10,7 @@ import {
 } from '../controllers/bannerController.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import bannerValidationSchema from '../validations/bannerValidator.js'
+import checkObjectId from '../middleware/checkObjectId.js'
 
 const router = express.Router()
 
@@ -46,13 +47,13 @@ router
     .route('/')
     .post(
         upload.single('bannerImage'),
-        validateSchema(bannerValidationSchema),
+        // validateSchema(bannerValidationSchema),
         createBanner
     )
     .get(getBanners)
 
 router
-    .route('/:id')
+    .route('/:id', checkObjectId)
     .get(getBannerById)
     .put(upload.single('bannerImage'), updateBanner)
     .delete(deleteBanner)

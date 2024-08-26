@@ -17,6 +17,7 @@ import categoryRoutes from './routes/categoryRoutes.js'
 import subCategoryRoutes from './routes/subCategoryRoutes.js'
 import subSubCategoryRoutes from './routes/subSubCategoryRoutes.js'
 import productRoutes from './routes/productRoutes.js'
+import reviewRoutes from './routes/reviewRoutes.js'
 import colorRoutes from './routes/colorRoutes.js'
 import whishlist from './routes/wishlistRoutes.js'
 import banner from './routes/bannerRoutes.js'
@@ -91,6 +92,7 @@ app.use('/api/sub-categories', subCategoryRoutes)
 app.use('/api/sub-sub-categories', subSubCategoryRoutes)
 app.use('/api/attributes', attributeRoutes)
 app.use('/api/colors', colorRoutes)
+app.use('/api/reviews', reviewRoutes)
 
 app.use('/api/orders', oderRoutes)
 app.use('/api/wishlists', whishlist)

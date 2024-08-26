@@ -23,7 +23,7 @@ router
     .post(
         protect,
         restrictTo('admin'),
-        validateSchema(userValidationSchema),
+        // validateSchema(userValidationSchema),
         createUser
     )
     .get(protect, restrictTo('admin'), getUsers)

@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import AppError from './../utils/appError.js'
 
 const productSchema = new mongoose.Schema(
     {
@@ -34,6 +35,8 @@ const productSchema = new mongoose.Schema(
         },
         digitalProductType: {
             type: String,
+            enum: ['physical', 'digital'],
+            default: 'physical',
         },
         sku: {
             type: String,
@@ -124,6 +127,39 @@ const productSchema = new mongoose.Schema(
     }
 )
 
+productSchema.pre('save', async function (next) {
+    const category = await mongoose.model('Category').findById(this.category)
+    if (!category) {
+        return next(new AppError('Referenced category ID does not exist', 400))
+    }
+
+    const subCategory = await mongoose
+        .model('SubCategory')
+        .findById(this.subCategory)
+
+    if (!subCategory) {
+        return next(
+            new AppError('Referenced subCategory ID does not exist', 400)
+        )
+    }
+
+    const subSubCategory = await mongoose
+        .model('SubSubCategory')
+        .findById(this.subSubCategory)
+
+    if (!subSubCategory) {
+        return next(
+            new AppError('Referenced subSubCategory ID does not exist', 400)
+        )
+    }
+
+    const brand = await mongoose.model('Brand').findById(this.brand)
+    if (!brand) {
+        return next(new AppError('Referenced brand ID does not exist', 400))
+    }
+    next()
+})
+
 // Virtual middleware fetch all the reviews associated with this product
 productSchema.virtual('reviews', {
     ref: 'ProductReview',
@@ -149,6 +185,12 @@ productSchema.pre(/^find/, function (next) {
             select: 'name',
         })
     next()
+})
+
+productSchema.post('findByIdAndDelete', async function (doc) {
+    if (doc) {
+        await mongoose.model('Review').deleteMany({ product: doc._id })
+    }
 })
 
 const Product = mongoose.model('Product', productSchema)

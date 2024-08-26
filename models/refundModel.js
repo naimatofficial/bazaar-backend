@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import AppError from '../utils/appError.js'
 
 const refundSchema = new mongoose.Schema(
     {
@@ -9,8 +10,8 @@ const refundSchema = new mongoose.Schema(
         },
         status: {
             type: String,
-            enum: ['Pending', 'Approved', 'Refunded', 'Rejected'],
-            default: 'Pending',
+            enum: ['pending', 'approved', 'refunded', 'rejected'],
+            default: 'pending',
         },
         statusReason: {
             type: String,
@@ -36,6 +37,19 @@ refundSchema.pre(/^find/, function (next) {
         select: '-__v -createdAt -updatedAt',
     })
     next()
+})
+
+refundSchema.pre('save', async function (next) {
+    try {
+        const order = await mongoose.model('Order').findById(this.order)
+        if (!order) {
+            return next(new AppError('Referenced order ID does not exist', 400))
+        }
+
+        next()
+    } catch (err) {
+        next(err)
+    }
 })
 
 const Refund = mongoose.model('Refund', refundSchema)

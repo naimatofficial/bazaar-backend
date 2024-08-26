@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import AppError from '../utils/appError.js'
 
 const productReviewSchema = new mongoose.Schema(
     {
@@ -32,14 +33,29 @@ const productReviewSchema = new mongoose.Schema(
     { timestamps: true }
 )
 
-productReviewSchema.pre(/^find/, function (next) {
-    this.populate({
-        path: 'customer',
-        select: '-__v -createdAt -updatedAt -role -status -referCode',
-    }).populate({
-        path: 'product',
-        select: '-__v -createdAt -updatedAt',
-    })
+// productReviewSchema.pre(/^find/, function (next) {
+//     this.populate({
+//         path: 'customer',
+//         select: '-__v -createdAt -updatedAt -role -status -referCode',
+//     }).populate({
+//         path: 'product',
+//         select: '-__v -createdAt -updatedAt',
+//     })
+// })
+
+productReviewSchema.pre('save', async function (next) {
+    const customer = await mongoose.model('Customer').findById(this.customer)
+
+    if (!customer) {
+        return next(new AppError('Referenced customer ID does not exist', 400))
+    }
+
+    const product = await mongoose.model('Product').findById(this.product)
+
+    if (!product) {
+        return next(new AppError('Referenced product ID does not exist', 400))
+    }
+    next()
 })
 
 const ProductReview = mongoose.model('ProductReview', productReviewSchema)

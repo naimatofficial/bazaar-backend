@@ -6,15 +6,12 @@ import {
     getAllProducts,
     getProductById,
     deleteProduct,
-    addReview,
-    getProductReviews,
     updateProductStatus,
     updateProductFeaturedStatus,
     getTopRatedProducts,
     sellProduct,
     getLimitedStockedProducts,
     updateProduct,
-    updateReviewStatus,
 } from '../controllers/productController.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import productValidationSchema from './../validations/productValidator.js'
@@ -45,7 +42,6 @@ router
             { name: 'thumbnail' },
             { name: 'images', maxCount: 10 },
         ]),
-        validateSchema(productValidationSchema),
         createProduct
     )
     .get(getAllProducts)
@@ -59,9 +55,9 @@ router.route('/:productId/sold').get(sellProduct)
 
 router.put('/:productId/update-product-image', updateProductImages)
 
-router.route('/:productId/reviews').post(addReview).get(getProductReviews)
+// router.route('/:productId/reviews').post(addReview).get(getProductReviews)
 
-router.route('/:reviewId/status').patch(updateReviewStatus)
+// router.route('/:reviewId/status').patch(updateReviewStatus)
 
 router
     .route('/:id')

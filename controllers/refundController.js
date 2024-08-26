@@ -5,7 +5,7 @@ import {
     sendSuccessResponse,
     sendErrorResponse,
 } from '../utils/responseHandler.js'
-import { deleteOne, getAll, getOne } from './handleFactory.js'
+import { createOne, deleteOne, getAll, getOne } from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
@@ -32,28 +32,7 @@ const populateOrderDetails = (query) => {
 }
 
 // Create a new refund request
-export const createRefund = async (req, res) => {
-    try {
-        const { order, reason } = req.body
-
-        const orderExists = await Order.findById(order)
-        if (!orderExists) {
-            return sendErrorResponse(res, 'Order not found', 404)
-        }
-
-        const refund = await Refund.create({ order, reason })
-
-        sendSuccessResponse(
-            res,
-            refund,
-            'Refund request created successfully',
-            201
-        )
-    } catch (error) {
-        console.error(`[ERROR] Error creating refund request: ${error.message}`)
-        sendErrorResponse(res, error)
-    }
-}
+export const createRefund = createOne(Refund)
 
 export const getAllRefunds = getAll(Refund)
 // export const getAllRefunds = async (req, res) => {

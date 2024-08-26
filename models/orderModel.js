@@ -1,4 +1,6 @@
 import mongoose from 'mongoose'
+import catchAsync from '../utils/catchAsync.js'
+import AppError from '../utils/appError.js'
 
 const orderSchema = new mongoose.Schema(
     {
@@ -92,6 +94,42 @@ orderSchema.pre(/^find/, function (next) {
             select: '-__v -createdAt -updatedAt -role -status -referCode',
         })
     next()
+})
+
+orderSchema.pre('save', async function (next) {
+    try {
+        // Check if vendors are provided and validate them
+        if (this.vendors && this.vendors.length > 0) {
+            const vendorCheck = await mongoose.model('Vendor').countDocuments({
+                _id: { $in: this.vendors },
+            })
+
+            if (vendorCheck !== this.vendors.length) {
+                return next(
+                    new AppError('One or more vendors do not exist.', 400)
+                )
+            }
+        }
+
+        // Check if products are provided and validate them
+        if (this.products && this.products.length > 0) {
+            const productCheck = await mongoose
+                .model('Product')
+                .countDocuments({
+                    _id: { $in: this.products },
+                })
+
+            if (productCheck !== this.products.length) {
+                return next(
+                    new AppError('One or more products do not exist.', 400)
+                )
+            }
+        }
+
+        next()
+    } catch (err) {
+        next(err)
+    }
 })
 
 const Order = mongoose.model('Order', orderSchema)

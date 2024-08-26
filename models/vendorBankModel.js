@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import AppError from '../utils/appError.js'
 
 const vendorBankSchema = new mongoose.Schema(
     {
@@ -34,5 +35,20 @@ const vendorBankSchema = new mongoose.Schema(
         timestamps: true,
     }
 )
+
+vendorBankSchema.post('save', async function (next) {
+    try {
+        const vendor = await mongoose.model('Vendor').findById(this.vendor)
+        if (!vendor) {
+            return next(
+                new AppError('Referenced vendor ID does not exist', 400)
+            )
+        }
+
+        next()
+    } catch (err) {
+        next(err)
+    }
+})
 
 export default mongoose.model('VendorBank', vendorBankSchema)

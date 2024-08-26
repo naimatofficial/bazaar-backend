@@ -2,7 +2,6 @@ import rateLimit from 'express-rate-limit'
 
 // Helper function to get the cache key
 export const getCacheKey = (modelName, id = '', query = {}) => {
-    console.log(modelName)
     const baseKey = `cache:${modelName}`
     if (id) return `${baseKey}:${id}`
     return `${baseKey}:query:${JSON.stringify(query)}`

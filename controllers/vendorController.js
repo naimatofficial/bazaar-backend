@@ -61,56 +61,48 @@ export const createVendor = async (req, res) => {
 }
 
 // Vendor registration (similar to createVendor but may have different logic)
-export const registerVendor = async (req, res) => {
-    try {
-        const {
-            firstName,
-            lastName,
-            phoneNumber,
-            email,
-            password,
-            shopName,
-            address,
-        } = req.body
+export const registerVendor = catchAsync(async (req, res) => {
+    const {
+        firstName,
+        lastName,
+        phoneNumber,
+        email,
+        password,
+        shopName,
+        address,
+    } = req.body
 
-        const vendorImage = req.files['vendorImage']
-            ? req.files['vendorImage'][0].path
-            : null
-        const logo = req.files['logo'] ? req.files['logo'][0].path : null
-        const banner = req.files['banner'] ? req.files['banner'][0].path : null
+    const vendorImage = req.files['vendorImage']
+        ? req.files['vendorImage'][0].path
+        : null
+    const logo = req.files['logo'] ? req.files['logo'][0].path : null
+    const banner = req.files['banner'] ? req.files['banner'][0].path : null
 
-        const newVendor = new Vendor({
-            firstName,
-            lastName,
-            phoneNumber,
-            email,
-            password,
-            shopName,
-            address,
-            vendorImage,
-            logo,
-            banner,
-            status: 'pending',
-        })
+    const newVendor = new Vendor({
+        firstName,
+        lastName,
+        phoneNumber,
+        email,
+        password,
+        shopName,
+        address,
+        vendorImage,
+        logo,
+        banner,
+        status: 'pending',
+    })
 
-        const savedVendor = await newVendor.save()
-        if (savedVendor) {
-            const cacheKey = `vendor:${savedVendor._id}`
-            await client.set(cacheKey, JSON.stringify(savedVendor))
-            await client.del('all_vendors')
+    const savedVendor = await newVendor.save()
+    if (savedVendor) {
+        const cacheKey = `vendor:${savedVendor._id}`
+        await client.set(cacheKey, JSON.stringify(savedVendor))
+        await client.del('all_vendors')
 
-            sendSuccessResponse(
-                res,
-                savedVendor,
-                'Vendor registered successfully'
-            )
-        } else {
-            throw new Error('Vendor could not be registered')
-        }
-    } catch (error) {
-        sendErrorResponse(res, error)
+        sendSuccessResponse(res, savedVendor, 'Vendor registered successfully')
+    } else {
+        throw new Error('Vendor could not be registered')
     }
-}
+})
 
 // Update vendor status
 export const updateVendorStatus = catchAsync(async (req, res, next) => {

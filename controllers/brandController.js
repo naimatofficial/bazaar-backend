@@ -1,45 +1,47 @@
+import redisClient from '../config/redisConfig.js'
 import Brand from '../models/brandModel.js'
 import catchAsync from '../utils/catchAsync.js'
+import { getCacheKey } from '../utils/helpers.js'
 import { client } from '../utils/redisClient.js'
-import {
-    sendSuccessResponse,
-    sendErrorResponse,
-} from '../utils/responseHandler.js'
-import { deleteOne, getAll, getOne } from './handleFactory.js'
+import { sendSuccessResponse } from '../utils/responseHandler.js'
+import { deleteOne, getAll, getOne, getOneBySlug } from './handleFactory.js'
 
 // Create a new brand
-export const createBrand = async (req, res) => {
-    try {
-        const { name, imageAltText } = req.body
-        const thumbnail = req.file ? req.file.path : undefined
+export const createBrand = catchAsync(async (req, res) => {
+    const { name, imageAltText } = req.body
+    const logo = req.file ? req.file.filename : ''
 
-        const newBrand = new Brand({
-            name,
-            thumbnail,
-            imageAltText,
+    console.log(req.file)
+
+    const brand = new Brand({
+        name,
+        logo,
+        imageAltText,
+    })
+
+    console.log(brand)
+
+    await brand.save()
+
+    if (!brand) {
+        return res.status(400).json({
+            status: 'fail',
+            message: `Brand could not be created`,
         })
-
-        const savedBrand = await newBrand.save()
-
-        if (savedBrand) {
-            // Cache the new brand
-            const cacheKey = `brand:${savedBrand._id}`
-            await client.set(cacheKey, JSON.stringify(savedBrand))
-            console.log(`[CACHE] Cached new brand with key: ${cacheKey}`)
-
-            // Invalidate the all brands cache
-            await client.del('all_brands')
-            console.log(`[CACHE] Invalidated cache for all brands`)
-
-            sendSuccessResponse(res, savedBrand, 'Brand created successfully')
-        } else {
-            throw new Error('Brand could not be created')
-        }
-    } catch (error) {
-        console.error(`[ERROR] Error creating brand: ${error.message}`)
-        sendErrorResponse(res, error)
     }
-}
+
+    const cacheKeyOne = getCacheKey('Brand', brand?._id)
+    await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(brand))
+
+    // delete all documents caches related to this model
+    const cacheKey = getCacheKey('Brand', '', req.query)
+    await redisClient.del(cacheKey)
+
+    res.status(201).json({
+        status: 'success',
+        doc: brand,
+    })
+})
 
 // Get all brands with optional search and status filter
 // export const getBrands = async (req, res) => {
@@ -99,6 +101,8 @@ export const getBrands = getAll(Brand, { path: 'productCount' })
 
 // Get a brand by ID
 export const getBrandById = getOne(Brand)
+
+export const getBrandBySlug = getOneBySlug(Brand)
 // Update a brand by ID
 export const updateBrand = catchAsync(async (req, res) => {
     const { name, imageAltText } = req.body
@@ -116,7 +120,7 @@ export const updateBrand = catchAsync(async (req, res) => {
     }
 
     // Update cache
-    const cacheKey = getCacheKey(Brand, '', req.query)
+    const cacheKey = getCacheKey('Brand', '', req.query)
     await redisClient.del(cacheKey)
 
     res.status(200).json({
@@ -127,43 +131,34 @@ export const updateBrand = catchAsync(async (req, res) => {
 // Delete a brand by ID
 export const deleteBrand = deleteOne(Brand)
 // Update a brand's status by ID
-export const updateBrandStatus = async (req, res) => {
-    try {
-        const { id } = req.params
-        const { status } = req.body
+export const updateBrandStatus = catchAsync(async (req, res) => {
+    const { id } = req.params
+    const { status } = req.body
 
-        // Ensure the status is valid
-        if (!['active', 'inactive'].includes(status)) {
-            return res.status(400).json({ message: 'Invalid status value' })
-        }
+    // // Ensure the status is valid
+    // if (!['active', 'inactive'].includes(status)) {
+    //     return res.status(400).json({ message: 'Invalid status value' })
+    // }
 
-        // Update the brand's status
-        const updatedBrand = await Brand.findByIdAndUpdate(
-            id,
-            { status },
-            { new: true }
-        )
+    // Update the brand's status
+    const updatedBrand = await Brand.findByIdAndUpdate(
+        id,
+        { status },
+        { new: true }
+    )
 
-        if (!updatedBrand) {
-            return res.status(404).json({ message: 'Brand not found' })
-        }
-
-        // Update the cache
-        const cacheKey = `brand:${updatedBrand._id}`
-        await client.set(cacheKey, JSON.stringify(updatedBrand))
-        console.log(`[CACHE] Updated cache for brand with key: ${cacheKey}`)
-
-        // Invalidate the all brands cache
-        await client.del('all_brands')
-        console.log(`[CACHE] Invalidated cache for all brands`)
-
-        sendSuccessResponse(
-            res,
-            updatedBrand,
-            'Brand status updated successfully'
-        )
-    } catch (error) {
-        console.error(`[ERROR] Error updating brand status: ${error.message}`)
-        sendErrorResponse(res, error)
+    if (!updatedBrand) {
+        return res.status(404).json({ message: 'Brand not found' })
     }
-}
+
+    // Update the cache
+    const cacheKey = `brand:${updatedBrand._id}`
+    await client.set(cacheKey, JSON.stringify(updatedBrand))
+    console.log(`[CACHE] Updated cache for brand with key: ${cacheKey}`)
+
+    // Invalidate the all brands cache
+    await client.del('all_brands')
+    console.log(`[CACHE] Invalidated cache for all brands`)
+
+    sendSuccessResponse(res, updatedBrand, 'Brand status updated successfully')
+})

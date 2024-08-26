@@ -9,129 +9,133 @@ import { populateProductDetails } from '../utils/productHelper.js'
 import { buildFilterQuery, buildSortOptions } from '../utils/filterHelper.js'
 import Customer from '../models/customerModel.js'
 import { deleteOne, getAll, getOne } from './handleFactory.js'
+import catchAsync from '../utils/catchAsync.js'
+import { getCacheKey } from '../utils/helpers.js'
+import redisClient from '../config/redisConfig.js'
 
 // Create a new product
-export const createProduct = async (req, res) => {
-    try {
-        // const { error } = productValidationSchema.validate(req.body, {
-        // 	abortEarly: false,
-        // });
-        // if (error) {
-        // 	return res
-        // 		.status(400)
-        // 		.json({ message: error.details.map((err) => err.message).join(", ") });
-        // }
+export const createProduct = catchAsync(async (req, res) => {
+    const {
+        name,
+        description,
+        category,
+        subCategory,
+        subSubCategory,
+        brand,
+        productType,
+        digitalProductType,
+        sku,
+        unit,
+        tags,
+        price,
+        discount,
+        discountType,
+        discountAmount,
+        taxAmount,
+        taxIncluded,
+        minimumOrderQty,
+        shippingCost,
+        stock,
+        isFeatured,
+        colors,
+        attributes,
+        size,
+        videoLink,
+        userId,
+        userType,
+    } = req.body
 
-        const {
-            name,
-            description,
-            category,
-            subCategorySlug,
-            subSubCategorySlug,
-            brand,
-            productType,
-            digitalProductType,
-            sku,
-            unit,
-            tags,
-            price,
-            discount,
-            discountType,
-            discountAmount,
-            taxAmount,
-            taxIncluded,
-            minimumOrderQty,
-            shippingCost,
-            stock,
-            isFeatured,
-            colors,
-            attributes,
-            size,
-            videoLink,
-            userId,
-            userType,
-        } = req.body
+    // const {
+    //     categoryObj,
+    //     subCategoryObj,
+    //     subSubCategoryObj,
+    //     brandObj,
+    //     colorObjs,
+    //     attributeObjs,
+    // } = await validateProductDependencies({
+    //     category,
+    //     subCategorySlug,
+    //     subSubCategorySlug,
+    //     brand,
+    //     colors,
+    //     attributes,
+    // })
 
-        const {
-            categoryObj,
-            subCategoryObj,
-            subSubCategoryObj,
-            brandObj,
-            colorObjs,
-            attributeObjs,
-        } = await validateProductDependencies({
-            category,
-            subCategorySlug,
-            subSubCategorySlug,
-            brand,
-            colors,
-            attributes,
-        })
+    const newProduct = new Product({
+        name,
+        description,
+        category,
+        subCategory,
+        subSubCategory,
+        brand,
+        productType,
+        digitalProductType,
+        sku,
+        unit,
+        tags,
+        price,
+        discount,
+        discountType,
+        discountAmount,
+        taxAmount,
+        taxIncluded,
+        minimumOrderQty,
+        shippingCost,
+        stock,
+        isFeatured: isFeatured || false,
+        colors: [colors],
+        attributes: [attributes],
+        size,
+        videoLink,
+        userId,
+        userType,
+        thumbnail: req.files['thumbnail']
+            ? req.files['thumbnail'][0].path
+            : undefined,
+        images: req.files['images']
+            ? req.files['images'].map((file) => file.path)
+            : [],
+    })
+    await newProduct.save()
 
-        const newProduct = new Product({
-            name,
-            description,
-            category: categoryObj._id,
-            subCategory: subCategoryObj ? subCategoryObj._id : undefined,
-            subSubCategory: subSubCategoryObj
-                ? subSubCategoryObj._id
-                : undefined,
-            brand: brandObj._id,
-            productType,
-            digitalProductType,
-            sku,
-            unit,
-            tags,
-            price,
-            discount,
-            discountType,
-            discountAmount,
-            taxAmount,
-            taxIncluded,
-            minimumOrderQty,
-            shippingCost,
-            stock,
-            isFeatured: isFeatured || false,
-            colors: colorObjs.map((color) => color._id),
-            attributes: attributeObjs.map((attribute) => attribute._id),
-            size,
-            videoLink,
-            userId,
-            userType,
-            thumbnail: req.files['thumbnail']
-                ? req.files['thumbnail'][0].path
-                : undefined,
-            images: req.files['images']
-                ? req.files['images'].map((file) => file.path)
-                : [],
-            status: 'pending',
-        })
-        await newProduct.save()
-        sendSuccessResponse(res, 201, newProduct)
-    } catch (error) {
-        sendErrorResponse(res, error)
-    }
-}
+    const cacheKeyOne = getCacheKey(Product, newProduct?._id)
+    await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(newProduct))
+
+    res.status(201).json({
+        status: 'success',
+        doc: newProduct,
+    })
+})
 
 // Update product images
-export const updateProductImages = async (req, res) => {
-    try {
-        const productId = req.params.id
-        const product = await Product.findById(productId)
+export const updateProductImages = catchAsync(async (req, res) => {
+    const productId = req.params.id
+    const product = await Product.findById(productId)
 
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' })
-        }
-
-        product.images = req.files ? req.files.map((file) => file.path) : []
-        await product.save()
-        await client.del(`product_${productId}`)
-        sendSuccessResponse(res, 200, product)
-    } catch (error) {
-        sendErrorResponse(res, error)
+    // Handle case where the document was not found
+    if (!product) {
+        return next(new AppError(`No product found with that ID`, 404))
     }
-}
 
+    product.images = req.files ? req.files.map((file) => file.path) : []
+    await product.save()
+
+    const cacheKeyOne = getCacheKey(Product, req.params.id)
+
+    // delete pervious document data
+    await redisClient.del(cacheKeyOne)
+    // updated the cache with new data
+    await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(doc))
+
+    // Update cache
+    const cacheKey = getCacheKey(Product, '', req.query)
+    await redisClient.del(cacheKey)
+
+    res.status(200).json({
+        status: 'success',
+        doc: product,
+    })
+})
 // export const getAllProducts = async (req, res) => {
 // 	try {
 // 		const { priceRange, sort, order = "asc", page = 1, limit = 10 } = req.query;
@@ -329,91 +333,92 @@ export const getLimitedStockedProducts = async (req, res) => {
 }
 
 // Mark product as sold
-export const sellProduct = async (req, res) => {
-    try {
-        const productId = req.params.id
-        const product = await Product.findById(productId)
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' })
-        }
+export const sellProduct = catchAsync(async (req, res) => {
+    const productId = req.params.id
+    const product = await Product.findById(productId)
 
-        product.status = 'sold'
-        await product.save()
-        sendSuccessResponse(res, product, 200)
-    } catch (error) {
-        sendErrorResponse(res, error)
+    if (!doc) {
+        return next(new AppError(`No product found with that ID`, 404))
     }
-}
 
-// Get product reviews
-export const getProductReviews = async (req, res) => {
-    try {
-        const productId = req.params.productId
+    product.status = 'sold'
 
-        const product = await Product.findById(productId).populate(
-            'reviews.customer',
-            'name'
-        )
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' })
-        }
-
-        sendSuccessResponse(res, product.reviews, 200)
-    } catch (error) {
-        sendErrorResponse(res, error)
-    }
-}
-
-// Update review status
-export const updateReviewStatus = async (req, res) => {
-    try {
-        const { productId, reviewId } = req.params
-        const { status } = req.body
-
-        const validStatuses = ['Active', 'Inactive']
-        if (!validStatuses.includes(status)) {
-            return res.status(400).json({ message: 'Invalid status' })
-        }
-
-        const product = await Product.findById(productId)
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' })
-        }
-
-        const review = product.reviews.id(reviewId)
-        if (!review) {
-            return res.status(404).json({ message: 'Review not found' })
-        }
-
-        review.status = status
-        await product.save()
-        sendSuccessResponse(res, review, 200)
-    } catch (error) {
-        sendErrorResponse(res, error)
-    }
-}
+    res.status(200).json({
+        status: 'success',
+        doc: product,
+    })
+})
 
 // Update product details
-export const updateProduct = async (req, res) => {
-    try {
-        const productId = req.params.id
+export const updateProduct = catchAsync(async (req, res) => {
+    const productId = req.params.id
 
-        const { error } = productValidationSchema.validate(req.body, {
-            abortEarly: false,
+    const { error } = productValidationSchema.validate(req.body, {
+        abortEarly: false,
+    })
+    if (error) {
+        return res.status(400).json({
+            message: error.details.map((err) => err.message).join(', '),
         })
-        if (error) {
-            return res.status(400).json({
-                message: error.details.map((err) => err.message).join(', '),
-            })
-        }
+    }
 
-        const {
+    const {
+        name,
+        description,
+        category,
+        subCategorySlug,
+        subSubCategorySlug,
+        brand,
+        productType,
+        digitalProductType,
+        sku,
+        unit,
+        tags,
+        price,
+        discount,
+        discountType,
+        discountAmount,
+        taxAmount,
+        taxIncluded,
+        minimumOrderQty,
+        shippingCost,
+        stock,
+        isFeatured,
+        colors,
+        attributes,
+        size,
+        videoLink,
+        userId,
+        userType,
+    } = req.body
+
+    const {
+        categoryObj,
+        subCategoryObj,
+        subSubCategoryObj,
+        brandObj,
+        colorObjs,
+        attributeObjs,
+    } = await validateProductDependencies({
+        category,
+        subCategorySlug,
+        subSubCategorySlug,
+        brand,
+        colors,
+        attributes,
+    })
+
+    const updatedProduct = await Product.findByIdAndUpdate(
+        productId,
+        {
             name,
             description,
-            category,
-            subCategorySlug,
-            subSubCategorySlug,
-            brand,
+            category: categoryObj ? categoryObj._id : undefined,
+            subCategory: subCategoryObj ? subCategoryObj._id : undefined,
+            subSubCategory: subSubCategoryObj
+                ? subSubCategoryObj._id
+                : undefined,
+            brand: brandObj ? brandObj._id : undefined,
             productType,
             digitalProductType,
             sku,
@@ -428,76 +433,21 @@ export const updateProduct = async (req, res) => {
             minimumOrderQty,
             shippingCost,
             stock,
-            isFeatured,
-            colors,
-            attributes,
+            isFeatured: isFeatured || false,
+            colors: colorObjs ? colorObjs.map((color) => color._id) : undefined,
+            attributes: attributeObjs
+                ? attributeObjs.map((attribute) => attribute._id)
+                : undefined,
             size,
             videoLink,
             userId,
             userType,
-        } = req.body
+            status: 'pending',
+        },
+        { new: true }
+    )
 
-        const {
-            categoryObj,
-            subCategoryObj,
-            subSubCategoryObj,
-            brandObj,
-            colorObjs,
-            attributeObjs,
-        } = await validateProductDependencies({
-            category,
-            subCategorySlug,
-            subSubCategorySlug,
-            brand,
-            colors,
-            attributes,
-        })
-
-        const updatedProduct = await Product.findByIdAndUpdate(
-            productId,
-            {
-                name,
-                description,
-                category: categoryObj ? categoryObj._id : undefined,
-                subCategory: subCategoryObj ? subCategoryObj._id : undefined,
-                subSubCategory: subSubCategoryObj
-                    ? subSubCategoryObj._id
-                    : undefined,
-                brand: brandObj ? brandObj._id : undefined,
-                productType,
-                digitalProductType,
-                sku,
-                unit,
-                tags,
-                price,
-                discount,
-                discountType,
-                discountAmount,
-                taxAmount,
-                taxIncluded,
-                minimumOrderQty,
-                shippingCost,
-                stock,
-                isFeatured: isFeatured || false,
-                colors: colorObjs
-                    ? colorObjs.map((color) => color._id)
-                    : undefined,
-                attributes: attributeObjs
-                    ? attributeObjs.map((attribute) => attribute._id)
-                    : undefined,
-                size,
-                videoLink,
-                userId,
-                userType,
-                status: 'pending',
-            },
-            { new: true }
-        )
-
-        await client.del('all_products:*')
-        await client.del(`product_${productId}`)
-        sendSuccessResponse(res, updatedProduct, 200)
-    } catch (error) {
-        sendErrorResponse(res, error)
-    }
-}
+    await client.del('all_products:*')
+    await client.del(`product_${productId}`)
+    sendSuccessResponse(res, updatedProduct, 200)
+})

@@ -14,87 +14,25 @@ export const deleteWishlist = deleteOne(Wishlist)
 
 export const getWishlist = getOne(Wishlist)
 
-export const addProductToWishlist = async (req, res) => {
-    const { userId, productId } = req.body
+export const addProductToWishlist = catchAsync(async (req, res) => {
+    const { customer, productId } = req.body
 
-    // const userId = req.user._id
+    let wishlist = await Wishlist.findById(customer)
 
-    try {
-        let product = await Product.findById(productId)
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' })
-        }
-        let customer = await Customer.findById(userId)
-        if (!customer) {
-            return res.status(404).json({ message: 'Customer not found' })
-        }
-        let wishlist = await Wishlist.findOne({ user: userId })
-
-        if (!wishlist) {
-            wishlist = new Wishlist({ user: userId, products: [productId] })
-        } else {
-            if (!wishlist.products.includes(productId)) {
-                wishlist.products.push(productId)
-            }
-        }
-
-        await wishlist.save()
-        res.status(200).json(wishlist)
-    } catch (error) {
-        res.status(500).json({
-            message: 'Error adding product to wishlist',
-            error,
+    if (!wishlist) {
+        wishlist = new Wishlist({
+            customer,
+            products: [productId],
         })
+    } else {
+        if (!wishlist.products.includes(productId)) {
+            wishlist.products.push(productId)
+        }
     }
-}
 
-// export const addProductToWishlist = catchAsync(async (req, res) => {
-//     const { productId } = req.body
-//     const userId = req.user._id
-
-//     // Validate ObjectId
-//     if (!mongoose.Types.ObjectId.isValid(productId)) {
-//         return next(new AppError('Invalid product ID', 400))
-//     }
-
-//     if (!mongoose.Types.ObjectId.isValid(userId)) {
-//         return next(new AppError('Invalid user ID', 400))
-//     }
-
-//     // Check if the user exists
-//     const userExists = await Customer.findById(userId)
-
-//     console.log(userExists)
-//     if (!userExists) {
-//         return next(new AppError('No user found with that ID', 404))
-//     }
-
-//     // Check if the product exists
-//     const productExists = await Product.findById(productId)
-//     if (!productExists) {
-//         return next(new AppError('No product found with that ID', 404))
-//     }
-
-//     // Find the wishlist for the user, or create a new one if it doesn't exist
-//     let wishlist = await Wishlist.findOne({ user: userId })
-
-//     console.log(wishlist)
-
-//     if (!wishlist) {
-//         wishlist = new Wishlist({ user: userId, products: [productId] })
-//     } else {
-//         if (!wishlist.products.includes(productId)) {
-//             wishlist.products.push(productId)
-//         }
-//     }
-
-//     await wishlist.save()
-
-//     res.status(200).json({
-//         status: 'success',
-//         doc: wishlist,
-//     })
-// })
+    await wishlist.save()
+    res.status(200).json(wishlist)
+})
 
 export const removeProductFromWishlist = catchAsync(async (req, res, next) => {
     const { productId } = req.params

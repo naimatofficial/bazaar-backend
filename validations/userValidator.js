@@ -19,7 +19,6 @@ const userValidationSchema = Joi.object({
         .trim(),
     phoneNumber: Joi.string().optional(),
     image: Joi.string().optional(),
-    role: Joi.string().valid('admin', 'user').default('user'),
     password: Joi.string().min(8).required().messages({
         'any.required': 'Please provide a password.',
         'string.min': 'Password must be at least 8 characters long.',

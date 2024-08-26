@@ -33,6 +33,29 @@ const featuredDealSchema = new mongoose.Schema(
     }
 )
 
+featuredDealSchema.pre('save', async function (next) {
+    try {
+        // Check if products are provided and validate them
+        if (this.products && this.products.length > 0) {
+            const productCheck = await mongoose
+                .model('Product')
+                .countDocuments({
+                    _id: { $in: this.products },
+                })
+
+            if (productCheck !== this.products.length) {
+                return next(
+                    new AppError('One or more products do not exist.', 400)
+                )
+            }
+        }
+
+        next()
+    } catch (err) {
+        next(err)
+    }
+})
+
 // Add a virtual field to calculate the total number of products
 featuredDealSchema.virtual('activeProducts').get(function () {
     return this.products.length

@@ -49,17 +49,15 @@ router
 
 router.route('/:vendorId/status').put(protect, updateVendorStatus)
 
-router
-    .route('/signup')
-    .post(
-        upload.fields([
-            { name: 'vendorImage' },
-            { name: 'logo' },
-            { name: 'banner' },
-        ]),
-        validateSchema(vendorValidationSchema),
-        registerVendor
-    )
+router.route('/signup').post(
+    upload.fields([
+        { name: 'vendorImage' },
+        { name: 'logo' },
+        { name: 'banner' },
+    ]),
+    // validateSchema(vendorValidationSchema),
+    registerVendor
+)
 
 router.post('/login', loginLimiter, loginVendor)
 

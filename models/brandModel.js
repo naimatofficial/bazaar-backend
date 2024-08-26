@@ -29,6 +29,14 @@ const brandSchema = new mongoose.Schema(
         timestamps: true,
     }
 )
+// Middleware to create slug before saving the document
+// brandSchema.pre('save', function (next) {
+//     if (this.isNew || this.isModified('name')) {
+//         // Check if the document is new or if the name was modified
+//         this.slug = slugify(this.name, { lower: true })
+//     }
+//     next()
+// })
 
 brandSchema.virtual('slug').get(function () {
     return slugify(this.name, { lower: true })
