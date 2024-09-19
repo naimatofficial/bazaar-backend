@@ -3,25 +3,22 @@ import catchAsync from '../utils/catchAsync.js'
 import { deleteOne, getAll, getOne } from './handleFactory.js'
 
 // Create a new banner
-export const createBanner = async (req, res) => {
-    try {
-        const { bannerType, resourceType, resourceId, url, publish } = req.body
-        const bannerImage = req.file ? req.file.path : null
+export const createBanner = catchAsync(async (req, res) => {
+    const { bannerType, resourceType, resourceId, url, publish } = req.body
+    const bannerImage = req.file ? req.file.path : null
 
-        const banner = new Banner({
-            bannerType,
-            resourceType,
-            resourceId,
-            url,
-            bannerImage,
-            publish,
-        })
-        await banner.save()
-        res.status(201).json(banner)
-    } catch (error) {
-        res.status(400).json({ message: error.message })
-    }
-}
+    const banner = new Banner({
+        bannerType,
+        resourceType,
+        resourceId,
+        url,
+        bannerImage,
+        publish,
+    })
+    await banner.save()
+    res.status(201).json(banner)
+    res.status(400).json({ message: error.message })
+})
 
 // Get all banners
 export const getBanners = getAll(Banner)
