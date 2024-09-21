@@ -65,7 +65,19 @@ export const createCategory = catchAsync(async (req, res) => {
 //     }
 // };
 
-export const getCategories = getAll(Category, { path: 'productCount' })
+export const getCategories = getAll(Category, {
+    path: [
+        'productCount',
+        {
+            path: 'subCategories',
+            select: '_id name slug',
+        },
+        {
+            path: 'subSubCategories',
+            select: '_id name slug',
+        },
+    ],
+})
 
 // Get a single category by ID
 export const getCategoryById = getOne(Category)

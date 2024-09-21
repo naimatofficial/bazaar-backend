@@ -201,12 +201,18 @@ export const getAll = (Model, popOptions) =>
         // EXECUTE QUERY
         let query = Model.find()
 
-        // If popOptions is provided, populate the query
-        if (popOptions && popOptions.path) {
-            query = query.populate(popOptions)
+        // If popOptions is provided and path is an array or a string, populate the query
+        if (popOptions.path) {
+            if (Array.isArray(popOptions.path)) {
+                popOptions.path.forEach((pathOption) => {
+                    query = query.populate(pathOption)
+                })
+            } else {
+                query = query.populate(popOptions)
+            }
         }
-
         // If not in cache, fetch from database
+
         const features = new APIFeatures(query, req.query)
             .filter()
             .sort()

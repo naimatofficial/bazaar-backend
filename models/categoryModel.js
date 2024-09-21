@@ -34,6 +34,19 @@ categorySchema.virtual('productCount', {
     count: true,
 })
 
+// Virtual field to populate subcategories and sub-subcategories
+categorySchema.virtual('subCategories', {
+    ref: 'SubCategory',
+    localField: '_id',
+    foreignField: 'mainCategory',
+})
+
+categorySchema.virtual('subSubCategories', {
+    ref: 'SubSubCategory',
+    localField: '_id',
+    foreignField: 'mainCategory',
+})
+
 categorySchema.pre('remove', async function (next) {
     console.log('DELETE MANY 🔥')
     await SubCategory.deleteMany({ mainCategory: this._id })
