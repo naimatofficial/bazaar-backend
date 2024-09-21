@@ -19,6 +19,9 @@ const subSubCategorySchema = new mongoose.Schema(
             ref: 'SubCategory',
         },
         priority: Number,
+        slug: {
+            type: String,
+        },
     },
     {
         toJSON: { virtuals: true },
@@ -26,10 +29,6 @@ const subSubCategorySchema = new mongoose.Schema(
         timestamps: true,
     }
 )
-
-subSubCategorySchema.virtual('slug').get(function () {
-    return slugify(this.name, { lower: true })
-})
 
 subSubCategorySchema.pre(/^find/, function (next) {
     this.populate({
@@ -45,17 +44,22 @@ subSubCategorySchema.post('findByIdAndDelete', async function (doc) {
     }
 })
 
-
 subSubCategorySchema.pre('save', async function (next) {
-    const category = await mongoose.model('Category').findById(this.mainCategory)
+    const category = await mongoose
+        .model('Category')
+        .findById(this.mainCategory)
 
     if (!category) {
         return next(new AppError('Referenced category ID does not exist', 400))
     }
-    const subCategory = await mongoose.model('SubCategory').findById(this.subCategory)
+    const subCategory = await mongoose
+        .model('SubCategory')
+        .findById(this.subCategory)
 
     if (!subCategory) {
-        return next(new AppError('Referenced sub category ID does not exist', 400))
+        return next(
+            new AppError('Referenced sub category ID does not exist', 400)
+        )
     }
     next()
 })

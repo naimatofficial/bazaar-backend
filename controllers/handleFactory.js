@@ -11,8 +11,6 @@ export const checkFields = (Model, req, next) => {
     // Step 1: Get the allowed fields from the model schema
     const allowedFields = Object.keys(Model.schema.paths)
 
-    console.log(allowedFields)
-
     // Step 2: Identify fields in req.body that are not in the allowedFields list
     const extraFields = Object.keys(req.body).filter(
         (field) => !allowedFields.includes(field)
@@ -68,17 +66,15 @@ export const deleteOne = (Model) =>
 // UPDATE One Document
 export const updateOne = (Model) =>
     catchAsync(async (req, res, next) => {
-        const { allowedFields, filteredData } = checkFields(Model, req, next)
+        let { allowedFields, filteredData } = checkFields(Model, req, next)
 
-        // // if document contain slug then update slug value
-        // if (allowedFields?.slug && filteredData?.name) {
-        //     filteredData = {
-        //         ...filteredData,
-        //         slug: slugify(filteredData.name, { lower: true }),
-        //     }
-        // }
-
-        console.log('DAta: ', filteredData)
+        // if document contain slug then create a slug
+        if (allowedFields.includes('slug')) {
+            filteredData = {
+                ...filteredData,
+                slug: slugify(filteredData.name, { lower: true }),
+            }
+        }
 
         // Perform the update operation
         const doc = await Model.findByIdAndUpdate(req.params.id, filteredData, {
@@ -113,7 +109,17 @@ export const updateOne = (Model) =>
 // CREATE One Document
 export const createOne = (Model) =>
     catchAsync(async (req, res, next) => {
-        const { filteredData } = checkFields(Model, req, next)
+        let { allowedFields, filteredData } = checkFields(Model, req, next)
+
+        console.log(allowedFields.includes('slug'))
+
+        // if document contain slug then create a slug
+        if (allowedFields.includes('slug')) {
+            filteredData = {
+                ...filteredData,
+                slug: slugify(filteredData.name, { lower: true }),
+            }
+        }
 
         const doc = await Model.create(filteredData)
 

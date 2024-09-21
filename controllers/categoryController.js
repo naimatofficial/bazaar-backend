@@ -93,26 +93,7 @@ export const updateCategory = catchAsync(async (req, res) => {
     await client.del('categories')
 })
 // Delete a category by ID
-export const deleteCategory = async (req, res) => {
-    try {
-        const category = await Category.findByIdAndDelete(req.params.id)
-        if (!category) {
-            return sendErrorResponse(res, 'Category not found', 404)
-        }
-
-        if (category.logo) {
-            fs.unlinkSync(path.join('uploads', category.logo))
-        }
-
-        await client.del(`category_${req.params.id}`)
-        await client.del('categories')
-
-        sendSuccessResponse(res, category, 'Category deleted successfully')
-    } catch (error) {
-        sendErrorResponse(res, error.message)
-    }
-}
-
+export const deleteCategory = deleteOne(Category)
 // Get category by slug
 export const getCategoryBySlug = async (req, res) => {
     try {

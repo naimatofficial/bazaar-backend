@@ -7,46 +7,54 @@ import {
     sendSuccessResponse,
 } from '../utils/responseHandler.js'
 import { client } from '../utils/redisClient.js'
-import { deleteOne, getAll, getOne, updateOne } from './handleFactory.js'
+import {
+    createOne,
+    deleteOne,
+    getAll,
+    getOne,
+    updateOne,
+} from './handleFactory.js'
 
 // Create a new sub-subcategory
-export const createSubSubCategory = async (req, res) => {
-    try {
-        const {
-            name,
-            mainCategory: mainCategorySlug,
-            subCategory,
-            priority,
-        } = req.body
 
-        const mainCategory = await Category.findOne({ slug: mainCategorySlug })
-        if (!mainCategory) {
-            return sendErrorResponse(res, 'Main category not found.', 400)
-        }
+export const createSubSubCategory = createOne(SubSubCategory)
+// export const createSubSubCategory = async (req, res) => {
+//     try {
+//         const {
+//             name,
+//             mainCategory: mainCategorySlug,
+//             subCategory,
+//             priority,
+//         } = req.body
 
-        const newSubSubCategory = new SubSubCategory({
-            name,
-            mainCategory: mainCategory._id,
-            subCategory,
-            priority,
-            slug: slugify(name, { lower: true }),
-        })
+//         const mainCategory = await Category.findOne({ slug: mainCategorySlug })
+//         if (!mainCategory) {
+//             return sendErrorResponse(res, 'Main category not found.', 400)
+//         }
 
-        const savedSubSubCategory = await newSubSubCategory.save()
+//         const newSubSubCategory = new SubSubCategory({
+//             name,
+//             mainCategory: mainCategory._id,
+//             subCategory,
+//             priority,
+//             slug: slugify(name, { lower: true }),
+//         })
 
-        await client.del('subsubcategories')
-        await client.del(`subsubcategories_sub_${subCategory}`)
+//         const savedSubSubCategory = await newSubSubCategory.save()
 
-        sendSuccessResponse(
-            res,
-            savedSubSubCategory,
-            'Sub-subcategory created successfully',
-            201
-        )
-    } catch (error) {
-        sendErrorResponse(res, error.message)
-    }
-}
+//         await client.del('subsubcategories')
+//         await client.del(`subsubcategories_sub_${subCategory}`)
+
+//         sendSuccessResponse(
+//             res,
+//             savedSubSubCategory,
+//             'Sub-subcategory created successfully',
+//             201
+//         )
+//     } catch (error) {
+//         sendErrorResponse(res, error.message)
+//     }
+// }
 
 export const getAllSubSubCategories = getAll(SubSubCategory)
 

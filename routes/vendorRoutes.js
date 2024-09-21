@@ -43,7 +43,7 @@ router
     .get(protect, getAllVendors)
 
 router
-    .route('/:vendorId')
+    .route('/:id')
     .get(getVendorById)
     .delete(protect, restrictTo('admin', 'vendor'), deleteVendor)
 

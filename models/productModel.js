@@ -70,7 +70,6 @@ const productSchema = new mongoose.Schema(
         },
         taxIncluded: {
             type: Boolean,
-            required: [true, 'Please provide Tax inclusion status'],
         },
         shippingCost: {
             type: Number,
@@ -128,29 +127,39 @@ const productSchema = new mongoose.Schema(
 )
 
 productSchema.pre('save', async function (next) {
-    const category = await mongoose.model('Category').findById(this.category)
-    if (!category) {
-        return next(new AppError('Referenced category ID does not exist', 400))
+    if (this.category) {
+        const category = await mongoose
+            .model('Category')
+            .findById(this.category)
+        if (!category) {
+            return next(
+                new AppError('Referenced category ID does not exist', 400)
+            )
+        }
     }
 
-    const subCategory = await mongoose
-        .model('SubCategory')
-        .findById(this.subCategory)
+    if (this.subCategory) {
+        const subCategory = await mongoose
+            .model('SubCategory')
+            .findById(this.subCategory)
 
-    if (!subCategory) {
-        return next(
-            new AppError('Referenced subCategory ID does not exist', 400)
-        )
+        if (!subCategory) {
+            return next(
+                new AppError('Referenced subCategory ID does not exist', 400)
+            )
+        }
     }
 
-    const subSubCategory = await mongoose
-        .model('SubSubCategory')
-        .findById(this.subSubCategory)
+    if (this.subSubCategory) {
+        const subSubCategory = await mongoose
+            .model('SubSubCategory')
+            .findById(this.subSubCategory)
 
-    if (!subSubCategory) {
-        return next(
-            new AppError('Referenced subSubCategory ID does not exist', 400)
-        )
+        if (!subSubCategory) {
+            return next(
+                new AppError('Referenced subSubCategory ID does not exist', 400)
+            )
+        }
     }
 
     const brand = await mongoose.model('Brand').findById(this.brand)

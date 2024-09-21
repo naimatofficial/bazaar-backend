@@ -16,6 +16,7 @@ const categorySchema = new mongoose.Schema(
             required: [true, 'Please provide category logo.'],
         },
         priority: Number,
+        slug: String,
     },
     {
         toJSON: { virtuals: true },
@@ -33,17 +34,13 @@ categorySchema.virtual('productCount', {
     count: true,
 })
 
-categorySchema.virtual('slug').get(function () {
-    return slugify(this.name, { lower: true })
+categorySchema.pre('remove', async function (next) {
+    console.log('DELETE MANY 🔥')
+    await SubCategory.deleteMany({ mainCategory: this._id })
+    await SubSubCategory.deleteMany({ mainCategory: this._id })
+    await Product.deleteMany({ category: this._id })
+    next()
 })
-
-// categorySchema.pre('remove', async function (next) {
-//     console.log('DELETE MANY 🔥')
-//     await SubCategory.deleteMany({ mainCategory: this._id })
-//     await SubSubCategory.deleteMany({ mainCategory: this._id })
-//     await Product.deleteMany({ category: this._id })
-//     next()
-// })
 
 categorySchema.post('findByIdAndDelete', async function (doc) {
     console.log('Delete Many')

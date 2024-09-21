@@ -1554,3 +1554,164 @@ Use mongoose.model(name, schema)
 2024-09-20T09:05:45.970Z [error]: Can't find this /uploads/image/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFFTu-mdPQ1EA-4FivG4Hk9mD-hgpTQ8Oj5w&s on this server.
 2024-09-20T09:05:45.974Z [error]: Can't find this /uploads/image/D:/ligth-house-projects/backend/uploads/logo/1720683461847-556d6946-e7b4-42d7-a4e9-801a7527a1bb.png on this server.
 2024-09-20T09:05:45.978Z [error]: Can't find this /uploads/image/undefined on this server.
+2024-09-20T09:39:05.040Z [error]: read ECONNRESET
+2024-09-20T10:28:54.036Z [error]: slugify: string argument expected
+2024-09-20T10:29:05.469Z [error]: Your Token has expired! Please log in again.
+2024-09-20T10:29:16.006Z [error]: Incorrect email or password
+2024-09-20T10:29:29.038Z [error]: Invalid input data: Please tell us your name.. Please provide your email address.. Please provide a password.
+2024-09-20T10:35:04.643Z [error]: Can't find this /feature-deals on this server.
+2024-09-20T10:35:04.665Z [error]: You are not logged in! Please log in to get access.
+2024-09-20T10:35:04.689Z [error]: Can't find this /uploads/image/1726826634635_l.jpg on this server.
+2024-09-20T10:35:04.705Z [error]: Can't find this /uploads/image/1726826594435_iphone_13_3.png on this server.
+2024-09-20T11:19:12.584Z [error]: You are not logged in! Please log in to get access.
+2024-09-20T11:19:20.719Z [error]: No vendor found with that ID
+2024-09-20T11:19:31.657Z [error]: Can't find this /feature-deals on this server.
+2024-09-20T11:19:31.662Z [error]: You are not logged in! Please log in to get access.
+2024-09-20T11:20:04.815Z [error]: No vendor found with that ID
+2024-09-20T11:20:06.631Z [error]: Can't find this /uploads/image/1726828629755_iphone_13_3.png on this server.
+2024-09-20T11:27:20.343Z [error]: No brand found with that ID
+2024-09-20T11:39:15.663Z [error]: No subcategory found with that ID
+2024-09-20T11:53:33.677Z [error]: Can't find this /feature-deals on this server.
+2024-09-20T11:53:33.684Z [error]: You are not logged in! Please log in to get access.
+2024-09-20T11:57:19.820Z [error]: Can't find this /uploads/image/1726831968539_1000_F_251608707_ft6BQtJPnT9htr86dduWjVm8JyKwbXj6.jpg on this server.
+2024-09-20T11:57:19.823Z [error]: Can't find this /uploads/image/1726831743351_png-transparent-exercise-machine-treadmill-life-fitness-exercise-bikes-exercise-equipment-gym-miscellaneous-physical-fitness-sports-equipment.png on this server.
+2024-09-20T11:57:19.828Z [error]: Can't find this /uploads/image/1726831581959_00d536e0ef3467916428dacffe8d0afa.jpg on this server.
+2024-09-20T11:57:19.831Z [error]: Can't find this /uploads/image/1726831281015_00d536e0ef3467916428dacffe8d0afa.jpg on this server.
+2024-09-20T11:57:19.833Z [error]: Can't find this /uploads/image/1726828629755_iphone_13_3.png on this server.
+2024-09-20T11:57:25.720Z [error]: Can't find this /feature-deals on this server.
+2024-09-20T11:57:25.741Z [error]: You are not logged in! Please log in to get access.
+2024-09-21T04:38:45.279Z [error]: Main category not found.
+2024-09-21T04:46:54.604Z [error]: Main category not found.
+2024-09-21T04:48:22.907Z [error]: allowedFields is not defined
+2024-09-21T04:58:19.341Z [error]: Duplicate field value Tread Mill, please use another value.
+2024-09-21T04:58:24.265Z [error]: Duplicate field value , please use another value.
+2024-09-21T04:58:33.496Z [error]: Duplicate field value , please use another value.
+2024-09-21T04:59:15.929Z [error]: MongoServerError: E11000 duplicate key error collection: store.subsubcategories index: slug_1 dup key: { slug: null }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-09-21T04:59:58.887Z [error]: MongoServerError: E11000 duplicate key error collection: store.subsubcategories index: slug_1 dup key: { slug: null }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-09-21T05:01:15.477Z [error]: MongoServerError: E11000 duplicate key error collection: store.subsubcategories index: slug_1 dup key: { slug: null }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-09-21T05:03:53.230Z [error]: TypeError: allowedFields.contains is not a function
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:116:35
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:04:27.854Z [error]: TypeError: Assignment to constant variable.
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:119:26
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:05:18.708Z [error]: TypeError: Assignment to constant variable.
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:121:26
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:05:38.759Z [error]: TypeError: Assignment to constant variable.
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:121:26
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:10:15.192Z [error]: TypeError: Assignment to constant variable.
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:125:26
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:11:19.896Z [error]: TypeError: Assignment to constant variable.
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:125:26
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:12:28.881Z [error]: TypeError: Assignment to constant variable.
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:125:26
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:13:12.569Z [error]: TypeError: Assignment to constant variable.
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:125:26
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/validationMiddleware.js:8:5
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:84:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+2024-09-21T05:21:14.578Z [error]: ValidationError: Category validation failed: logo: Please provide category logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-09-21T05:28:16.491Z [error]: Error: No category found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:49:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-21T05:38:28.790Z [error]: ValidationError: Product validation failed: taxIncluded: Please provide Tax inclusion status, stock: Please provide Stock, userType: `Vendor` is not a valid enum value for path `userType`.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-09-21T05:41:19.629Z [error]: ValidationError: Product validation failed: stock: Please provide Stock, userType: `Vendor` is not a valid enum value for path `userType`.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-09-21T05:41:33.116Z [error]: ValidationError: Product validation failed: userType: `Vendor` is not a valid enum value for path `userType`.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-09-21T05:41:54.437Z [error]: Error: Referenced subSubCategory ID does not exist
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/productModel.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

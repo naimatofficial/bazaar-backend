@@ -68,8 +68,7 @@ const productValidationSchema = Joi.object({
     taxAmount: Joi.number().default(0).messages({
         'number.base': 'TaxAmount must be a number',
     }),
-    taxIncluded: Joi.boolean().required().messages({
-        'any.required': 'Please provide Tax inclusion status',
+    taxIncluded: Joi.boolean().messages({
         'boolean.base': 'TaxIncluded must be a boolean',
     }),
     shippingCost: Joi.number().default(0).messages({
@@ -82,9 +81,6 @@ const productValidationSchema = Joi.object({
     stock: Joi.number().required().messages({
         'any.required': 'Please provide Stock',
         'number.base': 'Stock must be a number',
-    }),
-    isFeatured: Joi.boolean().default(false).messages({
-        'boolean.base': 'IsFeatured must be a boolean',
     }),
     colors: Joi.array().items(Joi.string()).optional().messages({
         'array.base': 'Colors must be an array of strings',
@@ -104,13 +100,7 @@ const productValidationSchema = Joi.object({
     videoLink: Joi.string().optional().allow('').messages({
         'string.base': 'VideoLink must be a string',
     }),
-    status: Joi.string()
-        .valid('pending', 'approved', 'rejected')
-        .default('pending')
-        .messages({
-            'string.base': 'Status must be a string',
-            'any.only': 'Status must be either pending, approved, or rejected',
-        }),
+
     userId: Joi.string().required().messages({
         'any.required': 'Please provide user.',
         'string.base': 'UserId must be a string',
