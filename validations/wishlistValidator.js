@@ -1,7 +1,7 @@
 import Joi from 'joi'
 
 const wishlistValidationSchema = Joi.object({
-    customer: Joi.string().required().messages({
+    customerId: Joi.string().required().messages({
         'any.required': 'Customer ID is required',
         'string.base': 'Customer ID must be a string',
         'string.empty': 'Customer ID cannot be empty.',

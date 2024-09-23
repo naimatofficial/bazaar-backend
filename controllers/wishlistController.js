@@ -12,16 +12,29 @@ export const getAllWishlists = getAll(Wishlist)
 
 export const deleteWishlist = deleteOne(Wishlist)
 
-export const getWishlist = getOne(Wishlist)
+export const getWishlist = catchAsync(async (req, res, next) => {
+    const { customerId } = req.params
+
+    const wishlist = await Wishlist.findOne({ customer: customerId })
+
+    if (!wishlist) {
+        return next(new AppError('Wishlist not found by that ID.', 404))
+    }
+
+    res.status(200).json({
+        status: 'success',
+        doc: wishlist,
+    })
+})
 
 export const addProductToWishlist = catchAsync(async (req, res) => {
-    const { customer, productId } = req.body
+    const { customerId, productId } = req.body
 
-    let wishlist = await Wishlist.findById(customer)
+    let wishlist = await Wishlist.findById(customerId)
 
     if (!wishlist) {
         wishlist = new Wishlist({
-            customer,
+            customer: customerId,
             products: [productId],
         })
     } else {
@@ -31,7 +44,11 @@ export const addProductToWishlist = catchAsync(async (req, res) => {
     }
 
     await wishlist.save()
-    res.status(200).json(wishlist)
+
+    res.status(201).json({
+        status: 'success',
+        doc: wishlist,
+    })
 })
 
 export const removeProductFromWishlist = catchAsync(async (req, res, next) => {
