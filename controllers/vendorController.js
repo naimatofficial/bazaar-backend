@@ -92,16 +92,19 @@ export const registerVendor = catchAsync(async (req, res) => {
         status: 'pending',
     })
 
-    const savedVendor = await newVendor.save()
-    if (savedVendor) {
-        const cacheKey = `vendor:${savedVendor._id}`
-        await client.set(cacheKey, JSON.stringify(savedVendor))
-        await client.del('all_vendors')
+    const vendor = await newVendor.save()
 
-        sendSuccessResponse(res, savedVendor, 'Vendor registered successfully')
-    } else {
-        throw new Error('Vendor could not be registered')
-    }
+    const cacheKeyOne = getCacheKey('Vendor', vendor?._id)
+    await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(vendor))
+
+    // delete all documents caches related to this model
+    const cacheKey = getCacheKey('Vendor', '', req.query)
+    await redisClient.del(cacheKey)
+
+    res.status(201).json({
+        status: 'success',
+        doc: vendor,
+    })
 })
 
 // Update vendor status

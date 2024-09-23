@@ -40,7 +40,7 @@ router
         validateSchema(vendorValidationSchema),
         createVendor
     )
-    .get(protect, getAllVendors)
+    .get(getAllVendors)
 
 router
     .route('/:id')

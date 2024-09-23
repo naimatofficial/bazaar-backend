@@ -35,7 +35,6 @@ const customerSchema = new mongoose.Schema(
         },
         phoneNumber: {
             type: String,
-            unique: true,
         },
         image: {
             type: String,
