@@ -6,6 +6,7 @@ const productSchema = new mongoose.Schema(
         name: {
             type: String,
             required: [true, 'Please provide Product name'],
+            trim: true,
         },
         description: {
             type: String,
@@ -118,6 +119,7 @@ const productSchema = new mongoose.Schema(
             enum: ['vendor', 'admin'],
             required: true,
         },
+        slug: String,
     },
     {
         toJSON: { virtuals: true },

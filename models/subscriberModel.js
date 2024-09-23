@@ -8,6 +8,7 @@ const subscriberSchema = new mongoose.Schema({
         unique: true,
         lowercase: true,
         validate: [validator.isEmail, 'Please provide a valid email address.'],
+        trim: true,
     },
     subscriptionDate: {
         type: Date,

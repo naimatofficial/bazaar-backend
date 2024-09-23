@@ -7,6 +7,7 @@ const brandSchema = new mongoose.Schema(
             type: String,
             required: [true, 'Please provide brand.'],
             unique: true,
+            trim: true,
         },
 
         logo: {

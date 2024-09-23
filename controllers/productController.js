@@ -8,7 +8,7 @@ import { validateProductDependencies } from '../utils/validation.js'
 import { populateProductDetails } from '../utils/productHelper.js'
 import { buildFilterQuery, buildSortOptions } from '../utils/filterHelper.js'
 import Customer from '../models/customerModel.js'
-import { deleteOne, getAll, getOne } from './handleFactory.js'
+import { deleteOne, getAll, getOne, getOneBySlug } from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
@@ -194,6 +194,8 @@ export const getAllProducts = getAll(Product)
 export const getProductById = getOne(Product)
 // Delete a Product
 export const deleteProduct = deleteOne(Product)
+
+export const getProductBySlug = getOneBySlug(Product)
 
 // update product
 // export const updateProduct = updateOne(Product)

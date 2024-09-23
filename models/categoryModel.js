@@ -10,6 +10,7 @@ const categorySchema = new mongoose.Schema(
             type: String,
             required: [true, 'Please provide category name.'],
             unique: true,
+            trim: true,
         },
         logo: {
             type: String,

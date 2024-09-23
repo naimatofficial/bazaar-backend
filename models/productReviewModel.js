@@ -16,6 +16,7 @@ const productReviewSchema = new mongoose.Schema(
         review: {
             type: String,
             required: [true, 'Please provide review.'],
+            trim: true,
         },
         rating: {
             type: Number,

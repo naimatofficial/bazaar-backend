@@ -1,12 +1,9 @@
 import Wishlist from '../models/wishlistModel.js'
-import Product from '../models/productModel.js'
-import Customer from '../models/customerModel.js'
 import { deleteOne, getAll, getOne } from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import AppError from '../utils/appError.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
-import mongoose from 'mongoose'
 
 export const getAllWishlists = getAll(Wishlist)
 

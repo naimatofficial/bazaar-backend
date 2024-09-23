@@ -12,6 +12,7 @@ import {
     sellProduct,
     getLimitedStockedProducts,
     updateProduct,
+    getProductBySlug,
 } from '../controllers/productController.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import productValidationSchema from './../validations/productValidator.js'
@@ -68,6 +69,7 @@ router
 router.route('/:id/status').put(updateProductStatus)
 
 router.route('/:id/feature').put(updateProductFeaturedStatus)
+router.get('/slug/:slug', getProductBySlug)
 
 // // router.get('/feature-product', getFeaturedProducts);
 // // router.get('/latest-product', getLatestProducts);
