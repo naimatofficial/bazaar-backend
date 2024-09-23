@@ -98,11 +98,16 @@ export const updateCategory = catchAsync(async (req, res) => {
     )
 
     if (!category) {
-        return sendErrorResponse(res, 'Category not found', 404)
+        return next(new AppError(`No category found with that Id.`, 404))
     }
 
     await client.del(`category_${req.params.id}`)
     await client.del('categories')
+
+    res.status(200).json({
+        status: 'success',
+        doc: category,
+    })
 })
 // Delete a category by ID
 export const deleteCategory = deleteOne(Category)

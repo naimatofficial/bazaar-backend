@@ -3908,3 +3908,135 @@ Use mongoose.model(name, schema)
     at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
     at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
     at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-23T05:48:29.547Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-23T05:50:42.257Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-23T05:51:53.266Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-23T05:54:34.729Z [error]: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOneAndUpdate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:3351:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:80:21
+2024-09-23T05:55:32.890Z [error]: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOneAndUpdate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:3351:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:80:21
+2024-09-23T05:57:28.264Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-23T05:57:28.317Z [error]: Error: Can't find this /uploads/1726831581959_00d536e0ef3467916428dacffe8d0afa.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-23T05:57:28.786Z [error]: Error: Can't find this /undefined on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-23T05:57:29.185Z [error]: Error: Can't find this /undefined on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-23T06:07:34.993Z [error]: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOneAndUpdate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:3351:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:80:21
+2024-09-23T06:07:36.136Z [error]: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOneAndUpdate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:3351:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:80:21
+2024-09-23T06:08:26.251Z [error]: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOneAndUpdate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:3351:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:80:21
