@@ -248,7 +248,9 @@ export const getOneBySlug = (Model, popOptions) =>
         // If not in cache, fetch from database
         let query = Model.findOne({ slug: req.params.slug })
 
-        if (popOptions && popOptions.path) query = query.populate(popOptions)
+        console.log(query)
+
+        if (popOptions && popOptions?.path) query = query.populate(popOptions)
         const doc = await query
 
         const docName = Model.modelName.toLowerCase() || 'Document'

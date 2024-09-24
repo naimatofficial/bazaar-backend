@@ -419,4 +419,4 @@ export const updateProduct = catchAsync(async (req, res) => {
     sendSuccessResponse(res, updatedProduct, 200)
 })
 
-export const getProductBySlug = getOneBySlug(Product)
+export const getProductBySlug = getOneBySlug(Product, { path: 'reviews' })

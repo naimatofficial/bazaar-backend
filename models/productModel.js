@@ -120,6 +120,11 @@ const productSchema = new mongoose.Schema(
             required: true,
         },
         slug: String,
+        numOfReviews: {
+            type: Number,
+            required: [true, 'Number of reviews are required.'],
+            default: 0,
+        },
     },
     {
         toJSON: { virtuals: true },
