@@ -10942,3 +10942,111 @@ Use mongoose.model(name, schema)
     at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:163:21
+2024-09-24T12:17:22.665Z [error]: Error: Can't find this /uploads/1727176548812_th%20(14).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T12:17:22.700Z [error]: Error: Can't find this /uploads/1727172636142_th%20(12).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T12:19:52.963Z [error]: MongoServerError: E11000 duplicate key error collection: store.users index: email_1 dup key: { email: "admin@mail.com" }
+    at InsertOneOperation.execute (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-09-24T12:19:58.903Z [error]: JsonWebTokenError: jwt malformed
+    at module.exports (F:\Side Projects\bazaar-backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at node:internal/util:442:7
+    at new Promise (<anonymous>)
+    at node:internal/util:428:12
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:53:48
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+2024-09-24T12:20:26.857Z [error]: Error: Can't find this /uploads/1727176548812_th%20(14).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T12:20:26.867Z [error]: Error: Can't find this /uploads/1727172636142_th%20(12).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T12:27:47.536Z [error]: Error: Can't find this //api/users/update-role on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+2024-09-24T12:27:51.771Z [error]: ObjectParameterError: Parameter "filter" to findOneAndUpdate() must be an object, got "admin@mail.com" (type string)
+    at Query.findOneAndUpdate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:3307:7)
+    at Model.findOneAndUpdate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:2274:13)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/userController.js:21:28
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+2024-09-24T12:28:49.999Z [error]: ReferenceError: AppError is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/userController.js:27:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T12:29:10.842Z [error]: Error: No user found with that email
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/userController.js:28:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T12:29:40.800Z [error]: Error: No user found with that email
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/userController.js:32:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T12:30:44.027Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:45:13
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:365:14)
+    at param (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:421:3)
+2024-09-24T12:31:21.305Z [error]: Error: No user found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:168:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T12:31:22.765Z [error]: Error: No user found with that ID
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:168:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
