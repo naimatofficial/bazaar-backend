@@ -12,6 +12,7 @@ import { deleteOne, getAll, getOne } from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
+import slugify from 'slugify'
 
 // Create a new product
 export const createProduct = catchAsync(async (req, res) => {
@@ -95,6 +96,7 @@ export const createProduct = catchAsync(async (req, res) => {
         images: req.files['images']
             ? req.files['images'].map((file) => file.path)
             : [],
+            slug: slugify(name, { lower: true }),
     })
     await newProduct.save()
 

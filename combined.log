@@ -3572,3 +3572,44 @@ Use mongoose.model(name, schema)
 2024-09-23T13:15:32.490Z [error]: Product not found in wishlist
 2024-09-23T13:15:51.231Z [error]: Product not found in wishlist
 2024-09-23T13:16:26.036Z [error]: Product not found in wishlist
+2024-09-24T04:42:23.204Z [error]: Can't find this //api/categories on this server.
+2024-09-24T05:03:51.922Z [error]: ENOENT: no such file or directory, open 'C:\DATA\Light House\Ecom\bazaar-backend\uploads\images\1727154231909-NikeLunarRoam-ezgif.com-webp-to-jpg-converter.jpg'
+2024-09-24T05:06:41.378Z [error]: ENOENT: no such file or directory, open 'C:\DATA\Light House\Ecom\bazaar-backend\uploads\images\1727154401375-Nike-Lunar-Roam.jpg'
+2024-09-24T05:10:40.421Z [error]: ENOENT: no such file or directory, open 'C:\DATA\Light House\Ecom\bazaar-backend\uploads\images\1727154640420-Nike-Lunar-Roam.jpg'
+2024-09-24T05:11:23.208Z [error]: ENOENT: no such file or directory, open 'C:\DATA\Light House\Ecom\bazaar-backend\uploads\images\1727154683197-Nike-Lunar-Roam.jpg'
+2024-09-24T05:12:27.616Z [error]: ENOENT: no such file or directory, open 'C:\DATA\Light House\Ecom\bazaar-backend\uploads\images\1727154747610-Brand.png'
+2024-09-24T05:15:54.395Z [error]: ENOENT: no such file or directory, open 'C:\DATA\Light House\Ecom\bazaar-backend\uploads\images\1727154954389-Nike-Lunar-Roam.jpg'
+2024-09-24T05:16:28.274Z [error]: ENOENT: no such file or directory, open 'C:\DATA\Light House\Ecom\bazaar-backend\uploads\thumbnails\1727154988269-Nike-Lunar-Roam.jpg'
+2024-09-24T05:16:53.238Z [error]: Referenced category ID does not exist
+2024-09-24T05:39:36.593Z [error]: No category found with that ID
+2024-09-24T05:41:16.847Z [error]: No product found with that ID
+2024-09-24T05:41:30.054Z [error]: No product found with that ID
+2024-09-24T05:41:37.871Z [error]: No product found with that ID
+2024-09-24T05:41:40.634Z [error]: No product found with that ID
+2024-09-24T05:42:09.011Z [error]: No product found with that ID
+2024-09-24T05:51:08.694Z [error]: productValidationSchema is not defined
+2024-09-24T05:52:20.292Z [error]: Invalid input data: Cast to [ObjectId] failed for value "[ 'black' ]" (type string) at path "colors.0" because of "CastError"
+2024-09-24T05:53:23.148Z [error]: Invalid input data: Cast to [ObjectId] failed for value "[ '#000000' ]" (type string) at path "colors.0" because of "CastError"
+2024-09-24T06:00:16.724Z [error]: Invalid input data: Cast to Number failed for value "541,994" (type string) at path "price"
+2024-09-24T06:03:16.040Z [error]: Can't find this /feature-deals on this server.
+2024-09-24T06:03:16.044Z [error]: You are not logged in! Please log in to get access.
+2024-09-24T06:03:16.154Z [error]: Can't find this /uploads/1727074855827_mobile.png on this server.
+2024-09-24T06:03:16.156Z [error]: Can't find this /uploads/1727074769722_hair.png on this server.
+2024-09-24T06:03:16.159Z [error]: Can't find this /uploads/1727074707739_kids.png on this server.
+2024-09-24T06:03:16.164Z [error]: Can't find this /uploads/1727074493339_jew.png on this server.
+2024-09-24T06:03:16.165Z [error]: Can't find this /uploads/1727074295373_womens.png on this server.
+2024-09-24T06:03:16.166Z [error]: Can't find this /uploads/1727074188380_sports.png on this server.
+2024-09-24T06:03:16.182Z [error]: Can't find this /uploads/1727074098230_home.png on this server.
+2024-09-24T06:03:16.187Z [error]: Can't find this /uploads/1727074014415_mens.png on this server.
+2024-09-24T06:03:16.189Z [error]: Can't find this /uploads/1727075179453_edu.png on this server.
+2024-09-24T06:03:16.190Z [error]: Can't find this /uploads/1727074927397_laptop.png on this server.
+2024-09-24T06:06:55.373Z [error]: getaddrinfo ENOTFOUND ac-icdjrdg-shard-00-01.lorfkks.mongodb.net
+2024-09-24T06:51:13.055Z [error]: Can't find this / on this server.
+2024-09-24T06:51:18.186Z [error]: Can't find this / on this server.
+2024-09-24T06:51:22.144Z [error]: Can't find this / on this server.
+2024-09-24T06:51:23.914Z [error]: Can't find this / on this server.
+2024-09-24T06:55:31.883Z [error]: Can't find this / on this server.
+2024-09-24T06:57:38.323Z [error]: Can't find this / on this server.
+2024-09-24T07:08:17.474Z [error]: Invalid input data: Cast to ObjectId failed for value "" (type string) at path "subCategory" because of "BSONError"
+2024-09-24T07:18:45.072Z [error]: Can't find this //api/brands on this server.
+2024-09-24T07:18:50.699Z [error]: Invalid input data: Please provide brand logo.

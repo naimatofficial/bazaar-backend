@@ -118,6 +118,7 @@ const productSchema = new mongoose.Schema(
             enum: ['vendor', 'admin'],
             required: true,
         },
+        slug: String
     },
     {
         toJSON: { virtuals: true },
