@@ -111,8 +111,6 @@ export const createOne = (Model) =>
     catchAsync(async (req, res, next) => {
         let { allowedFields, filteredData } = checkFields(Model, req, next)
 
-        console.log(allowedFields.includes('slug'))
-
         // if document contain slug then create a slug
         if (allowedFields.includes('slug')) {
             filteredData = {
@@ -236,8 +234,6 @@ export const getOneBySlug = (Model, popOptions) =>
     catchAsync(async (req, res, next) => {
         const cacheKey = getCacheKey(Model.modelName, req.params.slug)
 
-        const slug = req.params.slug
-
         // Check cache first
         const cachedDoc = await redisClient.get(cacheKey)
 
@@ -250,7 +246,7 @@ export const getOneBySlug = (Model, popOptions) =>
         }
 
         // If not in cache, fetch from database
-        let query = Model.findOne({ slug })
+        let query = Model.findOne({ slug: req.params.slug })
 
         if (popOptions && popOptions.path) query = query.populate(popOptions)
         const doc = await query

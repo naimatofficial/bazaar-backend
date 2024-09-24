@@ -7671,3 +7671,408 @@ Use mongoose.model(name, schema)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async executeOperation (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
     at async Collection.insertOne (F:\Side Projects\bazaar-backend\node_modules\mongodb\lib\collection.js:155:16)
+2024-09-23T10:50:22.107Z [error]: Error: read ECONNRESET
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20)
+2024-09-23T10:51:24.421Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:261:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T10:51:49.146Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:261:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T10:54:09.836Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:261:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T10:54:22.341Z [error]: CastError: Cast to ObjectId failed for value "nike" (type string) at path "_id" for model "Brand"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2585:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:165:21
+2024-09-23T10:54:30.714Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:261:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T10:56:15.982Z [error]: Error: read ECONNRESET
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20)
+2024-09-23T10:56:21.934Z [error]: Error: No category found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:261:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T10:56:50.421Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:261:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T10:57:21.791Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:263:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:03:47.878Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:263:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:07:37.864Z [error]: Error: Can't find this /favicon.ico on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-23T11:22:50.337Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:263:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:22:54.092Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:263:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:23:05.548Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:263:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:24:53.593Z [error]: ObjectParameterError: Parameter "filter" to findOne() must be an object, got "nike" (type string)
+    at Query.findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2662:16)
+    at Function.findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:2039:13)
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:255:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:25:10.695Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:265:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:28:37.444Z [error]: Error: No brand found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:259:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T11:30:35.775Z [error]: CastError: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Vendor"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2585:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:165:21
+2024-09-23T12:05:52.562Z [error]: ReferenceError: slugify is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/brandController.js:18:15
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (F:\Side Projects\bazaar-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:530:35)
+    at finish (node:internal/streams/writable:945:10)
+2024-09-24T04:22:52.075Z [error]: ReferenceError: filteredData is not defined
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/brandController.js:19:23
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at Multipart.<anonymous> (F:\Side Projects\bazaar-backend\node_modules\multer\lib\make-middleware.js:166:7)
+    at Multipart.emit (node:events:518:28)
+    at emitCloseNT (node:internal/streams/destroy:147:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+2024-09-24T04:23:45.172Z [error]: ValidationError: Brand validation failed: logo: Please provide brand logo.
+    at Document.invalidate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3318:32)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\document.js:3079:17
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-09-24T04:25:44.725Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-24T04:25:45.673Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:19.432Z [error]: Error: Can't find this /1727151932212_apple.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:19.453Z [error]: Error: Can't find this /1727151913831_adidas.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:19.463Z [error]: Error: Can't find this /1727151883054_puma.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:24.265Z [error]: Error: Can't find this /1727151948826_Nike.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:24.271Z [error]: Error: Can't find this /1727151932212_apple.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:24.276Z [error]: Error: Can't find this /1727151913831_adidas.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:24.283Z [error]: Error: Can't find this /1727151883054_puma.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:24.331Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-24T04:27:35.549Z [error]: Error: Can't find this /favicon.ico on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:27:44.059Z [error]: Error: Can't find this /1727151948826_Nike.png on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:29:14.636Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:30:55.291Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:37:45.767Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:41:17.416Z [error]: Error: Can't find this /uploads/images/1726901057527-vivo%20v22.jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:41:17.555Z [error]: Error: Can't find this / on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:42:05.572Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-24T04:43:24.436Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:44:53.508Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T04:50:10.737Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-24T04:51:18.747Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-24T04:51:45.414Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T05:00:44.038Z [error]: StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4183:21)
+    at _populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4143:5)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4115:5
+    at new Promise (<anonymous>)
+    at Function.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\model.js:4114:10)
+    at Query._completeOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2528:18)
+    at F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2600:10
+    at new Promise (<anonymous>)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2599:10)
+2024-09-24T05:03:30.135Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T05:08:15.468Z [error]: Error: Can't find this /api/wishlist on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T05:08:17.409Z [error]: Error: You are not logged in! Please log in to get access.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:32:13
+    at file:///F:/Side%20Projects/bazaar-backend/utils/catchAsync.js:2:2
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\index.js:175:3)

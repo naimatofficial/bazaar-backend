@@ -23,6 +23,8 @@ const brandSchema = new mongoose.Schema(
             enum: ['active', 'inactive'],
             default: 'inactive',
         },
+
+        slug: String,
     },
     {
         toJSON: { virtuals: true },
@@ -38,10 +40,6 @@ const brandSchema = new mongoose.Schema(
 //     }
 //     next()
 // })
-
-brandSchema.virtual('slug').get(function () {
-    return slugify(this.name, { lower: true })
-})
 
 // Virtual to count products associated with the brand
 brandSchema.virtual('productCount', {

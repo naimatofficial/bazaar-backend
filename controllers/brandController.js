@@ -1,3 +1,4 @@
+import slugify from 'slugify'
 import redisClient from '../config/redisConfig.js'
 import Brand from '../models/brandModel.js'
 import catchAsync from '../utils/catchAsync.js'
@@ -11,12 +12,11 @@ export const createBrand = catchAsync(async (req, res) => {
     const { name, imageAltText } = req.body
     const logo = req.file ? req.file.filename : ''
 
-    console.log(req.file)
-
     const brand = new Brand({
         name,
         logo,
         imageAltText,
+        slug: slugify(name, { lower: true }),
     })
 
     console.log(brand)
