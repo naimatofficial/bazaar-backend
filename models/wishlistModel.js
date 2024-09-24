@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-import AppError from '../utils/appError.js'
+import mongoose from 'mongoose';
+import AppError from '../utils/appError.js';
 
 const wishlistSchema = new mongoose.Schema(
     {
@@ -23,67 +23,70 @@ const wishlistSchema = new mongoose.Schema(
     {
         timestamps: true,
     }
-)
+);
 
+// Virtual field for vendor bank (if needed)
 wishlistSchema.virtual('vendorBank', {
     ref: 'VendorBank',
     localField: '_id',
     foreignField: 'vendor',
-})
+});
 
 // Calculate total products before saving the data
 wishlistSchema.pre('save', function (next) {
-    this.totalProducts = this.products.length
-    next()
-})
+    this.totalProducts = this.products.length;
+    next();
+});
 
+// Pre-find hook to populate products and customer (remove .lean())
 wishlistSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'products',
         select: '-__v -createdAt -updatedAt',
     })
-        .populate({
-            path: 'user',
-            select: '-__v -createdAt -updatedAt -role -status -referCode',
-        })
-        .lean()
+    .populate({
+        path: 'customer', // Corrected from 'user' to 'customer'
+        select: '-__v -createdAt -updatedAt -role -status -referCode',
+    });
 
-    next()
-})
+    next();
+});
 
+// Pre-save hook to validate customer and products
 wishlistSchema.pre('save', async function (next) {
     try {
+        // Check if customer exists
         const customer = await mongoose
             .model('Customer')
-            .findById(this.customer)
+            .findById(this.customer);
 
         if (!customer) {
             return next(
                 new AppError('Referenced customer ID does not exist', 400)
-            )
+            );
         }
 
-        // Check if products are provided and validate them
+        // Check if products exist and validate them
         if (this.products && this.products.length > 0) {
             const productCheck = await mongoose
                 .model('Product')
                 .countDocuments({
                     _id: { $in: this.products },
-                })
+                });
 
             if (productCheck !== this.products.length) {
                 return next(
                     new AppError('One or more products do not exist.', 400)
-                )
+                );
             }
         }
 
-        next()
+        next();
     } catch (err) {
-        next(err)
+        next(err);
     }
-})
+});
 
-const Wishlist = mongoose.model('Wishlist', wishlistSchema)
+const Wishlist = mongoose.model('Wishlist', wishlistSchema);
 
-export default Wishlist
+export default Wishlist;

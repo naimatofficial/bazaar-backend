@@ -14,63 +14,82 @@ export const deleteWishlist = deleteOne(Wishlist)
 
 export const getWishlist = getOne(Wishlist)
 
-export const addProductToWishlist = catchAsync(async (req, res) => {
-    const { customer, productId } = req.body
+export const addProductToWishlist = catchAsync(async (req, res, next) => {
+    const { customer, productId } = req.body;
 
-    let wishlist = await Wishlist.findById(customer)
+    const productExists = await Product.findById(productId);
+    if (!productExists) {
+        return next(new AppError('Product not found.', 400));
+    }
+
+
+    let existingCustomer = await Customer.findById(customer);
+    if (!existingCustomer) {
+        return next(new AppError('Customer not found.', 400));
+    }
+
+    let wishlist = await Wishlist.findOne({ customer });
 
     if (!wishlist) {
+
         wishlist = new Wishlist({
             customer,
             products: [productId],
-        })
+        });
     } else {
-        if (!wishlist.products.includes(productId)) {
-            wishlist.products.push(productId)
+
+        if (wishlist.products.includes(productId)) {
+            return res.status(400).json({
+                status: 'fail',
+                message: 'Product already added to wishlist.',
+            });
         }
+
+        wishlist.products.push(productId);
     }
 
-    await wishlist.save()
-    res.status(200).json(wishlist)
-})
+    wishlist.totalProducts = wishlist.products.length;
+
+    await wishlist.save();
+
+    res.status(200).json({
+        status: 'success',
+        message: 'Product added to wishlist successfully.',
+        data: wishlist,
+    });
+});
 
 export const removeProductFromWishlist = catchAsync(async (req, res, next) => {
-    const { productId } = req.params
+    const { productId } = req.params;
+    const { customer } = req.body;
 
-    // Step 1: Find the wishlist document for the user
-    const doc = await Wishlist.findOne({ user: req.user._id })
+    const wishlist = await Wishlist.findOne({ customer });
 
-    // Step 2: Handle case where the wishlist is not found
-    if (!doc) {
-        return next(new AppError('No wishlist found for this user', 404))
+    if (!wishlist) {
+        return next(new AppError('No wishlist found for this customer', 404));
     }
+    console.log(productId)
+    const productIndex = wishlist.products.findIndex(
+        (product) => product._id.toString() ===productId
+    );
 
-    console.log(doc.products.length)
-
-    // Step 3: Find the product in the wishlist
-    const productIndex = doc.products.findIndex(
-        (product) => product._id.toString() === productId
-    )
-
-    // Step 4: Handle case where the product is not found
     if (productIndex === -1) {
-        return next(new AppError('Product not found in wishlist', 404))
+        return next(new AppError('Product not found in wishlist', 404));
     }
 
-    // Step 5: Remove the product from the array
-    doc.products.splice(productIndex, 1)
 
-    console.log(doc.products.length)
+    wishlist.products.splice(productIndex, 1);
 
-    // Step 6: Save the updated document
-    await doc.save()
+    wishlist.totalProducts = wishlist.products.length;
 
-    // Invalidate the cache for this document
-    const cacheKey = getCacheKey(Wishlist, '', req.query)
-    await redisClient.del(cacheKey)
+    await wishlist.save();
 
-    res.status(204).json({
+    res.status(200).json({
         status: 'success',
-        message: 'Wishlist product deleted.',
-    })
-})
+        message: 'Product removed from wishlist successfully.',
+        data: {
+            wishlist,
+            totalItems: wishlist.totalProducts, 
+        },
+    });
+});

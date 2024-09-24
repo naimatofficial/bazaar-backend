@@ -3384,3 +3384,191 @@ Use mongoose.model(name, schema)
     at Query.populate (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4724:30)
     at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:206:27
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-23T05:06:11.457Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T05:06:11.464Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T05:06:21.113Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T05:06:21.114Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T05:06:39.146Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T05:16:46.354Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T05:39:12.325Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T05:42:26.271Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:10:17.612Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:10:22.080Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:14:35.158Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:14:35.159Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:14:39.380Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:15:33.766Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:18:36.013Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:18:36.015Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:18:50.172Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:18:50.173Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:18:56.307Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:28:35.589Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:41:53.924Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:51:40.872Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T06:58:04.253Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:00:21.292Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:43.441Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:44.442Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:45.192Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:45.729Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:46.646Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:47.012Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:47.328Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:06:48.393Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:10:45.337Z [error]: Can't find this /uploads/1727075179453_edu.png on this server.
+2024-09-23T07:10:45.341Z [error]: Can't find this /uploads/1727074927397_laptop.png on this server.
+2024-09-23T07:10:45.342Z [error]: Can't find this /uploads/1727074855827_mobile.png on this server.
+2024-09-23T07:10:45.344Z [error]: Can't find this /uploads/1727074769722_hair.png on this server.
+2024-09-23T07:10:45.350Z [error]: Can't find this /uploads/1727074707739_kids.png on this server.
+2024-09-23T07:10:45.354Z [error]: Can't find this /uploads/1727074493339_jew.png on this server.
+2024-09-23T07:10:45.356Z [error]: Can't find this /uploads/1727074295373_womens.png on this server.
+2024-09-23T07:10:45.359Z [error]: Can't find this /uploads/1727074188380_sports.png on this server.
+2024-09-23T07:10:45.361Z [error]: Can't find this /uploads/1727074098230_home.png on this server.
+2024-09-23T07:10:45.364Z [error]: Can't find this /uploads/1727074014415_mens.png on this server.
+2024-09-23T07:11:34.145Z [error]: Can't find this /uploads/1727075179453_edu.png on this server.
+2024-09-23T07:11:34.150Z [error]: Can't find this /uploads/1727074927397_laptop.png on this server.
+2024-09-23T07:11:34.152Z [error]: Can't find this /uploads/1727074855827_mobile.png on this server.
+2024-09-23T07:11:34.153Z [error]: Can't find this /uploads/1727074769722_hair.png on this server.
+2024-09-23T07:11:34.154Z [error]: Can't find this /uploads/1727074707739_kids.png on this server.
+2024-09-23T07:11:34.156Z [error]: Can't find this /uploads/1727074493339_jew.png on this server.
+2024-09-23T07:11:34.159Z [error]: Can't find this /uploads/1727074188380_sports.png on this server.
+2024-09-23T07:11:34.161Z [error]: Can't find this /uploads/1727074014415_mens.png on this server.
+2024-09-23T07:11:34.164Z [error]: Can't find this /uploads/1727074098230_home.png on this server.
+2024-09-23T07:11:34.166Z [error]: Can't find this /uploads/1727074295373_womens.png on this server.
+2024-09-23T07:11:38.329Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:15:10.572Z [error]: Can't find this /uploads/1727075179453_edu.png on this server.
+2024-09-23T07:15:10.576Z [error]: Can't find this /uploads/1727074927397_laptop.png on this server.
+2024-09-23T07:15:10.580Z [error]: Can't find this /uploads/1727074769722_hair.png on this server.
+2024-09-23T07:15:10.582Z [error]: Can't find this /uploads/1727074855827_mobile.png on this server.
+2024-09-23T07:15:10.583Z [error]: Can't find this /uploads/1727074707739_kids.png on this server.
+2024-09-23T07:15:10.585Z [error]: Can't find this /uploads/1727074493339_jew.png on this server.
+2024-09-23T07:15:10.588Z [error]: Can't find this /uploads/1727074295373_womens.png on this server.
+2024-09-23T07:15:10.590Z [error]: Can't find this /uploads/1727074188380_sports.png on this server.
+2024-09-23T07:15:10.595Z [error]: Can't find this /uploads/1727074098230_home.png on this server.
+2024-09-23T07:15:10.600Z [error]: Can't find this /uploads/1727074014415_mens.png on this server.
+2024-09-23T07:15:40.101Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:31:01.748Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:34:39.598Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T07:35:14.167Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T08:13:30.734Z [error]: Can't find this /uploads/1727075179453_edu.png on this server.
+2024-09-23T08:13:30.737Z [error]: Can't find this /uploads/1727074927397_laptop.png on this server.
+2024-09-23T08:13:30.739Z [error]: Can't find this /uploads/1727074707739_kids.png on this server.
+2024-09-23T08:13:30.740Z [error]: Can't find this /uploads/1727074769722_hair.png on this server.
+2024-09-23T08:13:30.741Z [error]: Can't find this /uploads/1727074855827_mobile.png on this server.
+2024-09-23T08:13:30.742Z [error]: Can't find this /uploads/1727074493339_jew.png on this server.
+2024-09-23T08:13:30.745Z [error]: Can't find this /uploads/1727074295373_womens.png on this server.
+2024-09-23T08:13:30.748Z [error]: Can't find this /uploads/1727074188380_sports.png on this server.
+2024-09-23T08:13:30.750Z [error]: Can't find this /uploads/1727074098230_home.png on this server.
+2024-09-23T08:13:30.754Z [error]: Can't find this /uploads/1727074014415_mens.png on this server.
+2024-09-23T09:18:16.927Z [error]: Can't find this /uploads/1727075179453_edu.png on this server.
+2024-09-23T09:18:16.929Z [error]: Can't find this /uploads/1727074927397_laptop.png on this server.
+2024-09-23T09:18:16.930Z [error]: Can't find this /uploads/1727074855827_mobile.png on this server.
+2024-09-23T09:18:16.931Z [error]: Can't find this /uploads/1727074769722_hair.png on this server.
+2024-09-23T09:18:16.932Z [error]: Can't find this /uploads/1727074707739_kids.png on this server.
+2024-09-23T09:18:16.933Z [error]: Can't find this /uploads/1727074493339_jew.png on this server.
+2024-09-23T09:18:16.938Z [error]: Can't find this /uploads/1727074295373_womens.png on this server.
+2024-09-23T09:18:16.940Z [error]: Can't find this /uploads/1727074188380_sports.png on this server.
+2024-09-23T09:18:16.941Z [error]: Can't find this /uploads/1727074098230_home.png on this server.
+2024-09-23T09:18:16.942Z [error]: Can't find this /uploads/1727074014415_mens.png on this server.
+2024-09-23T09:34:45.993Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:46.966Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:47.549Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:47.976Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:48.693Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:49.053Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:49.724Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:50.491Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:50.991Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:51.327Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:52.743Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:52.998Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:53.759Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:34:54.222Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:35:34.831Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:35:35.571Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:43:50.714Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:46:54.216Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T09:54:11.132Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:00:23.152Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:23:59.348Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:23:59.365Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:24:11.721Z [error]: Operation `brands.find()` buffering timed out after 10000ms
+2024-09-23T10:28:08.398Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:28:08.403Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:28:25.245Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:28:30.439Z [error]: Operation `brands.find()` buffering timed out after 10000ms
+2024-09-23T10:29:00.910Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:38:10.084Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:50:52.327Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:57:09.158Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T10:59:20.417Z [error]: Invalid Token! Please log in again.
+2024-09-23T11:00:07.782Z [error]: Can't find this //api/users on this server.
+2024-09-23T11:00:20.405Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:00:22.006Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:00:46.863Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:00:47.868Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:01:01.265Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:01:18.440Z [error]: Invalid Token! Please log in again.
+2024-09-23T11:01:25.687Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:02:10.100Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:04:13.053Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:04:58.665Z [error]: Expected ',' or '}' after property value in JSON at position 63
+2024-09-23T11:05:47.538Z [error]: Expected ',' or '}' after property value in JSON at position 63
+2024-09-23T11:06:01.684Z [error]: Expected ',' or '}' after property value in JSON at position 63
+2024-09-23T11:11:09.218Z [error]: Expected ',' or '}' after property value in JSON at position 63
+2024-09-23T11:14:02.812Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:20:08.883Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:20:14.099Z [error]: Cannot read properties of undefined (reading 'path')
+2024-09-23T11:20:33.957Z [error]: Can't find this //api/products on this server.
+2024-09-23T11:22:16.623Z [error]: Invalid Token! Please log in again.
+2024-09-23T11:22:53.394Z [error]: awaitProduct is not defined
+2024-09-23T11:31:40.881Z [error]: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-09-23T11:32:44.380Z [error]: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-09-23T11:33:39.672Z [error]: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-09-23T12:04:02.838Z [error]: Cannot read properties of null (reading 'findOneById')
+2024-09-23T12:04:28.506Z [error]: Cannot read properties of null (reading 'findById')
+2024-09-23T12:14:18.709Z [error]: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2024-09-23T12:16:50.785Z [error]: wishlist.save is not a function
+2024-09-23T12:22:29.775Z [error]: wishlist.save is not a function
+2024-09-23T12:24:52.467Z [error]: One or more products do not exist.
+2024-09-23T12:25:27.241Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:25:46.295Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:26:10.333Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:26:43.571Z [error]: Incorrect email or password
+2024-09-23T12:27:10.346Z [error]: Duplicate field value , please use another value.
+2024-09-23T12:27:30.957Z [error]: Duplicate field value , please use another value.
+2024-09-23T12:27:47.077Z [error]: Duplicate field value , please use another value.
+2024-09-23T12:29:54.847Z [error]: Incorrect email or password
+2024-09-23T12:31:40.237Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:32:10.296Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:32:11.589Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:33:25.222Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:33:37.014Z [error]: No wishlist found for this user
+2024-09-23T12:33:39.239Z [error]: No wishlist found for this user
+2024-09-23T12:34:53.219Z [error]: One or more products do not exist.
+2024-09-23T12:35:50.252Z [error]: One or more products do not exist.
+2024-09-23T12:37:07.201Z [error]: Invalid Token! Please log in again.
+2024-09-23T12:41:55.271Z [error]: One or more products do not exist.
+2024-09-23T12:46:20.361Z [error]: Duplicate field value , please use another value.
+2024-09-23T12:48:55.784Z [error]: No wishlist found with that ID
+2024-09-23T13:01:38.684Z [error]: You are not logged in! Please log in to get access.
+2024-09-23T13:02:05.533Z [error]: Product not found in wishlist
+2024-09-23T13:03:43.868Z [error]: Product not found in wishlist
+2024-09-23T13:06:02.801Z [error]: Product not found in wishlist
+2024-09-23T13:06:19.069Z [error]: Product not found in wishlist
+2024-09-23T13:06:37.459Z [error]: Product not found in wishlist
+2024-09-23T13:07:48.419Z [error]: Product not found in wishlist
+2024-09-23T13:08:22.962Z [error]: Product not found in wishlist
+2024-09-23T13:09:53.939Z [error]: No wishlist found for this customer
+2024-09-23T13:10:13.715Z [error]: Parameter "filter" to findOne() must be an object, got "66f117bb9a80a1d81a2fdb92" (type string)
+2024-09-23T13:10:23.067Z [error]: Parameter "filter" to find() must be an object, got "66f117bb9a80a1d81a2fdb92" (type string)
+2024-09-23T13:10:40.219Z [error]: No wishlist found for this customer
+2024-09-23T13:11:32.754Z [error]: No wishlist found for this customer
+2024-09-23T13:12:44.281Z [error]: Product not found in wishlist
+2024-09-23T13:13:19.793Z [error]: Product not found in wishlist
+2024-09-23T13:14:41.174Z [error]: Product not found in wishlist
+2024-09-23T13:15:14.968Z [error]: Product not found in wishlist
+2024-09-23T13:15:32.490Z [error]: Product not found in wishlist
+2024-09-23T13:15:51.231Z [error]: Product not found in wishlist
+2024-09-23T13:16:26.036Z [error]: Product not found in wishlist

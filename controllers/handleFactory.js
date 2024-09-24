@@ -202,7 +202,7 @@ export const getAll = (Model, popOptions) =>
         let query = Model.find()
 
         // If popOptions is provided and path is an array or a string, populate the query
-        if (popOptions.path) {
+        if (popOptions?.path) {
             if (Array.isArray(popOptions.path)) {
                 popOptions.path.forEach((pathOption) => {
                     query = query.populate(pathOption)
