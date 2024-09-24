@@ -7,10 +7,19 @@ import fs from 'fs'
 import path from 'path'
 import slugify from 'slugify'
 import { client } from '../utils/redisClient.js'
-import { deleteOne, getAll, getOne, getOneBySlug } from './handleFactory.js'
+import {
+    deleteOne,
+    deleteOneWithTransaction,
+    getAll,
+    getOne,
+    getOneBySlug,
+} from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
+import SubCategory from '../models/subCategoryModel.js'
+import SubSubCategory from '../models/subSubCategoryModel.js'
+import Product from '../models/productModel.js'
 
 // Create a new category
 export const createCategory = catchAsync(async (req, res) => {
@@ -110,6 +119,15 @@ export const updateCategory = catchAsync(async (req, res) => {
     })
 })
 // Delete a category by ID
-export const deleteCategory = deleteOne(Category)
+// Define related models and their foreign keys
+const relatedModels = [
+    { model: SubCategory, foreignKey: 'mainCategory' },
+    { model: SubSubCategory, foreignKey: 'mainCategory' },
+    { model: Product, foreignKey: 'category' },
+]
+
+// Delete a category by ID
+export const deleteCategory = deleteOneWithTransaction(Category, relatedModels)
+
 // Get category by slug
 export const getCategoryBySlug = getOneBySlug(Category)

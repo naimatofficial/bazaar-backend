@@ -5,13 +5,21 @@ import {
     getCustomer,
     getCustomers,
     updateCustomer,
+    updateCustomerStatus,
 } from './../controllers/customerController.js'
 import {
     logout,
     loginCustomer,
     signupCustomer,
+    updatePassword,
+    forgotPassword,
+    resetPassword,
 } from '../controllers/authController.js'
-import { protect, restrictTo } from '../middleware/authMiddleware.js'
+import {
+    protect,
+    restrictTo,
+    selectModelByRole,
+} from '../middleware/authMiddleware.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import customerValidationSchema from './../validations/customerValidator.js'
 import { loginLimiter } from '../utils/helpers.js'
@@ -26,6 +34,10 @@ router.post(
 )
 router.post('/logout', protect, logout)
 
+router.put('/update-password', protect, selectModelByRole, updatePassword)
+router.post('/forgot-password', forgotPassword)
+router.put('/reset-password/:token', resetPassword)
+
 router
     .route('/')
     .post(
@@ -35,6 +47,8 @@ router
         createCustomer
     )
     .get(protect, restrictTo('admin', 'vendor'), getCustomers)
+
+router.put('/status/:id', protect, restrictTo('admin'), updateCustomerStatus)
 
 router
     .route('/:id')

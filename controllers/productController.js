@@ -8,7 +8,13 @@ import { validateProductDependencies } from '../utils/validation.js'
 import { populateProductDetails } from '../utils/productHelper.js'
 import { buildFilterQuery, buildSortOptions } from '../utils/filterHelper.js'
 import Customer from '../models/customerModel.js'
-import { deleteOne, getAll, getOne, getOneBySlug } from './handleFactory.js'
+import {
+    deleteOne,
+    getAll,
+    getOne,
+    getOneBySlug,
+    updateStatus,
+} from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
@@ -44,22 +50,6 @@ export const createProduct = catchAsync(async (req, res) => {
         userId,
         userType,
     } = req.body
-
-    // const {
-    //     categoryObj,
-    //     subCategoryObj,
-    //     subSubCategoryObj,
-    //     brandObj,
-    //     colorObjs,
-    //     attributeObjs,
-    // } = await validateProductDependencies({
-    //     category,
-    //     subCategorySlug,
-    //     subSubCategorySlug,
-    //     brand,
-    //     colors,
-    //     attributes,
-    // })
 
     const newProduct = new Product({
         name,
@@ -136,7 +126,7 @@ export const updateProductImages = catchAsync(async (req, res) => {
         doc: product,
     })
 })
-// export const getAllProducts = async (req, res) => {
+/// export const getAllProducts = async (req, res) => {
 // 	try {
 // 		const { priceRange, sort, order = "asc", page = 1, limit = 10 } = req.query;
 
@@ -189,13 +179,11 @@ export const updateProductImages = catchAsync(async (req, res) => {
 // 		sendErrorResponse(res, error);
 // 	}
 // };
-export const getAllProducts = getAll(Product)
+export const getAllProducts = getAll(Product, { path: 'reviews' })
 
-export const getProductById = getOne(Product)
+export const getProductById = getOne(Product, { path: 'reviews' })
 // Delete a Product
 export const deleteProduct = deleteOne(Product)
-
-export const getProductBySlug = getOneBySlug(Product)
 
 // update product
 // export const updateProduct = updateOne(Product)
@@ -234,30 +222,7 @@ export const addReview = async (req, res) => {
 }
 
 // Update product status
-export const updateProductStatus = async (req, res) => {
-    try {
-        const productId = req.params.id
-        const { status } = req.body
-
-        const validStatuses = ['active', 'inactive', 'pending']
-        if (!validStatuses.includes(status)) {
-            return res.status(400).json({ message: 'Invalid status' })
-        }
-
-        const product = await Product.findById(productId)
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' })
-        }
-
-        product.status = status
-        await product.save()
-        await client.del('all_products:*')
-        await client.del(`product_${productId}`)
-        sendSuccessResponse(res, product, 200)
-    } catch (error) {
-        sendErrorResponse(res, error)
-    }
-}
+export const updateProductStatus = updateStatus(Product)
 
 // Update product featured status
 export const updateProductFeaturedStatus = async (req, res) => {

@@ -266,3 +266,96 @@ export const getOneBySlug = (Model, popOptions) =>
             doc,
         })
     })
+
+export const deleteOneWithTransaction = (Model, relatedModels = []) =>
+    catchAsync(async (req, res, next) => {
+        const session = await mongoose.startSession()
+        session.startTransaction()
+
+        try {
+            const doc = await Model.findById(req.params.id).session(session)
+
+            if (!doc) {
+                await session.abortTransaction()
+                return next(
+                    new AppError(
+                        `No ${Model.modelName.toLowerCase()} found with that ID`,
+                        404
+                    )
+                )
+            }
+
+            // Delete related documents in a transaction
+            for (const relatedModel of relatedModels) {
+                const { model, foreignKey } = relatedModel
+                await model
+                    .deleteMany({ [foreignKey]: req.params.id })
+                    .session(session)
+
+                // delete document caches
+                const cacheKey = getCacheKey(model.modelName.toString(), '')
+                await redisClient.del(cacheKey)
+            }
+
+            // Delete the main document
+            await doc.deleteOne({ session })
+
+            // Commit the transaction
+            await session.commitTransaction()
+            session.endSession()
+
+            res.status(204).json({
+                status: 'success',
+                doc: null,
+            })
+        } catch (err) {
+            await session.abortTransaction()
+            session.endSession()
+            return next(
+                new AppError('Something went wrong during deletion', 500)
+            )
+        }
+    })
+
+// UPDATE One Document
+export const updateStatus = (Model) =>
+    catchAsync(async (req, res, next) => {
+        if (!req.body.status) {
+            return next(new AppError(`Please provide status value.`, 400))
+        }
+
+        console.log('Status: ', req.body.status)
+
+        // Perform the update operation
+        const doc = await Model.findByIdAndUpdate(
+            req.params.id,
+            { status: req.body.status },
+            {
+                new: true,
+                runValidators: true,
+            }
+        )
+
+        const docName = Model.modelName.toLowerCase() || 'Document'
+
+        // Handle case where the document was not found
+        if (!doc) {
+            return next(new AppError(`No ${docName} found with that ID`, 404))
+        }
+
+        const cacheKeyOne = getCacheKey(Model.modelName, req.params.id)
+
+        // delete pervious document data
+        await redisClient.del(cacheKeyOne)
+        // updated the cache with new data
+        await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(doc))
+
+        // Update cache
+        const cacheKey = getCacheKey(Model.modelName, '', req.query)
+        await redisClient.del(cacheKey)
+
+        res.status(200).json({
+            status: 'success',
+            doc,
+        })
+    })

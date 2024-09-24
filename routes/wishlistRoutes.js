@@ -20,9 +20,6 @@ router.post(
     addProductToWishlist
 )
 router.delete('/products/:productId', protect, removeProductFromWishlist)
-router
-    .route('/:customerId')
-    .get(protect, getWishlist)
-    .delete(protect, deleteWishlist)
+router.route('/:id').get(protect, getWishlist).delete(protect, deleteWishlist)
 
 export default router

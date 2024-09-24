@@ -54,11 +54,11 @@ router
     .put(upload.single('image'), updateFlashDeal)
     .delete(deleteFlashDeal)
 
-router.route('/add-product/:id').put(addProductToFlashDeal)
+router.route('/add-product/:flashDealId').put(addProductToFlashDeal)
 
 router
-    .route('/:id/remove-product/:productId')
-    .delete(removeProductFromFlashDeal)
+    .route('/:flashDealId/remove-product/:productId')
+    .put(removeProductFromFlashDeal)
 
 router.route('/:id/status').patch(updateFlashDealStatus)
 

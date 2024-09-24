@@ -48,7 +48,7 @@ const vendorSchema = new mongoose.Schema(
 
         status: {
             type: String,
-            enum: ['pending', 'active', 'rejected'],
+            enum: ['pending', 'active', 'inactive', 'rejected'],
             default: 'pending',
         },
         vendorImage: {
@@ -72,11 +72,61 @@ const vendorSchema = new mongoose.Schema(
     }
 )
 
+vendorSchema.virtual('totalProducts', {
+    ref: 'Product',
+    localField: '_id',
+    foreignField: 'userId',
+    // This tells mongoose to return a count instead of the documents
+    count: true,
+})
+
+vendorSchema.virtual('totalOrders', {
+    ref: 'Order',
+    localField: '_id',
+    foreignField: 'vendors',
+    // This tells mongoose to return a count instead of the documents
+    count: true,
+})
+
+// vendorSchema.virtual('bank', {
+//     ref: 'VendorBank',
+//     localField: '_id',
+//     foreignField: 'vendor',
+//     justOne: true,
+//     options: { select: 'holderName accountNumber bankName branch vendor ' },
+// })
+
 vendorSchema.methods.correctPassword = async function (
     candidatePassword,
     userPassword
 ) {
     return await bcrypt.compare(candidatePassword, userPassword)
+}
+
+vendorSchema.methods.changePasswordAfter = function (JWTTimestamp) {
+    if (this.passwordChangedAt) {
+        const changeTimestamp = parseInt(
+            this.passwordChangedAt.getTime() / 1000,
+            10
+        )
+
+        return JWTTimestamp < changeTimestamp
+    }
+    // NO password changed
+    return false
+}
+
+vendorSchema.methods.createPasswordResetToken = function () {
+    const resetToken = crypto.randomBytes(32).toString('hex')
+
+    this.passwordResetToken = crypto
+        .createHash('sha256')
+        .update(resetToken)
+        .digest('hex')
+
+    this.passwordResetExpires = Date.now() + 10 * 60 * 1000
+
+    return resetToken
 }
 
 vendorSchema.pre('save', async function (next) {
