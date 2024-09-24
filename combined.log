@@ -10410,3 +10410,436 @@ Use mongoose.model(name, schema)
     at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
     at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:99:5
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T10:11:43.063Z [error]: CastError: Cast to ObjectId failed for value "amd-ryzen-7-5800x-8-core" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2585:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:163:21
+2024-09-24T10:11:55.340Z [error]: Error: Can't find this /api/products/slug/amd-ryzen-7-5800x-8-core on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:18:36.291Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:18:36.390Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:19:30.977Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:19:31.125Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:19:35.867Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:19:36.097Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:20:18.118Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:20:18.617Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:20:33.425Z [error]: Error: Can't find this / on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:20:45.425Z [error]: Error: Can't find this / on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:22:23.737Z [error]: CastError: Cast to ObjectId failed for value "computer-office-and-security" (type string) at path "category" for model "Product"
+    at SchemaObjectId.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4857:12)
+    at Query._castConditions (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._find (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:2292:8)
+    at model.Query.exec (F:\Side Projects\bazaar-backend\node_modules\mongoose\lib\query.js:4401:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:220:21
+2024-09-24T10:22:50.101Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:22:58.425Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:23:03.788Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:23:09.103Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:23:12.320Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:23:12.416Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:36:03.840Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:36:03.993Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:36:46.733Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:36:46.750Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:37:01.940Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:37:01.956Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:37:15.267Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:37:15.276Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:47:27.095Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:47:27.645Z [error]: Error: Can't find this /uploads/1727162369516_Asus%20Logo.jpg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:50:37.690Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T10:52:24.187Z [error]: Error: No product found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:257:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T10:52:29.683Z [error]: Error: No product found with that slug
+    at file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:257:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T10:52:59.779Z [error]: Error: Unfortunately, this token has already expired.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:62:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T11:02:03.741Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T11:05:07.215Z [error]: Error: Unfortunately, this token has already expired.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:62:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T11:05:12.867Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T11:05:22.850Z [error]: Error: Unfortunately, this token has already expired.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:62:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-09-24T11:05:40.499Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T11:21:09.140Z [error]: Error: Can't find this /feature-deals on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T11:21:09.192Z [error]: Error: Can't find this /uploads/1727174329849_th%20(11).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T11:21:09.198Z [error]: Error: Can't find this /uploads/1727172636142_th%20(12).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T11:21:11.640Z [error]: Error: Can't find this /uploads/1727174329849_th%20(11).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)
+2024-09-24T11:21:11.648Z [error]: Error: Can't find this /uploads/1727172636142_th%20(12).jpeg on this server.
+    at file:///F:/Side%20Projects/bazaar-backend/app.js:112:9
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:119:3)

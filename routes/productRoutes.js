@@ -12,9 +12,8 @@ import {
     sellProduct,
     getLimitedStockedProducts,
     updateProduct,
+    getProductBySlug,
 } from '../controllers/productController.js'
-import { validateSchema } from '../middleware/validationMiddleware.js'
-import productValidationSchema from './../validations/productValidator.js'
 import { protect, restrictTo } from './../middleware/authMiddleware.js'
 
 const router = express.Router()
@@ -63,6 +62,8 @@ router
     .delete(deleteProduct)
 
 router.put('/status/:id', protect, restrictTo('admin'), updateProductStatus)
+
+router.get('/slug/:slug', getProductBySlug)
 
 router.route('/:id/feature').put(updateProductFeaturedStatus)
 

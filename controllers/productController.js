@@ -418,3 +418,5 @@ export const updateProduct = catchAsync(async (req, res) => {
     await client.del(`product_${productId}`)
     sendSuccessResponse(res, updatedProduct, 200)
 })
+
+export const getProductBySlug = getOneBySlug(Product)
