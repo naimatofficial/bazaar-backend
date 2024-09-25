@@ -19,6 +19,7 @@ import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
 import slugify from 'slugify'
+import AppError from '../utils/appError.js'
 
 // Create a new product
 export const createProduct = catchAsync(async (req, res) => {
@@ -421,7 +422,7 @@ export const getProductBySlug = getOneBySlug(Product, { path: 'reviews' })
 
 export const searchProducts = catchAsync(async (req, res, next) => {
     const { query, page = 1, limit = 10 } = req.query
-
+    console.log(req.query)
     console.log('search', query)
 
     // Construct regex for case-insensitive partial matching
@@ -434,8 +435,7 @@ export const searchProducts = catchAsync(async (req, res, next) => {
 
     // Fetch products with pagination
     const products = await Product.find(searchQuery)
-        .skip((page - 1) * limit)
-        .limit(parseInt(limit))
+        
 
     // Check if products were found
     if (products.length === 0) {

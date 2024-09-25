@@ -119,9 +119,6 @@ const productSchema = new mongoose.Schema(
             enum: ['vendor', 'admin'],
             required: true,
         },
-<<<<<<< HEAD
-        slug: String
-=======
         slug: String,
         rating: {
             type: Number,
@@ -134,7 +131,7 @@ const productSchema = new mongoose.Schema(
             required: [true, 'Number of reviews are required.'],
             default: 0,
         },
->>>>>>> 70bdf2842ae5a81870277a07cea673255da531c0
+
     },
     {
         toJSON: { virtuals: true },

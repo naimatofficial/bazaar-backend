@@ -12531,3 +12531,229 @@ Use mongoose.model(name, schema)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async file:///F:/Side%20Projects/bazaar-backend/controllers/handleFactory.js:163:21
 >>>>>>> 70bdf2842ae5a81870277a07cea673255da531c0
+2024-09-25T07:39:33.175Z [error]: Invalid _id: search.
+2024-09-25T07:39:39.317Z [error]: Operation `vendors.find()` buffering timed out after 10000ms
+2024-09-25T07:39:52.967Z [error]: Invalid _id: search.
+2024-09-25T07:39:54.191Z [error]: Invalid _id: search.
+2024-09-25T07:39:55.562Z [error]: Invalid _id: search.
+2024-09-25T07:44:07.854Z [error]: $regex has to be a string
+2024-09-25T07:45:09.252Z [error]: $regex has to be a string
+2024-09-25T07:49:55.409Z [error]: AppError is not defined
+2024-09-25T07:49:57.945Z [error]: AppError is not defined
+2024-09-25T07:49:58.761Z [error]: AppError is not defined
+2024-09-25T07:50:00.308Z [error]: AppError is not defined
+2024-09-25T07:50:00.920Z [error]: AppError is not defined
+2024-09-25T07:50:03.827Z [error]: AppError is not defined
+2024-09-25T07:50:06.920Z [error]: AppError is not defined
+2024-09-25T07:50:08.159Z [error]: AppError is not defined
+2024-09-25T07:50:08.966Z [error]: AppError is not defined
+2024-09-25T07:50:10.205Z [error]: AppError is not defined
+2024-09-25T07:50:10.440Z [error]: AppError is not defined
+2024-09-25T07:50:11.182Z [error]: AppError is not defined
+2024-09-25T07:50:16.123Z [error]: AppError is not defined
+2024-09-25T07:50:16.465Z [error]: AppError is not defined
+2024-09-25T07:50:16.573Z [error]: AppError is not defined
+2024-09-25T07:50:16.577Z [error]: AppError is not defined
+2024-09-25T07:50:16.738Z [error]: AppError is not defined
+2024-09-25T07:53:11.372Z [error]: AppError is not defined
+2024-09-25T07:53:29.417Z [error]: read ECONNRESET
+2024-09-25T07:53:45.740Z [error]: read ECONNRESET
+2024-09-25T07:53:55.097Z [error]: read ECONNRESET
+2024-09-25T07:53:55.103Z [error]: read ECONNRESET
+2024-09-25T07:53:55.106Z [error]: read ECONNRESET
+2024-09-25T07:53:55.117Z [error]: connect ECONNABORTED 3.6.254.147:27017
+2024-09-25T07:53:55.120Z [error]: read ECONNRESET
+2024-09-25T07:53:55.123Z [error]: read ECONNRESET
+2024-09-25T07:53:55.126Z [error]: read ECONNRESET
+2024-09-25T08:16:13.863Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:16:53.900Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:17:44.890Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:17:53.868Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:17:58.628Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:18:00.543Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:18:34.587Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:18:35.970Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:19:01.388Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:19:02.111Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T08:19:58.886Z [error]: Can't find this /search?query=undefined&page=1&limit=10 on this server.
+2024-09-25T09:33:27.433Z [error]: AppError is not defined
+2024-09-25T09:33:30.214Z [error]: AppError is not defined
+2024-09-25T09:33:30.438Z [error]: AppError is not defined
+2024-09-25T09:33:30.653Z [error]: AppError is not defined
+2024-09-25T09:33:30.828Z [error]: AppError is not defined
+2024-09-25T09:33:31.570Z [error]: AppError is not defined
+2024-09-25T09:33:31.714Z [error]: AppError is not defined
+2024-09-25T09:33:31.872Z [error]: AppError is not defined
+2024-09-25T09:37:52.030Z [error]: AppError is not defined
+2024-09-25T09:38:03.664Z [error]: AppError is not defined
+2024-09-25T09:38:04.658Z [error]: AppError is not defined
+2024-09-25T09:38:04.661Z [error]: AppError is not defined
+2024-09-25T09:38:04.665Z [error]: AppError is not defined
+2024-09-25T09:38:04.721Z [error]: AppError is not defined
+2024-09-25T09:38:05.375Z [error]: AppError is not defined
+2024-09-25T09:38:05.380Z [error]: AppError is not defined
+2024-09-25T09:38:05.728Z [error]: AppError is not defined
+2024-09-25T09:38:05.731Z [error]: AppError is not defined
+2024-09-25T09:38:05.734Z [error]: AppError is not defined
+2024-09-25T09:38:07.552Z [error]: AppError is not defined
+2024-09-25T09:38:07.750Z [error]: AppError is not defined
+2024-09-25T09:38:07.795Z [error]: AppError is not defined
+2024-09-25T09:38:07.826Z [error]: AppError is not defined
+2024-09-25T09:38:07.858Z [error]: AppError is not defined
+2024-09-25T09:38:07.866Z [error]: AppError is not defined
+2024-09-25T09:38:07.889Z [error]: AppError is not defined
+2024-09-25T09:38:07.929Z [error]: AppError is not defined
+2024-09-25T09:38:07.995Z [error]: AppError is not defined
+2024-09-25T09:38:10.348Z [error]: AppError is not defined
+2024-09-25T09:38:10.652Z [error]: AppError is not defined
+2024-09-25T09:38:11.237Z [error]: AppError is not defined
+2024-09-25T09:38:12.558Z [error]: AppError is not defined
+2024-09-25T09:38:12.625Z [error]: AppError is not defined
+2024-09-25T09:38:13.002Z [error]: AppError is not defined
+2024-09-25T09:38:15.510Z [error]: AppError is not defined
+2024-09-25T09:38:16.012Z [error]: AppError is not defined
+2024-09-25T09:38:16.842Z [error]: AppError is not defined
+2024-09-25T09:38:16.848Z [error]: AppError is not defined
+2024-09-25T09:38:16.865Z [error]: AppError is not defined
+2024-09-25T09:38:16.915Z [error]: AppError is not defined
+2024-09-25T09:38:16.936Z [error]: AppError is not defined
+2024-09-25T09:38:16.951Z [error]: AppError is not defined
+2024-09-25T09:38:16.963Z [error]: AppError is not defined
+2024-09-25T09:38:17.024Z [error]: AppError is not defined
+2024-09-25T09:38:17.027Z [error]: AppError is not defined
+2024-09-25T09:38:17.033Z [error]: AppError is not defined
+2024-09-25T09:38:17.136Z [error]: AppError is not defined
+2024-09-25T09:38:17.176Z [error]: AppError is not defined
+2024-09-25T09:38:17.223Z [error]: AppError is not defined
+2024-09-25T09:38:17.225Z [error]: AppError is not defined
+2024-09-25T09:38:17.228Z [error]: AppError is not defined
+2024-09-25T09:38:28.960Z [error]: Can't find this / on this server.
+2024-09-25T09:38:29.217Z [error]: Can't find this /favicon.ico on this server.
+2024-09-25T09:38:49.042Z [error]: AppError is not defined
+2024-09-25T09:38:57.112Z [error]: AppError is not defined
+2024-09-25T09:39:10.155Z [error]: AppError is not defined
+2024-09-25T09:40:59.494Z [error]: AppError is not defined
+2024-09-25T09:41:44.517Z [error]: AppError is not defined
+2024-09-25T09:41:47.039Z [error]: AppError is not defined
+2024-09-25T09:42:28.773Z [error]: AppError is not defined
+2024-09-25T09:43:04.931Z [error]: No product found
+2024-09-25T09:43:19.684Z [error]: No product found
+2024-09-25T09:43:19.891Z [error]: No product found
+2024-09-25T09:43:19.995Z [error]: No product found
+2024-09-25T09:43:20.134Z [error]: No product found
+2024-09-25T09:43:20.323Z [error]: No product found
+2024-09-25T09:43:20.422Z [error]: No product found
+2024-09-25T09:43:20.487Z [error]: No product found
+2024-09-25T09:43:20.806Z [error]: No product found
+2024-09-25T09:43:20.811Z [error]: No product found
+2024-09-25T09:43:20.902Z [error]: No product found
+2024-09-25T09:43:21.072Z [error]: No product found
+2024-09-25T09:43:21.204Z [error]: No product found
+2024-09-25T09:43:21.268Z [error]: No product found
+2024-09-25T09:43:21.515Z [error]: No product found
+2024-09-25T09:43:32.574Z [error]: No product found
+2024-09-25T09:43:32.799Z [error]: No product found
+2024-09-25T09:43:32.913Z [error]: No product found
+2024-09-25T09:43:33.935Z [error]: No product found
+2024-09-25T09:43:34.111Z [error]: No product found
+2024-09-25T09:43:34.523Z [error]: No product found
+2024-09-25T09:43:34.526Z [error]: No product found
+2024-09-25T09:43:35.221Z [error]: No product found
+2024-09-25T09:43:35.291Z [error]: No product found
+2024-09-25T09:43:35.582Z [error]: No product found
+2024-09-25T09:43:35.812Z [error]: No product found
+2024-09-25T09:43:35.817Z [error]: No product found
+2024-09-25T09:43:35.867Z [error]: No product found
+2024-09-25T09:43:36.243Z [error]: No product found
+2024-09-25T09:43:36.305Z [error]: No product found
+2024-09-25T09:43:36.416Z [error]: No product found
+2024-09-25T09:43:36.477Z [error]: No product found
+2024-09-25T09:43:36.532Z [error]: No product found
+2024-09-25T09:43:37.262Z [error]: No product found
+2024-09-25T09:43:37.320Z [error]: No product found
+2024-09-25T09:43:37.374Z [error]: No product found
+2024-09-25T09:43:37.630Z [error]: No product found
+2024-09-25T09:43:37.633Z [error]: No product found
+2024-09-25T09:43:37.808Z [error]: No product found
+2024-09-25T09:43:38.139Z [error]: No product found
+2024-09-25T09:43:38.142Z [error]: No product found
+2024-09-25T09:44:03.097Z [error]: No product found
+2024-09-25T09:44:03.100Z [error]: No product found
+2024-09-25T09:44:03.159Z [error]: No product found
+2024-09-25T09:44:03.231Z [error]: No product found
+2024-09-25T09:44:03.319Z [error]: No product found
+2024-09-25T09:44:03.323Z [error]: No product found
+2024-09-25T09:44:03.490Z [error]: No product found
+2024-09-25T09:44:03.494Z [error]: No product found
+2024-09-25T09:44:03.594Z [error]: No product found
+2024-09-25T09:44:03.598Z [error]: No product found
+2024-09-25T09:44:22.044Z [error]: No product found
+2024-09-25T09:44:22.216Z [error]: No product found
+2024-09-25T09:44:22.442Z [error]: No product found
+2024-09-25T09:46:04.505Z [error]: No product found
+2024-09-25T09:46:04.677Z [error]: No product found
+2024-09-25T09:46:04.680Z [error]: No product found
+2024-09-25T09:46:04.726Z [error]: No product found
+2024-09-25T09:47:17.000Z [error]: No product found
+2024-09-25T09:47:22.053Z [error]: No product found
+2024-09-25T09:47:31.563Z [error]: No product found
+2024-09-25T09:47:32.016Z [error]: No product found
+2024-09-25T09:47:41.937Z [error]: No product found
+2024-09-25T09:47:41.991Z [error]: No product found
+2024-09-25T09:47:42.243Z [error]: No product found
+2024-09-25T09:47:42.630Z [error]: No product found
+2024-09-25T09:47:42.684Z [error]: No product found
+2024-09-25T09:47:42.934Z [error]: No product found
+2024-09-25T09:48:14.486Z [error]: No product found
+2024-09-25T09:48:15.568Z [error]: No product found
+2024-09-25T09:48:16.502Z [error]: No product found
+2024-09-25T09:48:17.139Z [error]: No product found
+2024-09-25T09:48:17.706Z [error]: No product found
+2024-09-25T09:48:18.356Z [error]: No product found
+2024-09-25T09:48:19.573Z [error]: No product found
+2024-09-25T09:48:21.139Z [error]: No product found
+2024-09-25T09:48:22.171Z [error]: No product found
+2024-09-25T09:48:23.201Z [error]: No product found
+2024-09-25T09:49:36.352Z [error]: No product found
+2024-09-25T09:49:41.335Z [error]: No product found
+2024-09-25T09:49:49.215Z [error]: No product found
+2024-09-25T09:49:49.510Z [error]: No product found
+2024-09-25T09:49:49.853Z [error]: No product found
+2024-09-25T09:49:50.115Z [error]: No product found
+2024-09-25T09:49:50.209Z [error]: No product found
+2024-09-25T09:49:50.541Z [error]: No product found
+2024-09-25T09:49:51.317Z [error]: No product found
+2024-09-25T09:49:51.764Z [error]: No product found
+2024-09-25T09:49:52.275Z [error]: No product found
+2024-09-25T09:49:52.361Z [error]: No product found
+2024-09-25T09:49:52.514Z [error]: No product found
+2024-09-25T09:49:53.415Z [error]: No product found
+2024-09-25T09:49:53.961Z [error]: No product found
+2024-09-25T09:49:54.500Z [error]: No product found
+2024-09-25T09:49:54.715Z [error]: No product found
+2024-09-25T09:49:55.258Z [error]: No product found
+2024-09-25T10:00:08.056Z [error]: Invalid _id: undefined.
+2024-09-25T10:00:45.572Z [error]: Invalid _id: undefined.
+2024-09-25T10:01:46.879Z [error]: Invalid _id: undefined.
+2024-09-25T10:01:48.878Z [error]: Invalid _id: undefined.
+2024-09-25T10:01:49.886Z [error]: Invalid _id: undefined.
+2024-09-25T10:02:12.674Z [error]: Invalid _id: undefined.
+2024-09-25T10:02:43.889Z [error]: Invalid _id: undefined.
+2024-09-25T10:03:11.921Z [error]: Invalid _id: undefined.
+2024-09-25T10:03:33.125Z [error]: Invalid _id: undefined.
+2024-09-25T10:04:17.885Z [error]: Invalid _id: undefined.
+2024-09-25T10:04:22.887Z [error]: Invalid _id: undefined.
+2024-09-25T10:04:52.896Z [error]: Invalid _id: undefined.
+2024-09-25T10:04:57.882Z [error]: Invalid _id: undefined.
+2024-09-25T10:05:00.880Z [error]: Invalid _id: undefined.
+2024-09-25T10:48:03.907Z [error]: Unfortunately, this token has already expired.
+2024-09-25T10:48:08.071Z [error]: Can't find this / on this server.
+2024-09-25T11:14:09.146Z [error]: Unfortunately, this token has already expired.
+2024-09-25T11:21:57.095Z [error]: Unfortunately, this token has already expired.
+2024-09-25T11:46:06.092Z [error]: Unfortunately, this token has already expired.
+2024-09-25T11:53:01.903Z [error]: Cannot read properties of undefined (reading 'thumbnail')
+2024-09-25T11:53:01.909Z [error]: Cannot read properties of undefined (reading 'thumbnail')
+2024-09-25T11:53:01.945Z [error]: Cannot read properties of undefined (reading 'thumbnail')
+2024-09-25T11:53:01.953Z [error]: Cannot read properties of undefined (reading 'thumbnail')
+2024-09-25T11:53:03.021Z [error]: Cannot read properties of undefined (reading 'thumbnail')
+2024-09-25T11:53:03.103Z [error]: Cannot read properties of undefined (reading 'thumbnail')
