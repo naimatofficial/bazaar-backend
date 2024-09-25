@@ -5,9 +5,19 @@ import {
     getUser,
     getUsers,
     updateUser,
+    updateRole,
 } from './../controllers/userController.js'
-import { login, signup, logout } from '../controllers/authController.js'
-import { protect, restrictTo } from '../middleware/authMiddleware.js'
+import {
+    login,
+    signup,
+    logout,
+    updatePassword,
+} from '../controllers/authController.js'
+import {
+    protect,
+    restrictTo,
+    selectModelByRole,
+} from '../middleware/authMiddleware.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import userValidationSchema from './../validations/userValidator.js'
 import { loginLimiter } from '../utils/helpers.js'
@@ -17,6 +27,9 @@ const router = express.Router()
 router.post('/login', loginLimiter, login)
 router.post('/register', signup)
 router.post('/logout', protect, logout)
+
+router.put('/update-password', protect, selectModelByRole, updatePassword)
+router.put('/update-role', updateRole)
 
 router
     .route('/')
@@ -30,8 +43,8 @@ router
 
 router
     .route('/:id')
-    .get(protect, getUser)
-    .put(protect, updateUser)
+    .get(getUser)
     .delete(protect, restrictTo('admin'), deleteUser)
+    .put(protect, updateUser)
 
 export default router

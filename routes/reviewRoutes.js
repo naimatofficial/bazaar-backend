@@ -8,6 +8,7 @@ import {
     getAllProductReviews,
     getProductReviewById,
     updateProductReview,
+    updateProductReviewStatus,
 } from '../controllers/reviewController.js'
 import reviewValidationSchema from '../validations/reviewValidator.js'
 
@@ -23,5 +24,12 @@ router
     .get(protect, getProductReviewById)
     .put(protect, updateProductReview)
     .delete(protect, deleteProductReview)
+
+router.put(
+    '/status/:id',
+    protect,
+    restrictTo('admin', 'vendor'),
+    updateProductReviewStatus
+)
 
 export default router

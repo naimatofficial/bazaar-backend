@@ -10,6 +10,7 @@ const dealOfTheDaySchema = new mongoose.Schema(
         title: {
             type: String,
             required: [true, 'Please provide title'],
+            trim: true,
         },
         status: {
             type: String,

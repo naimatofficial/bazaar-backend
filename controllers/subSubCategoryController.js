@@ -12,6 +12,7 @@ import {
     deleteOne,
     getAll,
     getOne,
+    getOneBySlug,
     updateOne,
 } from './handleFactory.js'
 
@@ -62,39 +63,7 @@ export const getAllSubSubCategories = getAll(SubSubCategory)
 export const getSubSubCategoryById = getOne(SubSubCategory)
 
 // Get a sub-subcategory by slug
-export const getSubSubCategoryBySlug = async (req, res) => {
-    try {
-        const slug = req.params.slug
-
-        const cacheKey = `subsubcategory_slug_${slug}`
-        const cachedSubSubCategory = await client.get(cacheKey)
-        if (cachedSubSubCategory) {
-            return sendSuccessResponse(
-                res,
-                JSON.parse(cachedSubSubCategory),
-                'Sub-subcategory fetched successfully'
-            )
-        }
-
-        const subSubCategory = await SubSubCategory.findOne({ slug }).populate(
-            'mainCategory subCategory',
-            'name'
-        )
-        if (!subSubCategory) {
-            return sendErrorResponse(res, 'Sub-subcategory not found.', 404)
-        }
-
-        await client.set(cacheKey, JSON.stringify(subSubCategory))
-
-        sendSuccessResponse(
-            res,
-            subSubCategory,
-            'Sub-subcategory fetched successfully'
-        )
-    } catch (error) {
-        sendErrorResponse(res, error.message)
-    }
-}
+export const getSubSubCategoryBySlug = getOneBySlug(SubSubCategory)
 
 // Update a sub-subcategory by ID
 export const updateSubSubCategoryById = updateOne(SubSubCategory)

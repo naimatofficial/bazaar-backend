@@ -8,7 +8,13 @@ import { validateProductDependencies } from '../utils/validation.js'
 import { populateProductDetails } from '../utils/productHelper.js'
 import { buildFilterQuery, buildSortOptions } from '../utils/filterHelper.js'
 import Customer from '../models/customerModel.js'
-import { deleteOne, getAll, getOne } from './handleFactory.js'
+import {
+    deleteOne,
+    getAll,
+    getOne,
+    getOneBySlug,
+    updateStatus,
+} from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
 import { getCacheKey } from '../utils/helpers.js'
 import redisClient from '../config/redisConfig.js'
@@ -45,22 +51,6 @@ export const createProduct = catchAsync(async (req, res) => {
         userId,
         userType,
     } = req.body
-
-    // const {
-    //     categoryObj,
-    //     subCategoryObj,
-    //     subSubCategoryObj,
-    //     brandObj,
-    //     colorObjs,
-    //     attributeObjs,
-    // } = await validateProductDependencies({
-    //     category,
-    //     subCategorySlug,
-    //     subSubCategorySlug,
-    //     brand,
-    //     colors,
-    //     attributes,
-    // })
 
     const newProduct = new Product({
         name,
@@ -138,7 +128,7 @@ export const updateProductImages = catchAsync(async (req, res) => {
         doc: product,
     })
 })
-// export const getAllProducts = async (req, res) => {
+/// export const getAllProducts = async (req, res) => {
 // 	try {
 // 		const { priceRange, sort, order = "asc", page = 1, limit = 10 } = req.query;
 
@@ -191,9 +181,9 @@ export const updateProductImages = catchAsync(async (req, res) => {
 // 		sendErrorResponse(res, error);
 // 	}
 // };
-export const getAllProducts = getAll(Product)
+export const getAllProducts = getAll(Product, { path: 'reviews' })
 
-export const getProductById = getOne(Product)
+export const getProductById = getOne(Product, { path: 'reviews' })
 // Delete a Product
 export const deleteProduct = deleteOne(Product)
 
@@ -234,30 +224,7 @@ export const addReview = async (req, res) => {
 }
 
 // Update product status
-export const updateProductStatus = async (req, res) => {
-    try {
-        const productId = req.params.id
-        const { status } = req.body
-
-        const validStatuses = ['active', 'inactive', 'pending']
-        if (!validStatuses.includes(status)) {
-            return res.status(400).json({ message: 'Invalid status' })
-        }
-
-        const product = await Product.findById(productId)
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' })
-        }
-
-        product.status = status
-        await product.save()
-        await client.del('all_products:*')
-        await client.del(`product_${productId}`)
-        sendSuccessResponse(res, product, 200)
-    } catch (error) {
-        sendErrorResponse(res, error)
-    }
-}
+export const updateProductStatus = updateStatus(Product)
 
 // Update product featured status
 export const updateProductFeaturedStatus = async (req, res) => {
@@ -338,11 +305,7 @@ export const getLimitedStockedProducts = async (req, res) => {
 export const sellProduct = catchAsync(async (req, res) => {
     const productId = req.params.id
     const product = await Product.findById(productId)
-
-    if (!doc) {
-        return next(new AppError(`No product found with that ID`, 404))
-    }
-
+    re
     product.status = 'sold'
 
     res.status(200).json({
@@ -452,4 +415,41 @@ export const updateProduct = catchAsync(async (req, res) => {
     await client.del('all_products:*')
     await client.del(`product_${productId}`)
     sendSuccessResponse(res, updatedProduct, 200)
+})
+
+export const getProductBySlug = getOneBySlug(Product, { path: 'reviews' })
+
+export const searchProducts = catchAsync(async (req, res, next) => {
+    const { query, page = 1, limit = 10 } = req.query
+
+    console.log('search', query)
+
+    // Construct regex for case-insensitive partial matching
+    const searchQuery = {
+        $or: [
+            { name: { $regex: query, $options: 'i' } }, // Case-insensitive search in 'name'
+            { description: { $regex: query, $options: 'i' } }, // Case-insensitive search in 'description'
+        ],
+    }
+
+    // Fetch products with pagination
+    const products = await Product.find(searchQuery)
+        .skip((page - 1) * limit)
+        .limit(parseInt(limit))
+
+    // Check if products were found
+    if (products.length === 0) {
+        return next(new AppError(`No product found`, 404))
+    }
+
+    // Get total product count
+    const total = await Product.countDocuments(searchQuery)
+
+    res.status(200).json({
+        status: 'success',
+        results: products.length,
+        doc: products,
+        totalPages: Math.ceil(total / limit),
+        currentPage: parseInt(page),
+    })
 })

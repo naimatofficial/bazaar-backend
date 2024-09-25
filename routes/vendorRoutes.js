@@ -8,12 +8,20 @@ import {
     getAllVendors,
     getVendorById,
     deleteVendor,
-} from '../controllers/vendorController.js' // Adjust the path based on your project structure
+} from '../controllers/vendorController.js'
 import { validateSchema } from '../middleware/validationMiddleware.js'
 import vendorValidationSchema from './../validations/vendorValidator.js'
 import { loginLimiter } from '../utils/helpers.js'
-import { protect, restrictTo } from '../middleware/authMiddleware.js'
-import { loginVendor } from './../controllers/authController.js'
+import {
+    protect,
+    restrictTo,
+    selectModelByRole,
+} from '../middleware/authMiddleware.js'
+import {
+    loginVendor,
+    logout,
+    updatePassword,
+} from './../controllers/authController.js'
 
 const router = express.Router()
 
@@ -40,7 +48,7 @@ router
         validateSchema(vendorValidationSchema),
         createVendor
     )
-    .get(protect, getAllVendors)
+    .get(getAllVendors)
 
 router
     .route('/:id')
@@ -59,6 +67,11 @@ router.route('/signup').post(
     registerVendor
 )
 
+router.put('/update-password', protect, selectModelByRole, updatePassword)
+
 router.post('/login', loginLimiter, loginVendor)
+router.post('/logout', protect, logout)
+
+router.put('/status/:id', protect, restrictTo('admin'), updateVendorStatus)
 
 export default router

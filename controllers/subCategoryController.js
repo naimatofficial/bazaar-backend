@@ -11,6 +11,7 @@ import {
     deleteOne,
     getAll,
     getOne,
+    getOneBySlug,
     updateOne,
 } from './handleFactory.js'
 import catchAsync from '../utils/catchAsync.js'
@@ -23,40 +24,7 @@ export const getAllSubCategories = getAll(SubCategory)
 // Get a subcategory by ID
 export const getSubCategoryById = getOne(SubCategory)
 // Get a subcategory by slug
-export const getSubCategoryBySlug = async (req, res) => {
-    try {
-        const slug = req.params.slug
-
-        const cacheKey = `subcategory_slug_${slug}`
-        const cachedSubCategory = await client.get(cacheKey)
-        if (cachedSubCategory) {
-            console.log('Serving subcategory by slug from cache')
-            return sendSuccessResponse(
-                res,
-                JSON.parse(cachedSubCategory),
-                'Subcategory fetched successfully'
-            )
-        }
-
-        const subCategory = await SubCategory.findOne({ slug }).populate(
-            'mainCategory',
-            'name'
-        )
-        if (!subCategory) {
-            return sendErrorResponse(res, 'Subcategory not found.', 404)
-        }
-
-        await client.set(cacheKey, JSON.stringify(subCategory))
-
-        sendSuccessResponse(
-            res,
-            subCategory,
-            'Subcategory fetched successfully'
-        )
-    } catch (error) {
-        sendErrorResponse(res, error.message)
-    }
-}
+export const getSubCategoryBySlug = getOneBySlug(SubCategory)
 
 export const updateSubCategoryById = updateOne(SubCategory)
 

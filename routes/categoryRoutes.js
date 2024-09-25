@@ -11,6 +11,7 @@ import {
 } from '../controllers/categoryController.js'
 import { validateSchema } from './../middleware/validationMiddleware.js'
 import categoryValidationSchema from './../validations/categoryValidator.js'
+import { protect, restrictTo } from './../middleware/authMiddleware.js'
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -45,13 +46,16 @@ const checkFileType = (file, cb) => {
 
 const router = express.Router()
 
-router.route('/').post(upload.single('logo'), createCategory).get(getCategories)
+router
+    .route('/')
+    .post(protect, upload.single('logo'), createCategory)
+    .get(getCategories)
 
 router
     .route('/:id')
     .get(getCategoryById)
-    .put(upload.single('logo'), updateCategory)
-    .delete(deleteCategory)
+    .put(protect, restrictTo('admin'), upload.single('logo'), updateCategory)
+    .delete(protect, restrictTo('admin'), deleteCategory)
 
 router.route('/slug/:slug').get(getCategoryBySlug)
 

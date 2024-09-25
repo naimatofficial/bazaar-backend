@@ -5,6 +5,7 @@ const featuredDealSchema = new mongoose.Schema(
         title: {
             type: String,
             required: [true, 'Please provide title.'],
+            trim: true,
         },
         startDate: {
             type: Date,

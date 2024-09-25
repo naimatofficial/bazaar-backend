@@ -37,6 +37,9 @@ const userSchema = new mongoose.Schema(
             minlength: 8,
             select: false,
         },
+        passwordChangedAt: Date,
+        passwordResetToken: String,
+        passwordResetExpires: Date,
     },
     {
         timestamps: true,
@@ -59,6 +62,32 @@ userSchema.pre('save', async function (next) {
 
     next()
 })
+
+userSchema.methods.changePasswordAfter = function (JWTTimestamp) {
+    if (this.passwordChangedAt) {
+        const changeTimestamp = parseInt(
+            this.passwordChangedAt.getTime() / 1000,
+            10
+        )
+
+        return JWTTimestamp < changeTimestamp
+    }
+    // NO password changed
+    return false
+}
+
+userSchema.methods.createPasswordResetToken = function () {
+    const resetToken = crypto.randomBytes(32).toString('hex')
+
+    this.passwordResetToken = crypto
+        .createHash('sha256')
+        .update(resetToken)
+        .digest('hex')
+
+    this.passwordResetExpires = Date.now() + 10 * 60 * 1000
+
+    return resetToken
+}
 
 const User = mongoose.model('User', userSchema)
 

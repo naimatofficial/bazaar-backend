@@ -6,6 +6,7 @@ const productSchema = new mongoose.Schema(
         name: {
             type: String,
             required: [true, 'Please provide Product name'],
+            trim: true,
         },
         description: {
             type: String,
@@ -118,7 +119,22 @@ const productSchema = new mongoose.Schema(
             enum: ['vendor', 'admin'],
             required: true,
         },
+<<<<<<< HEAD
         slug: String
+=======
+        slug: String,
+        rating: {
+            type: Number,
+            required: [true, 'Please provide rating.'],
+            default: 0,
+            set: (val) => (Math.round(val * 10) / 10).toFixed(1),
+        },
+        numOfReviews: {
+            type: Number,
+            required: [true, 'Number of reviews are required.'],
+            default: 0,
+        },
+>>>>>>> 70bdf2842ae5a81870277a07cea673255da531c0
     },
     {
         toJSON: { virtuals: true },
