@@ -372,7 +372,7 @@ export const updateStatus = (Model) =>
 
 export const cleanCache = catchAsync(async (req, res, next) => {
     try {
-        await redisClient.flushAll() // Use `flushAll()` for promises
+        await redisClient.flushAll()
         res.status(200).json({
             status: 'success',
             message: 'Redis cache cleaned.',

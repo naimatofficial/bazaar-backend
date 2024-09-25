@@ -16515,3 +16515,5 @@ Use mongoose.model(name, schema)
 2024-09-25T11:47:56.982Z [error]: Invalid argument type
 2024-09-25T11:48:50.605Z [error]: Invalid argument type
 2024-09-25T11:49:46.610Z [error]: Invalid argument type
+2024-09-25T12:07:54.901Z [error]: Can't find this /uploads/thumbnails/1721901679485-download.png on this server.
+2024-09-25T12:07:55.008Z [error]: Can't find this /uploads/thumbnails/1721901679485-download.png on this server.
