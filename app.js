@@ -32,6 +32,7 @@ import subscriber from './routes/subscriberRoutes.js'
 import notification from './routes/notificationRoutes.js'
 import AppError from './utils/appError.js'
 import { searchProducts } from './controllers/productController.js'
+import { cleanCache } from './controllers/handleFactory.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -70,6 +71,8 @@ app.get('/', (req, res, next) => {
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
 // API ROUTES
+app.post('/clean-cache', cleanCache)
+
 app.get('/api/search', searchProducts)
 
 app.use('/api/users', userRoutes)
