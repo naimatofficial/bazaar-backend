@@ -68,7 +68,6 @@ export const removeProductFromWishlist = catchAsync(async (req, res, next) => {
     if (!wishlist) {
         return next(new AppError('No wishlist found for this customer', 404));
     }
-    console.log(productId)
     const productIndex = wishlist.products.findIndex(
         (product) => product._id.toString() ===productId
     );
