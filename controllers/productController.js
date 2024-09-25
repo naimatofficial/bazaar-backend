@@ -303,11 +303,7 @@ export const getLimitedStockedProducts = async (req, res) => {
 export const sellProduct = catchAsync(async (req, res) => {
     const productId = req.params.id
     const product = await Product.findById(productId)
-
-    if (!doc) {
-        return next(new AppError(`No product found with that ID`, 404))
-    }
-
+    re
     product.status = 'sold'
 
     res.status(200).json({
@@ -420,3 +416,38 @@ export const updateProduct = catchAsync(async (req, res) => {
 })
 
 export const getProductBySlug = getOneBySlug(Product, { path: 'reviews' })
+
+export const searchProducts = catchAsync(async (req, res, next) => {
+    const { query, page = 1, limit = 10 } = req.query
+
+    console.log('search', query)
+
+    // Construct regex for case-insensitive partial matching
+    const searchQuery = {
+        $or: [
+            { name: { $regex: query, $options: 'i' } }, // Case-insensitive search in 'name'
+            { description: { $regex: query, $options: 'i' } }, // Case-insensitive search in 'description'
+        ],
+    }
+
+    // Fetch products with pagination
+    const products = await Product.find(searchQuery)
+        .skip((page - 1) * limit)
+        .limit(parseInt(limit))
+
+    // Check if products were found
+    if (products.length === 0) {
+        return next(new AppError(`No product found`, 404))
+    }
+
+    // Get total product count
+    const total = await Product.countDocuments(searchQuery)
+
+    res.status(200).json({
+        status: 'success',
+        results: products.length,
+        doc: products,
+        totalPages: Math.ceil(total / limit),
+        currentPage: parseInt(page),
+    })
+})
