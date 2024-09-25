@@ -88,8 +88,12 @@ export const createProduct = catchAsync(async (req, res) => {
     })
     await newProduct.save()
 
-    const cacheKeyOne = getCacheKey(Product, newProduct?._id)
+    const cacheKeyOne = getCacheKey('Product', newProduct?._id)
     await redisClient.setEx(cacheKeyOne, 3600, JSON.stringify(newProduct))
+
+    // Update cache
+    const cacheKey = getCacheKey('Product', '', req.query)
+    await redisClient.del(cacheKey)
 
     res.status(201).json({
         status: 'success',
