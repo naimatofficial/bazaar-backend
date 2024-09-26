@@ -16517,3 +16517,6 @@ Use mongoose.model(name, schema)
 2024-09-25T11:49:46.610Z [error]: Invalid argument type
 2024-09-25T12:07:54.901Z [error]: Can't find this /uploads/thumbnails/1721901679485-download.png on this server.
 2024-09-25T12:07:55.008Z [error]: Can't find this /uploads/thumbnails/1721901679485-download.png on this server.
+2024-09-25T19:37:00.264Z [error]: Duplicate field value zia23@mail.com, please use another value.
+2024-09-25T19:37:44.664Z [error]: Duplicate field value zia2@mail.com, please use another value.
+2024-09-25T19:41:31.460Z [error]: Duplicate field value rahim@mail.com, please use another value.
