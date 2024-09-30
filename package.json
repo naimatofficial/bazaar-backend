@@ -2,11 +2,11 @@
     "name": "ecommerce-bazaar-backend",
     "version": "1.0.0",
     "type": "module",
-    "description": "Ecommerce Baaazaar is an online shopping store.",
-    "main": "server.js",
+    "description": "Vistamart Baaazaar is an online shopping store.",
+    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "server": "nodemon server.js"
+        "server": "nodemon index.js"
     },
     "keywords": [
         "store",

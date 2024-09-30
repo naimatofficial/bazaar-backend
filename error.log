@@ -15285,3 +15285,12 @@ Use mongoose.model(name, schema)
 2024-09-25T19:37:00.264Z [error]: Duplicate field value zia23@mail.com, please use another value.
 2024-09-25T19:37:44.664Z [error]: Duplicate field value zia2@mail.com, please use another value.
 2024-09-25T19:41:31.460Z [error]: Duplicate field value rahim@mail.com, please use another value.
+2024-09-26T05:16:33.806Z [error]: Can't find this /favicon.ico on this server.
+2024-09-26T07:12:23.785Z [error]: Unfortunately, this token has already expired.
+2024-09-26T07:12:26.291Z [error]: Can't find this /feature-deals on this server.
+2024-09-26T07:12:36.441Z [error]: Unfortunately, this token has already expired.
+2024-09-26T07:14:47.309Z [error]: read ECONNRESET
+2024-09-26T07:20:34.898Z [error]: Incorrect email or password
+2024-09-26T07:22:40.617Z [error]: Can't find this /feature-deals on this server.
+2024-09-26T07:22:40.851Z [error]: Wishlist not found by that ID.
+2024-09-26T07:23:31.829Z [error]: Wishlist not found by that ID.
