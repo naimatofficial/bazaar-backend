@@ -10,7 +10,7 @@ export const getAllWishlists = getAll(Wishlist)
 export const deleteWishlist = deleteOne(Wishlist)
 
 export const getWishlist = catchAsync(async (req, res, next) => {
-    const { customerId } = req.body
+    const { customerId } = req.params
 
     const wishlist = await Wishlist.findOne({ customer: customerId })
 
@@ -25,8 +25,8 @@ export const getWishlist = catchAsync(async (req, res, next) => {
 })
 
 export const addProductToWishlist = catchAsync(async (req, res, next) => {
-    const { customer, productId } = req.body
-
+    const { customerId, productId } = req.body
+    const customer = customerId;
     const productExists = await Product.findById(productId)
     if (!productExists) {
         return next(new AppError('Product not found.', 400))
@@ -59,6 +59,7 @@ export const addProductToWishlist = catchAsync(async (req, res, next) => {
 
     await wishlist.save()
 
+    console.log(wishlist)
     res.status(200).json({
         status: 'success',
         doc: wishlist,
