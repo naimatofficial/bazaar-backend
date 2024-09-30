@@ -48,6 +48,16 @@ export const createProduct = catchAsync(async (req, res) => {
         userType,
     } = req.body
 
+    let updatedDiscountAmount = discountAmount
+
+    if (discountType === 'flat') {
+        // If the discount type is flat, use the given discountAmount
+        updatedDiscountAmount = discountAmount
+    } else if (discountType === 'percent') {
+        // If the discount type is percent, calculate the discount percentage
+        updatedDiscountAmount = (price * discount) / 100
+    }
+
     const newProduct = new Product({
         name,
         description,
@@ -63,7 +73,7 @@ export const createProduct = catchAsync(async (req, res) => {
         price,
         discount,
         discountType,
-        discountAmount,
+        discountAmount: updatedDiscountAmount,
         taxAmount,
         taxIncluded,
         minimumOrderQty,
@@ -272,15 +282,6 @@ export const sellProduct = catchAsync(async (req, res) => {
 export const updateProduct = catchAsync(async (req, res) => {
     const productId = req.params.id
 
-    const { error } = productValidationSchema.validate(req.body, {
-        abortEarly: false,
-    })
-    if (error) {
-        return res.status(400).json({
-            message: error.details.map((err) => err.message).join(', '),
-        })
-    }
-
     const {
         name,
         description,
@@ -311,6 +312,16 @@ export const updateProduct = catchAsync(async (req, res) => {
         userType,
     } = req.body
 
+    let updatedDiscountAmount = discountAmount
+
+    if (discountType === 'flat') {
+        // If the discount type is flat, use the given discountAmount
+        updatedDiscountAmount = discountAmount
+    } else if (discountType === 'percent') {
+        // If the discount type is percent, calculate the discount percentage
+        updatedDiscountAmount = (price * discount) / 100
+    }
+
     const updatedProduct = await Product.findByIdAndUpdate(
         productId,
         {
@@ -328,7 +339,7 @@ export const updateProduct = catchAsync(async (req, res) => {
             price,
             discount,
             discountType,
-            discountAmount,
+            discountAmount: updatedDiscountAmount,
             taxAmount,
             taxIncluded,
             minimumOrderQty,
