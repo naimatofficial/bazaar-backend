@@ -15294,3 +15294,32 @@ Use mongoose.model(name, schema)
 2024-09-26T07:22:40.617Z [error]: Can't find this /feature-deals on this server.
 2024-09-26T07:22:40.851Z [error]: Wishlist not found by that ID.
 2024-09-26T07:23:31.829Z [error]: Wishlist not found by that ID.
+2024-09-30T05:49:25.353Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:49:26.401Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:49:33.018Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:49:40.379Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:49:53.804Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:50:49.172Z [error]: Can't find this /feature-deals on this server.
+2024-09-30T05:50:49.408Z [error]: No wishlist found with that ID
+2024-09-30T05:51:16.438Z [error]: Customer not found.
+2024-09-30T05:52:47.808Z [error]: No wishlist found with that ID
+2024-09-30T05:52:50.554Z [error]: Customer not found.
+2024-09-30T05:54:24.712Z [error]: No wishlist found with that ID
+2024-09-30T05:54:26.400Z [error]: Customer ID is required
+2024-09-30T05:55:18.355Z [error]: Customer ID is required
+2024-09-30T05:55:37.711Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:55:40.317Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:55:52.260Z [error]: Unfortunately, this token has already expired.
+2024-09-30T05:56:23.548Z [error]: Can't find this /feature-deals on this server.
+2024-09-30T05:56:23.603Z [error]: No wishlist found with that ID
+2024-09-30T05:56:33.394Z [error]: Customer ID is required
+2024-09-30T05:57:35.979Z [error]: No wishlist found with that ID
+2024-09-30T05:57:39.891Z [error]: Customer not found.
+2024-09-30T05:58:14.287Z [error]: No wishlist found with that ID
+2024-09-30T05:58:29.498Z [error]: No wishlist found with that ID
+2024-09-30T06:02:02.564Z [error]: No wishlist found with that ID
+2024-09-30T06:02:13.309Z [error]: No wishlist found with that ID
+2024-09-30T06:02:23.488Z [error]: You do not have permission to perform this action.
+2024-09-30T06:34:49.532Z [error]: No wishlist found with that ID
+2024-09-30T06:34:56.142Z [error]: No wishlist found with that ID
+2024-09-30T06:34:59.740Z [error]: No wishlist found with that ID
