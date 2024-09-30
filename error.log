@@ -15323,3 +15323,5 @@ Use mongoose.model(name, schema)
 2024-09-30T06:34:49.532Z [error]: No wishlist found with that ID
 2024-09-30T06:34:56.142Z [error]: No wishlist found with that ID
 2024-09-30T06:34:59.740Z [error]: No wishlist found with that ID
+2024-09-30T06:41:16.637Z [error]: Customer not found.
+2024-09-30T06:41:17.378Z [error]: Customer not found.

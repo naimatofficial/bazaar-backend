@@ -10,7 +10,7 @@ export const getAllWishlists = getAll(Wishlist)
 export const deleteWishlist = deleteOne(Wishlist)
 
 export const getWishlist = catchAsync(async (req, res, next) => {
-    const { customerId } = req.body
+    const { customerId } = req.params
 
     const wishlist = await Wishlist.findOne({ customer: customerId })
 
