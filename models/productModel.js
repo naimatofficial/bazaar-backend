@@ -189,8 +189,8 @@ productSchema.virtual('reviews', {
     foreignField: 'product',
 })
 
-productSchema.virtual('totalWishlists', {
-    ref: 'Wishlist',
+productSchema.virtual('totalOrders', {
+    ref: 'Order',
     localField: '_id',
     foreignField: 'products',
     count: true,

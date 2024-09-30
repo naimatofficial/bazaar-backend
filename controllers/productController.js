@@ -129,15 +129,15 @@ export const updateProductImages = catchAsync(async (req, res) => {
 })
 
 export const getAllProducts = getAll(Product, {
-    path: 'reviews totalWishlists',
+    path: 'reviews totalOrders',
 })
 
 export const getProductById = getOne(Product, {
-    path: 'reviews totalWishlists',
+    path: 'reviews totalOrders',
 })
 
 export const getProductBySlug = getOneBySlug(Product, {
-    path: 'reviews  totalWishlists',
+    path: 'reviews  totalOrders',
 })
 
 // Delete a Product
