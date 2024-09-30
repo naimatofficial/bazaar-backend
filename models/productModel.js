@@ -189,6 +189,13 @@ productSchema.virtual('reviews', {
     foreignField: 'product',
 })
 
+productSchema.virtual('totalWishlists', {
+    ref: 'Wishlist',
+    localField: '_id',
+    foreignField: 'products',
+    count: true,
+})
+
 productSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'category',
