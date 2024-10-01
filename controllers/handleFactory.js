@@ -334,8 +334,6 @@ export const updateStatus = (Model) =>
             return next(new AppError(`Please provide status value.`, 400))
         }
 
-        console.log('Status: ', req.body.status)
-
         // Perform the update operation
         const doc = await Model.findByIdAndUpdate(
             req.params.id,
