@@ -15370,3 +15370,9 @@ Use mongoose.model(name, schema)
 2024-10-01T08:16:20.393Z [error]: Error: Referenced customer ID does not exist
     at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/productReviewModel.js:51:21)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-10-01T10:11:05.575Z [error]: Error: You do not have permission to perform this action.
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:109:17
+    at Layer.handle [as handle_request] (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Side Projects\bazaar-backend\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/Side%20Projects/bazaar-backend/middleware/authMiddleware.js:99:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
