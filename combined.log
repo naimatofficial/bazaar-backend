@@ -16604,3 +16604,6 @@ Use mongoose.model(name, schema)
 2024-10-01T07:36:19.639Z [error]: ReferenceError: mongoose is not defined
     at file:///F:/Side%20Projects/bazaar-backend/controllers/featuredDealController.js:84:33
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-10-01T08:16:20.393Z [error]: Error: Referenced customer ID does not exist
+    at model.<anonymous> (file:///F:/Side%20Projects/bazaar-backend/models/productReviewModel.js:51:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
